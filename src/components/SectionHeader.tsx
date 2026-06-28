@@ -1,7 +1,7 @@
 type Props = {
   eyebrow: string;
   title: string;
-  lede: string;
+  lede?: string;
 };
 
 export function SectionHeader({ eyebrow, title, lede }: Props) {
@@ -16,12 +16,15 @@ export function SectionHeader({ eyebrow, title, lede }: Props) {
       <h2 className="text-2xl font-black leading-[1.05] text-ink md:text-3xl lg:text-4xl">
         {title}
       </h2>
-      <p className="mt-4 max-w-3xl text-xl leading-relaxed text-ink md:text-2xl">
-        {lede}
-      </p>
+      {lede && (
+        <p className="mt-4 max-w-3xl text-xl leading-relaxed text-ink md:text-2xl">
+          {lede}
+        </p>
+      )}
     </div>
   );
 }
+
 
 
 
