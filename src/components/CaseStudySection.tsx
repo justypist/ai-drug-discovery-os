@@ -8,13 +8,6 @@ const timeline = [
   { date: "Jun 26", label: "First round optimization completed" },
 ];
 
-const workflow = [
-  { title: "CRA Input", body: "CRA enters the PD activity into the SMART system." },
-  { title: "Physician Review", body: "Physician reviews the submitted PD activity." },
-  { title: "PD Type Classification", body: "Classify the PD by its type." },
-  { title: "IPD Determination", body: "Determine whether the PD is an Important Protocol Deviation (IPD)." },
-];
-
 const metrics = [
   {
     label: "PD Category Classification Accuracy",
@@ -82,21 +75,90 @@ export function CaseStudySection() {
             <span className="eyebrow text-base">What is PD Analysis?</span>
           </div>
           <div className="flex flex-col items-stretch gap-3 md:flex-row">
-            {workflow.map((step, idx, arr) => (
-              <div key={step.title} className="flex flex-1 items-center gap-2">
+            <div className="flex flex-1 items-center gap-2">
+              <div className="flex-1 rounded-xl border border-hairline bg-paper p-3 text-center shadow-sm">
+                <div className="text-base font-bold uppercase tracking-wider text-ink md:text-lg">
+                  CRA Input
+                </div>
+              </div>
+              <ArrowRight className="hidden h-5 w-5 shrink-0 text-teal md:block" />
+            </div>
+            <div className="flex flex-1 items-center gap-2">
+              <div className="flex-1 rounded-xl border border-hairline bg-paper p-3 text-center shadow-sm">
+                <div className="text-base font-bold uppercase tracking-wider text-ink md:text-lg">
+                  Physician Review
+                </div>
+              </div>
+              <ArrowRight className="hidden h-5 w-5 shrink-0 text-teal md:block" />
+            </div>
+            <div className="flex flex-1 flex-col gap-2">
+              <div className="flex flex-1 items-center gap-2">
                 <div className="flex-1 rounded-xl border border-hairline bg-paper p-3 text-center shadow-sm">
                   <div className="text-base font-bold uppercase tracking-wider text-ink md:text-lg">
-                    {step.title}
+                    PD Classification
                   </div>
-                  <p className="mt-1 text-sm leading-tight text-ink/80 md:text-base">
-                    {step.body}
-                  </p>
                 </div>
-                {idx < arr.length - 1 && (
-                  <ArrowRight className="hidden h-5 w-5 shrink-0 text-teal md:block" />
-                )}
+                <div className="text-sm font-bold text-ink/60">+</div>
+                <div className="flex-1 rounded-xl border border-hairline bg-paper p-3 text-center shadow-sm">
+                  <div className="text-base font-bold uppercase tracking-wider text-ink md:text-lg">
+                    IPD Determination
+                  </div>
+                </div>
               </div>
-            ))}
+              <div className="text-center text-xs font-semibold uppercase tracking-wider text-ink/60">
+                Parallel classification
+              </div>
+            </div>
+            <div className="flex flex-1 items-center gap-2">
+              <ArrowRight className="hidden h-5 w-5 shrink-0 text-teal md:block" />
+              <div className="flex-1 rounded-xl border border-hairline bg-paper p-3 text-center shadow-sm">
+                <div className="text-base font-bold uppercase tracking-wider text-ink md:text-lg">
+                  Trend Analysis
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* AI-assisted PD analysis workflow */}
+        <div className="mt-4 rounded-2xl border border-hairline bg-card p-4 md:p-5">
+          <div className="mb-3 flex items-center gap-3">
+            <span className="h-px w-8 bg-teal" />
+            <span className="eyebrow text-base">AI-assisted PD Analysis Workflow</span>
+          </div>
+          <div className="flex flex-col items-stretch gap-3 md:flex-row">
+            <div className="flex flex-1 items-center gap-2">
+              <div className="flex-1 rounded-xl border border-hairline bg-paper p-3 text-center shadow-sm">
+                <div className="text-base font-bold uppercase tracking-wider text-ink md:text-lg">
+                  CRA Input
+                </div>
+              </div>
+              <ArrowRight className="hidden h-5 w-5 shrink-0 text-teal md:block" />
+            </div>
+            <div className="flex-[2] rounded-xl border border-hairline bg-paper p-3 text-center shadow-sm">
+              <div className="text-base font-bold uppercase tracking-wider text-ink md:text-lg">
+                AI Agent
+              </div>
+              <div className="mt-2 flex flex-wrap items-center justify-center gap-2">
+                <span className="rounded-full bg-teal/10 px-3 py-1 text-sm font-semibold uppercase tracking-wider text-teal">
+                  PD Category
+                </span>
+                <span className="rounded-full bg-teal/10 px-3 py-1 text-sm font-semibold uppercase tracking-wider text-teal">
+                  IPD Determination
+                </span>
+                <span className="rounded-full bg-teal/10 px-3 py-1 text-sm font-semibold uppercase tracking-wider text-teal">
+                  Trend Analysis
+                </span>
+              </div>
+            </div>
+            <div className="flex flex-1 items-center gap-2">
+              <ArrowRight className="hidden h-5 w-5 shrink-0 text-teal md:block" />
+              <div className="flex-1 rounded-xl border border-hairline bg-paper p-3 text-center shadow-sm">
+                <div className="text-base font-bold uppercase tracking-wider text-ink md:text-lg">
+                  Physician Review
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -144,7 +206,20 @@ export function CaseStudySection() {
             ))}
           </div>
         </div>
+
+        {/* Bottom highlight */}
+        <div className="mt-4 rounded-2xl border-2 border-dashed border-teal bg-card p-4 text-center md:p-5">
+          <div className="text-lg font-black uppercase tracking-wider text-ink md:text-2xl">
+            Human review-based feedback and manual AI tool tuning
+            <span className="mx-2 text-teal">·</span>
+            <span className="text-teal">87%</span>
+            <span className="ml-2 text-sm font-semibold normal-case tracking-normal text-ink/70 md:text-base">
+              of total time spent
+            </span>
+          </div>
+        </div>
       </div>
     </section>
   );
 }
+
