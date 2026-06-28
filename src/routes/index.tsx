@@ -7,7 +7,9 @@ import { ScalingSection } from "@/components/ScalingSection";
 import { PlaceholderSection } from "@/components/PlaceholderSection";
 import { ProgressSection } from "@/components/ProgressSection";
 import { NewProjectsSection } from "@/components/NewProjectsSection";
+import { CaseStudySection } from "@/components/CaseStudySection";
 import { SlideDeck, Slide } from "@/components/SlideDeck";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
