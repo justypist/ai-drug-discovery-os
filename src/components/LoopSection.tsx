@@ -139,19 +139,19 @@ function LoopDiagram() {
           />
           <text
             x="380"
-            y="240"
+            y="238"
             textAnchor="middle"
             className="font-serif"
-            fontSize="22"
+            fontSize="28"
             fill="oklch(0.22 0.04 250)"
           >
             Task
           </text>
           <text
             x="380"
-            y="262"
+            y="268"
             textAnchor="middle"
-            fontSize="10"
+            fontSize="12"
             letterSpacing="2"
             fill="oklch(0.45 0.03 250)"
           >
