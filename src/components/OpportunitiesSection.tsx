@@ -121,6 +121,13 @@ const groups: Group[] = [
   },
 ];
 
+const order: Record<Ownership, number> = {
+  "China": 0,
+  "China & HQ": 1,
+  "HQ": 2,
+  "Unexplored": 3,
+};
+
 const chipClass: Record<Ownership, string> = {
   "China": "bg-emerald-500/15 border-emerald-600/50 text-emerald-900 dark:text-emerald-200",
   "China & HQ": "bg-sky-500/15 border-sky-600/50 text-sky-900 dark:text-sky-200",
@@ -228,17 +235,23 @@ export function OpportunitiesSection() {
                 key={`col-${g.name}-${p.name}`}
                 className={`flex flex-col gap-1.5 overflow-y-auto rounded-md border border-hairline p-1.5 ${groupBg[g.name]}`}
               >
-                {p.apps.map((app) => {
-                  const own = ownership[app] ?? "Unexplored";
-                  return (
-                    <div
-                      key={app}
-                      className={`rounded-md border px-2 py-1.5 text-[12px] font-semibold leading-tight md:text-[13px] ${chipClass[own]}`}
-                    >
-                      {app}
-                    </div>
-                  );
-                })}
+                {[...p.apps]
+                  .sort(
+                    (a, b) =>
+                      order[ownership[a] ?? "Unexplored"] -
+                      order[ownership[b] ?? "Unexplored"]
+                  )
+                  .map((app) => {
+                    const own = ownership[app] ?? "Unexplored";
+                    return (
+                      <div
+                        key={app}
+                        className={`rounded-md border px-2 py-1.5 text-[12px] font-semibold leading-tight md:text-[13px] ${chipClass[own]}`}
+                      >
+                        {app}
+                      </div>
+                    );
+                  })}
               </div>
             ))
           )}
