@@ -19,11 +19,11 @@ export function Timeline() {
           <span className="eyebrow text-base">Program Timeline · 2026</span>
         </div>
         <div className="relative overflow-x-auto pb-2">
-          <div className="relative flex min-w-[1000px] items-start">
+          <div className="relative flex min-w-[900px] items-start">
             {milestones.map((m, i) => (
               <Fragment key={i}>
                 {i > 0 && (
-                  <div className="flex min-w-[40px] flex-1 items-start pt-[38px]">
+                  <div className="flex min-w-[24px] flex-1 items-start pt-[40px]">
                     <div
                       className={`h-0 w-full ${
                         i >= 4
@@ -33,7 +33,7 @@ export function Timeline() {
                     />
                   </div>
                 )}
-                <div className="flex min-w-[140px] flex-1 shrink-0 flex-col items-center text-center">
+                <div className="flex min-w-[120px] max-w-[150px] flex-1 shrink-0 flex-col items-center text-center">
                   <div className="font-mono text-lg uppercase tracking-wider text-ink">
                     {m.date}
                   </div>
@@ -48,8 +48,8 @@ export function Timeline() {
                     )}
                   </div>
                   <div
-                    className={`mt-4 text-lg leading-snug ${
-                      m.highlight ? "font-semibold text-teal" : "text-ink-soft"
+                    className={`mt-4 max-w-[140px] text-base leading-snug ${
+                      m.highlight ? "font-semibold text-teal" : "text-ink"
                     }`}
                   >
                     {m.label}
