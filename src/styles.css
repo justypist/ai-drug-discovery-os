@@ -87,6 +87,7 @@
   --bg-frontier: oklch(0.91 0.02 270);
   --bg-ci: oklch(0.94 0.02 80);
   --bg-infra: oklch(0.90 0.01 250);
+  --bg-panel: oklch(0.94 0.01 240);
 }
 
 .dark {
