@@ -196,9 +196,9 @@ function OSDiagram() {
 
         <text
           x="400"
-          y="350"
+          y="354"
           textAnchor="middle"
-          fontSize="9"
+          fontSize="12"
           letterSpacing="3"
           fill="oklch(0.45 0.03 250)"
         >
