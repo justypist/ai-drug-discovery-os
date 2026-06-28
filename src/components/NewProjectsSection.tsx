@@ -46,13 +46,13 @@ const columns: {
 function ExistingItem({ item }: { item: Item }) {
   return (
     <div>
-      <div className="text-sm font-medium leading-tight text-ink/50 line-through decoration-ink/30">
+      <div className="text-base font-medium leading-tight text-ink">
         {item.name}
       </div>
       {item.sub && (
         <div className="ml-3 border-l border-ink/15 pl-2">
           {item.sub.map((s) => (
-            <div key={s} className="text-xs text-ink/40 line-through decoration-ink/30">
+            <div key={s} className="text-sm text-ink/80">
               {s}
             </div>
           ))}
@@ -64,14 +64,19 @@ function ExistingItem({ item }: { item: Item }) {
 
 function CandidateItem({ item }: { item: Item }) {
   return (
-    <div className="rounded-md border border-teal/50 bg-paper/80 px-2.5 py-1.5 shadow-sm">
-      <div className="flex items-center gap-2">
-        <span className="inline-block h-2 w-2 rounded-full bg-teal" />
-        <span className="text-base font-semibold leading-tight text-ink">{item.name}</span>
-        <span className="ml-auto rounded-full bg-teal/15 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-teal">
-          New
-        </span>
+    <div>
+      <div className="text-base font-medium leading-tight text-ink/40">
+        {item.name}
       </div>
+      {item.sub && (
+        <div className="ml-3 border-l border-ink/10 pl-2">
+          {item.sub.map((s) => (
+            <div key={s} className="text-sm text-ink/30">
+              {s}
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 }
