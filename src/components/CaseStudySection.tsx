@@ -25,14 +25,12 @@ export function CaseStudySection() {
   return (
     <section id="case-study" className="border-t border-hairline bg-paper py-3 md:py-4">
       <div className="mx-auto w-full max-w-7xl px-2 md:px-3">
-        {/* Title eyebrow */}
+        {/* Title */}
         <div className="mb-2">
-          <div className="mb-1 flex items-center gap-3">
-            <span className="h-px w-12 bg-teal/60" />
-            <span className="text-lg font-semibold uppercase tracking-[0.18em] text-teal md:text-xl">
-              Case Study <span className="mx-1 text-ink/40">·</span> AI-Assisted Protocol Deviation
-            </span>
-          </div>
+          <h2 className="text-5xl font-black leading-[1.05] text-ink md:text-6xl lg:text-7xl">
+            Case Study <span className="text-ink/40">·</span>{" "}
+            <span className="text-teal">AI-Assisted Protocol Deviation</span>
+          </h2>
         </div>
 
         {/* Timeline */}
