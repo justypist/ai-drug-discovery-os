@@ -112,11 +112,11 @@ function Arrows({ count }: { count: number }) {
 export function ProgressSection() {
   let firstShown = false;
   return (
-    <section id="progress" className="border-t border-hairline bg-paper pt-2 pb-6">
+    <section id="progress" className="border-t border-hairline bg-paper pt-6 pb-6">
       <div className="mx-auto w-full max-w-7xl px-4 md:px-6">
-        <div className="mb-3 flex items-center gap-3">
+        <div className="mb-4 flex items-center gap-3">
           <span className="h-px w-12 bg-teal/60" />
-          <span className="eyebrow text-base">Current Project Progress</span>
+          <span className="eyebrow text-base">Current Project Progress · Five Streams</span>
         </div>
 
         {/* Tier 3: Applications */}
