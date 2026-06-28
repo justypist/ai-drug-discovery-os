@@ -96,13 +96,13 @@ function ProjectItem({ project, showLabels }: { project: Project; showLabels?: b
 function Arrows({ count }: { count: number }) {
   return (
     <div
-      className="grid items-center justify-items-center py-1"
+      className="grid items-center justify-items-center py-0.5"
       style={{ gridTemplateColumns: `repeat(${count}, minmax(0, 1fr))` }}
     >
       {Array.from({ length: count }).map((_, i) => (
-        <svg key={i} width="22" height="26" viewBox="0 0 22 26" className="text-ink/60">
-          <line x1="11" y1="26" x2="11" y2="8" stroke="currentColor" strokeWidth="2.5" />
-          <polygon points="11,0 4,10 18,10" fill="currentColor" />
+        <svg key={i} width="18" height="16" viewBox="0 0 18 16" className="text-ink/60">
+          <line x1="9" y1="16" x2="9" y2="5" stroke="currentColor" strokeWidth="2.5" />
+          <polygon points="9,0 2,8 16,8" fill="currentColor" />
         </svg>
       ))}
     </div>
