@@ -91,7 +91,6 @@ function CandidateItem({ name }: { name: string }) {
 
 
 export function NewProjectsSection() {
-  let firstShown = false;
   return (
     <section id="new-projects" className="border-t border-hairline bg-paper pt-6 pb-6">
       <div className="mx-auto w-full max-w-7xl px-4 md:px-6">
