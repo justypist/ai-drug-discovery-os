@@ -39,6 +39,13 @@
   --color-teal-soft: var(--teal-soft);
   --color-paper: var(--paper);
   --color-hairline: var(--hairline);
+  --color-bg-search: var(--bg-search);
+  --color-bg-clinical: var(--bg-clinical);
+  --color-bg-frontier: var(--bg-frontier);
+  --color-bg-ci: var(--bg-ci);
+  --color-bg-infra: var(--bg-infra);
+  --color-success: var(--success);
+  --color-success-dim: var(--success-dim);
   --font-serif: "Instrument Serif", "Times New Roman", serif;
   --font-sans: "Work Sans", system-ui, sans-serif;
 }
@@ -71,6 +78,14 @@
   --border: var(--hairline);
   --input: var(--hairline);
   --ring: var(--teal);
+
+  --success: oklch(0.65 0.15 140);
+  --success-dim: oklch(0.55 0.15 140);
+  --bg-search: oklch(0.92 0.02 210);
+  --bg-clinical: oklch(0.93 0.02 150);
+  --bg-frontier: oklch(0.91 0.02 270);
+  --bg-ci: oklch(0.94 0.02 80);
+  --bg-infra: oklch(0.90 0.01 250);
 }
 
 .dark {
@@ -99,6 +114,14 @@
   --border: oklch(0.32 0.03 250);
   --input: oklch(0.32 0.03 250);
   --ring: var(--teal);
+
+  --success: oklch(0.72 0.15 140);
+  --success-dim: oklch(0.62 0.15 140);
+  --bg-search: oklch(0.32 0.03 210);
+  --bg-clinical: oklch(0.32 0.03 150);
+  --bg-frontier: oklch(0.32 0.03 270);
+  --bg-ci: oklch(0.34 0.03 80);
+  --bg-infra: oklch(0.30 0.03 250);
 }
 
 html {
