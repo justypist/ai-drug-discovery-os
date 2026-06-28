@@ -9,7 +9,7 @@ const potentialStreams = [
     id: "clinical",
     title: "Clinical Development",
     color: "bg-bg-clinical",
-    items: ["Medical Monitoring", "Protocol Review", "CTO / Operation Platform"],
+    items: ["Medical Monitoring", "Protocol Review", "GCTO Operation Platform"],
   },
   {
     id: "frontier",
