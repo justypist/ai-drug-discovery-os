@@ -232,15 +232,15 @@ function LoopDiagram() {
         {/* Bottom arrow: reward */}
         <g className="text-ink-soft">
           <path
-            d="M 315 265 Q 247 325 180 265"
+            d="M 290 265 Q 235 325 180 265"
             fill="none"
             stroke="currentColor"
             strokeWidth="2"
             markerEnd="url(#arrow-loop)"
           />
           <text
-            x="247"
-            y="310"
+            x="235"
+            y="255"
             textAnchor="middle"
             fontSize="14"
             className="fill-ink"
@@ -248,8 +248,8 @@ function LoopDiagram() {
             Reward / Feedback
           </text>
           <text
-            x="247"
-            y="328"
+            x="235"
+            y="275"
             textAnchor="middle"
             fontSize="11"
             letterSpacing="2"
