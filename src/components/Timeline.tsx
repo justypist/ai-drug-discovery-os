@@ -48,7 +48,7 @@ export function Timeline() {
                     )}
                   </div>
                   <div
-                    className={`mt-3 max-w-[120px] break-words text-sm leading-snug md:mt-4 md:max-w-[160px] md:text-base ${
+                    className={`mt-3 w-full break-words text-sm leading-snug md:mt-4 md:text-base ${
                       m.highlight ? "font-semibold text-teal" : "text-ink"
                     }`}
                   >
