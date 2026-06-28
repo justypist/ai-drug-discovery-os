@@ -23,7 +23,6 @@ const xItems = [
   "Disease Deep Dive",
 ];
 
-
 // AI Agentic Capability scaling (bottom → top)
 const yItems = [
   "Prompt Engineering",
@@ -76,9 +75,14 @@ function tileState(r: number, c: number, step: number) {
     return { filled: false, delay: 0 };
   }
 
-  // Step 3: fill remaining tiles to complete the matrix
+  // Step 3: fill rightmost 3 columns first, then the rest from bottom-left to top-right
+  const isRightmost = c >= STEP1_END;
+  if (isRightmost) {
+    return { filled: true, delay: (ROWS - 1 - r) * 0.08 };
+  }
+
   if (r < height) return { filled: true, delay: 0 };
-  return { filled: true, delay: 0.025 * (r + c) };
+  return { filled: true, delay: 0.025 * (r + c) + 0.5 };
 }
 
 function colRevealed(c: number, step: number) {
@@ -91,7 +95,6 @@ function rowRevealed(r: number, step: number) {
   if (step >= 2) return true; // leftmost column reaches the top in step 2
   return false;
 }
-
 
 // Lighter at bottom, darker at top
 function tileOpacity(r: number) {
@@ -107,7 +110,8 @@ export function ScalingSection() {
       <div className="mx-auto w-full max-w-7xl px-2 md:px-4">
         <SectionHeader
           eyebrow="Two-way Scaling"
-          title="Tile the matrix toward Drug R&D Super Intelligence."
+          title="Drug R&D AI OS"
+          lede="Scaling Through Applications × Agentic Capabilities"
         />
 
         <div className="mt-4 flex items-center justify-between gap-4">
@@ -129,6 +133,12 @@ export function ScalingSection() {
             </button>
           </div>
         </div>
+
+        <ul className="mt-4 list-disc space-y-1 pl-6 text-base text-ink md:text-lg">
+          <li>Expand the Application Layer by building specialized tools and scaling trusted data assets</li>
+          <li>Upgrade Agentic Intelligence by embedding advanced reasoning and planning capabilities</li>
+          <li>Accelerate Organizational AI Maturity by developing talent while shipping solutions faster</li>
+        </ul>
 
         <div
           onClick={next}
@@ -186,8 +196,6 @@ export function ScalingSection() {
                       )}
                     </div>
                   ))}
-
-
                 </div>
 
                 {/* X-axis label */}
