@@ -1,3 +1,6 @@
+import { useState } from "react";
+import { Play, RotateCcw } from "lucide-react";
+
 type Project = {
   name: string;
   sub?: { name: string; value?: number; feasibility?: boolean }[];
