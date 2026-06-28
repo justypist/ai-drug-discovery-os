@@ -48,12 +48,12 @@ export function OSSection() {
 
           <div className="mt-10 grid gap-px overflow-hidden rounded-lg border border-hairline bg-hairline md:grid-cols-4">
             {agents.map((a) => (
-              <div key={a.name} className="bg-card p-5">
-                <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-md border border-teal/40 font-mono text-xs text-teal">
+              <div key={a.name} className="bg-card p-6">
+                <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-md border border-teal/40 font-mono text-sm text-teal">
                   {a.icon}
                 </div>
-                <div className="text-sm font-medium text-ink">{a.name}</div>
-                <div className="mt-1 text-sm text-ink-soft">{a.role}</div>
+                <div className="text-base font-semibold text-ink">{a.name}</div>
+                <div className="mt-1 text-base text-ink">{a.role}</div>
               </div>
             ))}
           </div>
