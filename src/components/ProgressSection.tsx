@@ -14,7 +14,7 @@ const streams: {
   {
     id: "search",
     title: "Search & Evaluation",
-    color: "bg-bg-search",
+    color: "bg-bg-panel",
     projects: [
       { name: "Target Research", value: 80 },
       { name: "ADMET Prediction", value: 70 },
@@ -25,7 +25,7 @@ const streams: {
   {
     id: "clinical",
     title: "Clinical Development",
-    color: "bg-bg-clinical",
+    color: "bg-bg-panel",
     projects: [
       {
         name: "Clinical Study QC & QA",
@@ -38,7 +38,7 @@ const streams: {
   {
     id: "frontier",
     title: "Frontier Technology",
-    color: "bg-bg-frontier",
+    color: "bg-bg-panel",
     projects: [
       { name: "Virtual Cell", value: 20 },
       { name: "Digital Pathology", feasibility: true },
