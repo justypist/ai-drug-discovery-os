@@ -30,7 +30,7 @@ const streams = [
 ];
 
 const ciItems = [
-  "Scientific Finding Checking",
+  "Scientific Finding Tracking",
   "Disease Deep Dive",
   "Clinical Data Benchmarking",
   "Competitive Intelligence Monitoring",
