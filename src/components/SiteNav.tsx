@@ -38,23 +38,13 @@ export function SiteNav() {
   }, []);
 
   useEffect(() => {
-    const sections = links
-      .map((l) => document.getElementById(l.id))
-      .filter((el): el is HTMLElement => !!el);
-    if (sections.length === 0) return;
-
-    const onScroll = () => {
-      const probe = window.innerHeight * 0.3;
-      let current = sections[0].id;
-      for (const s of sections) {
-        const top = s.getBoundingClientRect().top;
-        if (top - probe <= 0) current = s.id;
-      }
-      setActive(current);
+    const onSlideChange = (e: Event) => {
+      const id = (e as CustomEvent<string>).detail;
+      if (id) setActive(id);
     };
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    window.addEventListener("slidechange", onSlideChange as EventListener);
+    return () =>
+      window.removeEventListener("slidechange", onSlideChange as EventListener);
   }, []);
 
   const toggleTheme = () => {
