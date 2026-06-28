@@ -1,9 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteNav } from "@/components/SiteNav";
+import { Timeline } from "@/components/Timeline";
 import { Hero } from "@/components/Hero";
 import { LoopSection } from "@/components/LoopSection";
 import { OSSection } from "@/components/OSSection";
 import { ScalingSection } from "@/components/ScalingSection";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -30,7 +32,9 @@ function Index() {
     <div className="min-h-screen bg-paper text-ink">
       <SiteNav />
       <main>
+        <Timeline />
         <Hero />
+
         <LoopSection />
         <OSSection />
         <ScalingSection />
