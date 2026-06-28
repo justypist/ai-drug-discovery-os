@@ -58,7 +58,7 @@ export function OSSection() {
             ))}
           </div>
 
-          <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2 rounded-md border border-dashed border-teal/40 bg-paper px-5 py-3 text-xs uppercase tracking-[0.2em] text-ink-soft">
+          <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2 rounded-md border border-dashed border-teal/40 bg-paper px-5 py-4 text-sm uppercase tracking-[0.2em] text-ink">
             <span className="text-teal">Kernel</span>
             <span>Shared memory</span>
             <span>·</span>
