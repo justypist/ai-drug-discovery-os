@@ -1,10 +1,10 @@
+type Project = { name: string; sub?: string[] };
 
-
-type Project = { name: string; progress?: number; sub?: string[] };
-
-const applications: { title: string; projects: Project[] }[] = [
+const streams = [
   {
+    id: "search",
     title: "Search & Evaluation",
+    color: "bg-bg-search",
     projects: [
       { name: "Target Research" },
       { name: "Animal Model Translatability Evaluation" },
@@ -13,14 +13,18 @@ const applications: { title: string; projects: Project[] }[] = [
     ],
   },
   {
+    id: "clinical",
     title: "Clinical Development",
+    color: "bg-bg-clinical",
     projects: [
       { name: "Clinical Study QC & QA", sub: ["Protocol Deviation Analysis"] },
       { name: "Project Risk & Issue Identification & Management" },
     ],
   },
   {
+    id: "frontier",
     title: "Frontier Technology",
+    color: "bg-bg-frontier",
     projects: [{ name: "Virtual Cell" }, { name: "Digital Pathology" }],
   },
 ];
@@ -34,18 +38,18 @@ const ciItems = [
 
 function ProgressBar({ value = 50, showLabels = false }: { value?: number; showLabels?: boolean }) {
   return (
-    <div className="mt-1.5">
-      <div className="relative h-4 w-full rounded-full bg-hairline/60 overflow-hidden">
+    <div className="mt-1">
+      <div className="relative h-4 w-full overflow-hidden rounded-full bg-paper/70">
         <div
           className="h-full rounded-full"
           style={{
             width: `${value}%`,
             backgroundImage:
-              "repeating-linear-gradient(45deg, #16a34a 0 6px, #15803d 6px 12px)",
+              "repeating-linear-gradient(45deg, var(--success) 0 6px, var(--success-dim) 6px 12px)",
           }}
         />
       </div>
-      {/* Markers BELOW the bar pointing UP */}
+      {/* Markers below the bar pointing up */}
       <div className="relative h-3">
         <div className="absolute top-0 -translate-x-1/2" style={{ left: "80%" }}>
           <div className="h-0 w-0 border-x-[7px] border-b-[10px] border-x-transparent border-b-ink" />
@@ -55,7 +59,7 @@ function ProgressBar({ value = 50, showLabels = false }: { value?: number; showL
         </div>
       </div>
       {showLabels && (
-        <div className="relative h-9 text-[12px] font-semibold uppercase tracking-wider text-ink/80">
+        <div className="relative h-9 text-sm font-semibold uppercase tracking-wider text-ink/80">
           <div className="absolute -translate-x-1/2 text-center leading-tight" style={{ left: "80%" }}>
             <div>Pilot</div>
             <div className="font-normal text-ink/60">September</div>
@@ -70,16 +74,16 @@ function ProgressBar({ value = 50, showLabels = false }: { value?: number; showL
   );
 }
 
-function ProjectCard({ project, showLabels }: { project: Project; showLabels?: boolean }) {
+function ProjectItem({ project, showLabels }: { project: Project; showLabels?: boolean }) {
   return (
-    <div className="rounded-lg border border-hairline bg-card/50 px-3 py-2">
-      <div className="text-[15px] font-semibold text-ink leading-tight">{project.name}</div>
+    <div className="py-1">
+      <div className="text-base font-semibold leading-tight text-ink">{project.name}</div>
       <ProgressBar value={50} showLabels={showLabels} />
       {project.sub && (
-        <div className="mt-2 space-y-1.5 border-l-2 border-teal/40 pl-3">
+        <div className="mt-2 space-y-2 border-l-2 border-ink/20 pl-4">
           {project.sub.map((s) => (
             <div key={s}>
-              <div className="text-[13px] font-medium text-ink/80">{s}</div>
+              <div className="text-sm font-medium text-ink/90">{s}</div>
               <ProgressBar value={50} />
             </div>
           ))}
@@ -96,7 +100,7 @@ function Arrows({ count }: { count: number }) {
       style={{ gridTemplateColumns: `repeat(${count}, minmax(0, 1fr))` }}
     >
       {Array.from({ length: count }).map((_, i) => (
-        <svg key={i} width="22" height="26" viewBox="0 0 22 26" className="text-teal">
+        <svg key={i} width="22" height="26" viewBox="0 0 22 26" className="text-ink/60">
           <line x1="11" y1="26" x2="11" y2="8" stroke="currentColor" strokeWidth="2.5" />
           <polygon points="11,0 4,10 18,10" fill="currentColor" />
         </svg>
@@ -115,22 +119,21 @@ export function ProgressSection() {
           <span className="eyebrow text-base">Current Project Progress</span>
         </div>
 
-
         {/* Tier 3: Applications */}
         <div className="grid grid-cols-1 gap-3 md:grid-cols-3">
-          {applications.map((app) => (
+          {streams.map((stream) => (
             <div
-              key={app.title}
-              className="rounded-2xl border border-hairline bg-card/30 p-3"
+              key={stream.id}
+              className={`rounded-2xl border border-hairline p-3 shadow-sm ${stream.color}`}
             >
-              <div className="mb-2 text-center text-lg font-bold uppercase tracking-[0.15em] text-teal">
-                {app.title}
+              <div className="mb-2 text-center text-xl font-bold uppercase tracking-[0.12em] text-ink">
+                {stream.title}
               </div>
               <div className="space-y-2">
-                {app.projects.map((p) => {
+                {stream.projects.map((p) => {
                   const showLabels = !firstShown;
                   firstShown = true;
-                  return <ProjectCard key={p.name} project={p} showLabels={showLabels} />;
+                  return <ProjectItem key={p.name} project={p} showLabels={showLabels} />;
                 })}
               </div>
             </div>
@@ -140,16 +143,16 @@ export function ProgressSection() {
         {/* Arrows up from CI to applications */}
         <Arrows count={3} />
 
-        {/* Tier 2: CI & Scientific Finding Checking — flat */}
-        <div className="rounded-2xl border border-hairline bg-card/30 p-3">
-          <div className="mb-2 text-center text-lg font-bold uppercase tracking-[0.15em] text-teal">
+        {/* Tier 2: CI & Scientific Finding Checking — flat, warm tint */}
+        <div className="rounded-2xl border border-hairline bg-bg-ci p-3 shadow-sm">
+          <div className="mb-2 text-center text-xl font-bold uppercase tracking-[0.12em] text-ink">
             Competitive Intelligence & Scientific Finding Checking
           </div>
           <div className="grid grid-cols-1 gap-2 md:grid-cols-2">
             {ciItems.map((item) => (
               <div
                 key={item}
-                className="rounded-md border border-hairline bg-paper/70 px-3 py-1.5 text-[15px] font-semibold text-ink"
+                className="text-base font-semibold text-ink"
               >
                 {item}
               </div>
@@ -160,9 +163,9 @@ export function ProgressSection() {
         {/* Arrows up from infra to CI */}
         <Arrows count={3} />
 
-        {/* Tier 1: IT Infrastructure — flat */}
-        <div className="rounded-2xl border border-hairline bg-card/30 px-3 py-2.5 text-center">
-          <div className="text-lg font-bold uppercase tracking-[0.15em] text-teal">
+        {/* Tier 1: IT Infrastructure — flat, cool tint */}
+        <div className="rounded-2xl border border-hairline bg-bg-infra px-3 py-2.5 text-center shadow-sm">
+          <div className="text-xl font-bold uppercase tracking-[0.12em] text-ink">
             IT Infrastructure Excellence Enablement
           </div>
         </div>
