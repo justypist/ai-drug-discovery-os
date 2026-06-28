@@ -43,8 +43,7 @@ const STEPS = [
 
 const COLS = 20;
 const ROWS = yItems.length; // 6
-const HALF_C = Math.ceil(COLS / 2); // 10
-const HALF_R = Math.ceil(ROWS / 2); // 3
+const STEP1_END = COLS - 3; // 17 — fill right to the 4th-from-last column
 
 // X-axis labels: first N are the real applications, last 3 are ellipses
 const xLabels: string[] = Array.from({ length: COLS }, (_, i) => {
@@ -53,32 +52,46 @@ const xLabels: string[] = Array.from({ length: COLS }, (_, i) => {
   return "";
 });
 
+// Gradient height when going up: leftmost 2 columns reach the top,
+// then next 2 reach the second-to-last row, gradually decreasing.
+function upHeight(c: number) {
+  if (c >= STEP1_END) return 1; // only bottom row filled from step 1
+  return Math.max(1, ROWS - Math.floor(c / 2));
+}
+
 function tileState(r: number, c: number, step: number) {
-  if (step >= 3) {
-    const fromStep1 = r === 0 && c < HALF_C;
-    const fromStep2 = c === 0 && r < HALF_R;
-    if (fromStep1 || fromStep2) return { filled: true, delay: 0 };
-    return { filled: true, delay: 0.025 * (r + c) };
+  if (step === 0) return { filled: false, delay: 0 };
+
+  // Step 1: bottom row fills right to STEP1_END
+  if (step === 1) {
+    if (r === 0 && c < STEP1_END) return { filled: true, delay: c * 0.12 };
+    return { filled: false, delay: 0 };
   }
-  if (step >= 2 && c === 0 && r < HALF_R) {
-    return { filled: true, delay: r * 0.35 };
+
+  const height = upHeight(c);
+
+  // Step 2: gradient upward — column by column, bottom to top
+  if (step === 2) {
+    if (r < height) return { filled: true, delay: c * 0.18 + r * 0.12 };
+    return { filled: false, delay: 0 };
   }
-  if (step >= 1 && r === 0 && c < HALF_C) {
-    return { filled: true, delay: c * 0.18 };
-  }
-  return { filled: false, delay: 0 };
+
+  // Step 3: fill remaining tiles to complete the matrix
+  if (r < height) return { filled: true, delay: 0 };
+  return { filled: true, delay: 0.025 * (r + c) };
 }
 
 function colRevealed(c: number, step: number) {
   if (step >= 3) return true;
-  if (step >= 1 && c < HALF_C) return true;
+  if (step >= 1) return c < STEP1_END;
   return false;
 }
 function rowRevealed(r: number, step: number) {
   if (step >= 3) return true;
-  if (step >= 2 && r < HALF_R) return true;
+  if (step >= 2) return true; // leftmost column reaches the top in step 2
   return false;
 }
+
 
 // Lighter at bottom, darker at top
 function tileOpacity(r: number) {
