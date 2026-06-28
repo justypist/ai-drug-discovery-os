@@ -56,7 +56,7 @@ const ciItems: { name: string; value: number }[] = [
   { name: "Competitive Intelligence Monitoring", value: 50 },
 ];
 
-function ProgressBar({ value = 50, showLabels = false }: { value?: number; showLabels?: boolean }) {
+function ProgressBar({ value = 50, showLabels = false, animate = false }: { value?: number; showLabels?: boolean; animate?: boolean }) {
   return (
     <div className="mt-1 w-[65%]">
       {/* Markers above the bar, pointing down */}
@@ -72,9 +72,9 @@ function ProgressBar({ value = 50, showLabels = false }: { value?: number; showL
       {/* Progress track */}
       <div className="relative h-3 w-full overflow-hidden rounded-full bg-progress-track">
         <div
-          className="h-full rounded-full"
+          className="h-full rounded-full transition-[width] duration-1000 ease-out"
           style={{
-            width: `${value}%`,
+            width: animate ? `${value}%` : "0%",
             backgroundImage:
               "repeating-linear-gradient(45deg, var(--success) 0 5px, var(--success-dim) 5px 10px)",
           }}
