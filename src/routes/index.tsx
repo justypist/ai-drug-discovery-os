@@ -39,8 +39,8 @@ function Index() {
         <OSSection />
         <ScalingSection />
       </main>
-      <footer className="border-t border-hairline py-10 text-center text-xs uppercase tracking-[0.3em] text-ink-soft">
-        Drug R&amp;D Super Intelligence · A visual thesis
+      <footer className="border-t border-hairline py-12 text-center text-base uppercase tracking-[0.3em] text-ink">
+        AI TF Update · A visual thesis
       </footer>
     </div>
   );
