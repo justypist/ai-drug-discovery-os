@@ -50,14 +50,14 @@ function ProgressBar({ value = 50, showLabels = false }: { value?: number; showL
         />
       </div>
       {/* Markers below the bar pointing up */}
-      <div className="relative h-3">
-        <div className="absolute top-0 -translate-x-1/2" style={{ left: "80%" }}>
-          <div className="h-0 w-0 border-x-[7px] border-b-[10px] border-x-transparent border-b-ink" />
+        <div className="relative h-3">
+          <div className="absolute top-0 -translate-x-1/2" style={{ left: "80%" }}>
+            <div className="h-0 w-0 border-x-[7px] border-b-[10px] border-x-transparent border-b-teal" />
+          </div>
+          <div className="absolute top-0 -translate-x-1/2" style={{ left: "100%" }}>
+            <div className="h-0 w-0 border-x-[7px] border-b-[10px] border-x-transparent border-b-ink" />
+          </div>
         </div>
-        <div className="absolute top-0 -translate-x-1/2" style={{ left: "100%" }}>
-          <div className="h-0 w-0 border-x-[7px] border-b-[10px] border-x-transparent border-b-ink" />
-        </div>
-      </div>
       {showLabels && (
         <div className="relative mt-1 h-12 text-sm font-semibold uppercase tracking-wider text-ink/80">
           <div className="absolute text-center leading-tight" style={{ left: "80%", transform: "translateX(-50%)" }}>
