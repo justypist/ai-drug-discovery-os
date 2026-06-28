@@ -1,14 +1,13 @@
 import { motion } from "framer-motion";
-import { SectionHeader } from "./SectionHeader";
 
 const appClusters = [
   {
     id: "search",
     label: "Search & Evaluation",
-    x: 60,
-    y: 60,
-    width: 280,
-    height: 180,
+    x: 80,
+    y: 30,
+    width: 250,
+    height: 140,
     items: [
       "Target Research",
       "ADMET Prediction",
@@ -20,10 +19,10 @@ const appClusters = [
   {
     id: "clinical",
     label: "Clinical Development",
-    x: 660,
-    y: 60,
-    width: 280,
-    height: 240,
+    x: 680,
+    y: 30,
+    width: 250,
+    height: 180,
     items: [
       "Clinical Study QC & QA",
       "Protocol Deviation Analysis",
@@ -37,19 +36,19 @@ const appClusters = [
   {
     id: "frontier",
     label: "Frontier Technology",
-    x: 60,
-    y: 380,
-    width: 280,
-    height: 160,
+    x: 80,
+    y: 310,
+    width: 250,
+    height: 120,
     items: ["Virtual Cell", "Digital Pathology", "Genomics Platform", "PBPK Prediction"],
   },
   {
     id: "ci",
     label: "Competitive Intelligence & Scientific Finding Tracking",
-    x: 660,
-    y: 380,
-    width: 280,
-    height: 180,
+    x: 680,
+    y: 310,
+    width: 250,
+    height: 140,
     items: [
       "Scientific Finding Tracking",
       "PV Literature Search",
@@ -64,14 +63,23 @@ export function OSSection() {
   return (
     <section
       id="os"
-      className="border-t border-hairline bg-card py-6 md:py-8"
+      className="border-t border-hairline bg-card py-4 md:py-5"
     >
       <div className="mx-auto w-full max-w-7xl px-4 md:px-6">
-        <SectionHeader
-          eyebrow="Multi-Agent Platform"
-          title="Multi-agent Platform for Drug R&D AI OS"
-          lede="No single agent solves a drug program. The R&D AI OS routes tasks, shares context, and orchestrates specialized agents — turning fragmented tools into one coherent workflow."
-        />
+        <div className="mb-4 max-w-5xl">
+          <div className="mb-2 flex items-center gap-3">
+            <span className="h-px w-12 bg-teal/60" />
+            <span className="text-base font-semibold uppercase tracking-[0.18em] text-teal md:text-lg">
+              Multi-Agent Platform
+            </span>
+          </div>
+          <h2 className="font-sans text-2xl font-black leading-[1.05] text-ink md:text-3xl lg:text-4xl">
+            Multi-agent Platform for Drug R&D AI OS
+          </h2>
+          <p className="mt-2 max-w-3xl text-lg leading-relaxed text-ink md:text-xl">
+            No single agent solves a drug program. The R&D AI OS routes tasks, shares context, and orchestrates specialized agents — turning fragmented tools into one coherent workflow.
+          </p>
+        </div>
 
         <motion.div
           initial={{ opacity: 0, y: 24 }}
@@ -88,8 +96,8 @@ export function OSSection() {
 
 function OSDiagram() {
   return (
-    <div className="relative w-full overflow-hidden rounded-lg border border-hairline bg-paper p-4">
-      <svg viewBox="0 0 1000 620" className="h-auto w-full">
+    <div className="relative w-full max-h-[62vh] overflow-hidden rounded-lg border border-hairline bg-paper p-2">
+      <svg viewBox="0 0 1000 480" className="h-auto w-full">
         <defs>
           <marker
             id="arrow-os"
@@ -108,7 +116,7 @@ function OSDiagram() {
         <g>
           <rect
             x="420"
-            y="270"
+            y="210"
             width="160"
             height="80"
             rx="6"
@@ -116,7 +124,7 @@ function OSDiagram() {
           />
           <text
             x="500"
-            y="308"
+            y="248"
             textAnchor="middle"
             className="font-serif fill-paper"
             fontSize="26"
@@ -125,7 +133,7 @@ function OSDiagram() {
           </text>
           <text
             x="500"
-            y="335"
+            y="275"
             textAnchor="middle"
             fontSize="12"
             letterSpacing="3"
@@ -141,7 +149,7 @@ function OSDiagram() {
           const cy = c.y + c.height / 2;
           const isLeft = cx < 500;
           const targetX = isLeft ? 420 : 580;
-          const targetY = 310;
+          const targetY = 250;
           return (
             <g key={c.id}>
               <line
@@ -167,14 +175,14 @@ function OSDiagram() {
                 width={c.width}
                 height={c.height}
               >
-                <div className="flex h-full flex-col p-3">
-                  <div className="mb-2 text-sm font-bold uppercase tracking-wider text-teal md:text-base">
+                <div className="flex h-full flex-col p-2.5">
+                  <div className="mb-1 text-xs font-bold uppercase tracking-wider leading-tight text-teal md:text-sm">
                     {c.label}
                   </div>
-                  <ul className="flex-1 space-y-1 overflow-hidden text-sm leading-tight text-ink md:text-base">
+                  <ul className="flex-1 space-y-0.5 overflow-hidden text-xs leading-tight text-ink md:text-sm">
                     {c.items.map((item) => (
                       <li key={item} className="flex items-start gap-2">
-                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-ink/40" />
+                        <span className="mt-1 h-1 w-1 shrink-0 rounded-full bg-ink/40" />
                         <span>{item}</span>
                       </li>
                     ))}
@@ -187,7 +195,7 @@ function OSDiagram() {
 
         <text
           x="500"
-          y="590"
+          y="462"
           textAnchor="middle"
           fontSize="12"
           letterSpacing="3"
