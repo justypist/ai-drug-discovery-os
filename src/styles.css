@@ -44,6 +44,7 @@
   --color-bg-frontier: var(--bg-frontier);
   --color-bg-ci: var(--bg-ci);
   --color-bg-infra: var(--bg-infra);
+  --color-bg-panel: var(--bg-panel);
   --color-success: var(--success);
   --color-success-dim: var(--success-dim);
   --font-serif: "Instrument Serif", "Times New Roman", serif;
@@ -86,6 +87,7 @@
   --bg-frontier: oklch(0.91 0.02 270);
   --bg-ci: oklch(0.94 0.02 80);
   --bg-infra: oklch(0.90 0.01 250);
+  --bg-panel: oklch(0.94 0.01 240);
 }
 
 .dark {
@@ -122,6 +124,7 @@
   --bg-frontier: oklch(0.32 0.03 270);
   --bg-ci: oklch(0.34 0.03 80);
   --bg-infra: oklch(0.30 0.03 250);
+  --bg-panel: oklch(0.28 0.03 250);
 }
 
 html {

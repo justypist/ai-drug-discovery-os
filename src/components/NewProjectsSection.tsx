@@ -17,7 +17,7 @@ const streams: {
   {
     id: "search",
     title: "Search & Evaluation",
-    color: "bg-bg-search",
+    color: "bg-bg-panel",
     projects: [
       { name: "Target Research", value: 80 },
       { name: "ADMET Prediction", value: 70 },
@@ -29,7 +29,7 @@ const streams: {
   {
     id: "clinical",
     title: "Clinical Development",
-    color: "bg-bg-clinical",
+    color: "bg-bg-panel",
     projects: [
       {
         name: "Clinical Study QC & QA",
@@ -48,7 +48,7 @@ const streams: {
   {
     id: "frontier",
     title: "Frontier Technology",
-    color: "bg-bg-frontier",
+    color: "bg-bg-panel",
     projects: [
       { name: "Virtual Cell", value: 20 },
       { name: "Digital Pathology", feasibility: true },
@@ -205,11 +205,11 @@ export function NewProjectsSection() {
         <Arrows count={3} />
 
         {/* Tier 2: CI & Scientific Finding Tracking */}
-        <div className="rounded-2xl border border-hairline bg-bg-ci p-3 shadow-sm">
+        <div className="rounded-2xl border border-hairline bg-bg-panel p-3 shadow-sm">
           <div className="mb-2 text-center text-xl font-bold uppercase tracking-[0.12em] text-ink">
             Competitive Intelligence & Scientific Finding Tracking
           </div>
-          <div className="grid grid-cols-1 gap-x-3 gap-y-1 md:grid-cols-3">
+          <div className="grid grid-cols-1 gap-x-3 gap-y-1 md:grid-cols-2">
             {ciItems.map((item) => (
               <div key={item.name} className="py-1">
                 <div className="text-base font-semibold leading-tight text-ink">{item.name}</div>
@@ -232,7 +232,7 @@ export function NewProjectsSection() {
         <Arrows count={3} />
 
         {/* Tier 1: IT Infrastructure */}
-        <div className="rounded-2xl border border-hairline bg-bg-infra px-3 py-2.5 text-center shadow-sm">
+        <div className="rounded-2xl border border-hairline bg-bg-panel px-3 py-2.5 text-center shadow-sm">
           <div className="text-xl font-bold uppercase tracking-[0.12em] text-ink">
             IT Infrastructure Excellence Enablement
           </div>
