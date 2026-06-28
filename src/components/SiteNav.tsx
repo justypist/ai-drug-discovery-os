@@ -38,23 +38,13 @@ export function SiteNav() {
   }, []);
 
   useEffect(() => {
-    const sections = links
-      .map((l) => document.getElementById(l.id))
-      .filter((el): el is HTMLElement => !!el);
-    if (sections.length === 0) return;
-
-    const onScroll = () => {
-      const probe = window.innerHeight * 0.3;
-      let current = sections[0].id;
-      for (const s of sections) {
-        const top = s.getBoundingClientRect().top;
-        if (top - probe <= 0) current = s.id;
-      }
-      setActive(current);
+    const onSlideChange = (e: Event) => {
+      const id = (e as CustomEvent<string>).detail;
+      if (id) setActive(id);
     };
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    window.addEventListener("slidechange", onSlideChange as EventListener);
+    return () =>
+      window.removeEventListener("slidechange", onSlideChange as EventListener);
   }, []);
 
   const toggleTheme = () => {
@@ -69,7 +59,7 @@ export function SiteNav() {
   };
 
   return (
-    <header className="sticky top-0 z-50 border-b border-hairline bg-paper/85 backdrop-blur">
+    <header className="fixed left-0 right-0 top-0 z-50 border-b border-hairline bg-paper/85 backdrop-blur">
       <nav className="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-4 py-3 md:px-6">
         <a href="#top" className="flex shrink-0 items-baseline gap-2">
           <span className="font-serif text-2xl text-ink md:text-3xl">AI TF Update</span>
