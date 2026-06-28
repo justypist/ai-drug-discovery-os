@@ -93,15 +93,6 @@ export function SiteNav() {
                     }`}
                   >
                     <Icon className="h-5 w-5" strokeWidth={2.25} />
-                    <span
-                      className={`absolute -bottom-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full font-mono text-[10px] font-bold ring-2 ring-paper ${
-                        isActive
-                          ? "bg-primary-foreground text-teal"
-                          : "bg-ink/80 text-paper"
-                      }`}
-                    >
-                      {idx + 1}
-                    </span>
                   </a>
                   <span
                     className="pointer-events-none absolute left-1/2 top-full z-50 mt-2 -translate-x-1/2 whitespace-nowrap rounded-md border border-hairline bg-ink px-2.5 py-1 text-xs font-semibold text-paper opacity-0 shadow-lg transition-opacity duration-150 group-hover:opacity-100"
