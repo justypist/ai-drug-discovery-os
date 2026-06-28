@@ -170,18 +170,18 @@ function LoopDiagram() {
           />
           <text
             x="250"
-            y="150"
+            y="148"
             textAnchor="middle"
-            fontSize="12"
+            fontSize="14"
             fill="oklch(0.22 0.04 250)"
           >
             Inference / Action
           </text>
           <text
             x="250"
-            y="168"
+            y="170"
             textAnchor="middle"
-            fontSize="9"
+            fontSize="11"
             letterSpacing="2"
             fill="oklch(0.45 0.03 250)"
           >
