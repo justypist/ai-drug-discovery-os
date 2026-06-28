@@ -157,17 +157,17 @@ export function OpportunitiesSection() {
         {/* Title + legend */}
         <div className="mb-3 flex items-end justify-between gap-4">
           <div>
-            <h2 className="font-sans text-2xl font-black leading-[1.05] text-ink md:text-3xl lg:text-4xl">
+            <h2 className="font-sans text-3xl font-black leading-[1.05] text-ink md:text-4xl lg:text-5xl">
               Opportunities Across R&amp;D Value Chain
             </h2>
             <p className="mt-1 text-base text-ink/70 md:text-lg">
               {"\n"}
             </p>
           </div>
-          <div className="flex flex-wrap items-center gap-3 text-sm">
+          <div className="flex flex-wrap items-center gap-3 text-base">
             {(Object.keys(chipClass) as Ownership[]).map((k) => (
               <div key={k} className="flex items-center gap-1.5">
-                <span className={`h-3 w-3 rounded-sm ${dotClass[k]}`} />
+                <span className={`h-4 w-4 rounded-sm ${dotClass[k]}`} />
                 <span className="font-medium text-ink">{k}</span>
               </div>
             ))}
@@ -186,7 +186,7 @@ export function OpportunitiesSection() {
           {groups.map((g) => (
             <div
               key={g.name}
-              className={`rounded-md border border-hairline px-3 py-1.5 text-center text-sm font-bold uppercase tracking-wider text-ink ${groupBg[g.name]}`}
+              className={`rounded-md border border-hairline px-3 py-1.5 text-center text-base font-bold uppercase tracking-wider text-ink ${groupBg[g.name]}`}
             >
               {g.name}
             </div>
@@ -202,12 +202,12 @@ export function OpportunitiesSection() {
             g.phases.map((p, i) => (
               <div
                 key={`${g.name}-${p.name}`}
-                className="relative flex items-center justify-center rounded-md bg-ink px-2 py-2 text-center text-[13px] font-bold leading-tight text-paper md:text-sm"
+                className="relative flex items-center justify-center rounded-md bg-ink px-2 py-2 text-center text-sm font-bold leading-tight text-paper md:text-base"
               >
                 {p.name}
                 {/* Arrow chevron between consecutive phases */}
                 <ChevronRight
-                  className="pointer-events-none absolute -right-3 top-1/2 z-10 h-5 w-5 -translate-y-1/2 text-ink"
+                  className="pointer-events-none absolute -right-3 top-1/2 z-10 h-6 w-6 -translate-y-1/2 text-ink"
                   strokeWidth={3}
                   aria-hidden
                   style={{
@@ -245,7 +245,7 @@ export function OpportunitiesSection() {
                     return (
                       <div
                         key={app}
-                        className={`rounded-md border px-2 py-1.5 text-[12px] font-semibold leading-tight md:text-[13px] ${chipClass[own]}`}
+                        className={`rounded-md border px-2 py-1.5 text-[13px] font-semibold leading-tight md:text-sm ${chipClass[own]}`}
                       >
                         {app}
                       </div>
@@ -254,6 +254,16 @@ export function OpportunitiesSection() {
               </div>
             ))
           )}
+        </div>
+
+        {/* Bottom questions */}
+        <div className="mt-3 flex flex-col items-center justify-center gap-3 rounded-xl border-2 border-ink bg-paper py-3 shadow-lg">
+          <p className="text-center text-lg font-black text-ink md:text-xl lg:text-2xl">
+            Where are the valuable AI applications in different functions or project process?
+          </p>
+          <p className="text-center text-lg font-black text-ink md:text-xl lg:text-2xl">
+            Where are the opportunities we believe we are more advanced so that we can talk broadly with HQ?
+          </p>
         </div>
       </div>
     </section>
