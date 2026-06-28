@@ -165,9 +165,9 @@ function OSDiagram() {
               />
               <text
                 x={s.x + 26}
-                y={s.y + 33}
+                y={s.y + 35}
                 textAnchor="middle"
-                fontSize="10"
+                fontSize="12"
                 fill="oklch(0.58 0.09 210)"
                 fontFamily="monospace"
               >
@@ -175,16 +175,16 @@ function OSDiagram() {
               </text>
               <text
                 x={s.x + 50}
-                y={s.y + 36}
-                fontSize="12"
+                y={s.y + 38}
+                fontSize="15"
                 fill="oklch(0.22 0.04 250)"
               >
                 {s.label}
               </text>
               <text
                 x={s.x + 50}
-                y={s.y + 50}
-                fontSize="9"
+                y={s.y + 55}
+                fontSize="11"
                 letterSpacing="2"
                 fill="oklch(0.45 0.03 250)"
               >
