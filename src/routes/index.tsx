@@ -7,6 +7,7 @@ import { ScalingSection } from "@/components/ScalingSection";
 import { PlaceholderSection } from "@/components/PlaceholderSection";
 import { ProgressSection } from "@/components/ProgressSection";
 import { NewProjectsSection } from "@/components/NewProjectsSection";
+import { SlideDeck, Slide } from "@/components/SlideDeck";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -30,39 +31,44 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <div className="min-h-screen bg-paper text-ink">
+    <div className="h-screen overflow-hidden bg-paper text-ink">
       <SiteNav />
-      <main>
-        <section id="timeline">
+      <SlideDeck>
+        <Slide id="timeline">
           <Timeline />
-        </section>
-
-        <NewProjectsSection />
-
-        <ProgressSection />
-
-
-        <PlaceholderSection
-          id="case-study"
-          eyebrow="Case Study"
-          title="AI-assisted Protocol Deviation."
-          lede="A worked example of how an agentic workflow detects, classifies, and triages protocol deviations end-to-end."
-        />
-
-        <LoopSection />
-        <OSSection />
-        <ScalingSection />
-
-        <PlaceholderSection
-          id="opportunities"
-          eyebrow="Opportunities"
-          title="Opportunities across the R&D value chain."
-          lede="Where agentic systems can compound value next — from discovery through translational, clinical, regulatory, and commercial."
-        />
-      </main>
-      <footer className="border-t border-hairline py-12 text-center text-base uppercase tracking-[0.3em] text-ink">
-        AI TF Update · A visual thesis
-      </footer>
+        </Slide>
+        <Slide id="new-projects">
+          <NewProjectsSection />
+        </Slide>
+        <Slide id="progress">
+          <ProgressSection />
+        </Slide>
+        <Slide id="case-study">
+          <PlaceholderSection
+            id="case-study-inner"
+            eyebrow="Case Study"
+            title="AI-assisted Protocol Deviation."
+            lede="A worked example of how an agentic workflow detects, classifies, and triages protocol deviations end-to-end."
+          />
+        </Slide>
+        <Slide id="loop">
+          <LoopSection />
+        </Slide>
+        <Slide id="os">
+          <OSSection />
+        </Slide>
+        <Slide id="scaling">
+          <ScalingSection />
+        </Slide>
+        <Slide id="opportunities">
+          <PlaceholderSection
+            id="opportunities-inner"
+            eyebrow="Opportunities"
+            title="Opportunities across the R&D value chain."
+            lede="Where agentic systems can compound value next — from discovery through translational, clinical, regulatory, and commercial."
+          />
+        </Slide>
+      </SlideDeck>
     </div>
   );
 }
