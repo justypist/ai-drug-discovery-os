@@ -132,7 +132,6 @@ interface SlideProps {
 export function Slide({ id, children, className = "" }: SlideProps) {
   return (
     <section
-      id={id}
       data-slide
       data-slide-id={id}
       className={`flex h-screen w-full snap-start snap-always flex-col overflow-hidden ${className}`}
