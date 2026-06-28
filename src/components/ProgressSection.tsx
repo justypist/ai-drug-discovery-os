@@ -173,10 +173,12 @@ export function ProgressSection() {
             {ciItems.map((item) => (
               <div key={item.name} className="py-1">
                 <div className="flex items-start gap-2">
-                  <span className="mt-1.5 h-2 w-2 flex-shrink-0 rounded-full bg-ink" />
+                  <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-ink" />
                   <div className="text-lg font-semibold leading-none text-ink">{item.name}</div>
                 </div>
-                <ProgressBar value={item.value} />
+                <div className="ml-[14px]">
+                  <ProgressBar value={item.value} />
+                </div>
               </div>
             ))}
           </div>
