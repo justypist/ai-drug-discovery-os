@@ -42,11 +42,11 @@ function ProgressBar({ value = 50, showLabels = false }: { value?: number; showL
         />
         {/* Pilot marker @ 80% */}
         <div className="absolute -bottom-1 -translate-x-1/2" style={{ left: "80%" }}>
-          <div className="h-0 w-0 border-x-[6px] border-t-[8px] border-x-transparent border-t-navy" />
+          <div className="h-0 w-0 border-x-[6px] border-t-[8px] border-x-transparent border-t-ink" />
         </div>
         {/* Massive reuse marker @ 100% */}
         <div className="absolute -bottom-1 -translate-x-1/2" style={{ left: "100%" }}>
-          <div className="h-0 w-0 border-x-[6px] border-t-[8px] border-x-transparent border-t-navy" />
+          <div className="h-0 w-0 border-x-[6px] border-t-[8px] border-x-transparent border-t-ink" />
         </div>
       </div>
       {showLabels && (
