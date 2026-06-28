@@ -2,7 +2,7 @@ import { o as __toESM } from "../_runtime.mjs";
 import { n as require_jsx_runtime, r as require_react } from "../_libs/react+tanstack__react-query.mjs";
 import { a as Play, c as Lightbulb, d as CircleCheck, f as ChevronRight, g as Activity, h as ArrowRight, i as RefreshCw, l as FileSearch, m as Calendar, n as Scaling, o as Network, p as ChevronLeft, r as RotateCcw, s as Moon, t as Sun, u as Compass } from "../_libs/lucide-react.mjs";
 import { t as motion } from "../_libs/framer-motion.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/routes-zc_I7Cmh.js
+//#region node_modules/.nitro/vite/services/ssr/assets/routes-BSSUfZDp.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var links = [
@@ -1036,16 +1036,16 @@ function OpportunitiesSection() {
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "mb-3 flex items-end justify-between gap-4",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
-						className: "font-sans text-2xl font-black leading-[1.05] text-ink md:text-3xl lg:text-4xl",
+						className: "font-sans text-3xl font-black leading-[1.05] text-ink md:text-4xl lg:text-5xl",
 						children: "Opportunities Across R&D Value Chain"
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 						className: "mt-1 text-base text-ink/70 md:text-lg",
 						children: "\n"
 					})] }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						className: "flex flex-wrap items-center gap-3 text-sm",
+						className: "flex flex-wrap items-center gap-3 text-base",
 						children: Object.keys(chipClass).map((k) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 							className: "flex items-center gap-1.5",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: `h-3 w-3 rounded-sm ${dotClass[k]}` }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: `h-4 w-4 rounded-sm ${dotClass[k]}` }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 								className: "font-medium text-ink",
 								children: k
 							})]
@@ -1056,7 +1056,7 @@ function OpportunitiesSection() {
 					className: "mb-1 grid gap-1",
 					style: { gridTemplateColumns: groups.map((g) => `${g.phases.length}fr`).join(" ") },
 					children: groups.map((g) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						className: `rounded-md border border-hairline px-3 py-1.5 text-center text-sm font-bold uppercase tracking-wider text-ink ${groupBg[g.name]}`,
+						className: `rounded-md border border-hairline px-3 py-1.5 text-center text-base font-bold uppercase tracking-wider text-ink ${groupBg[g.name]}`,
 						children: g.name
 					}, g.name))
 				}),
@@ -1064,9 +1064,9 @@ function OpportunitiesSection() {
 					className: "grid items-stretch gap-1",
 					style: { gridTemplateColumns: `repeat(${totalPhases}, minmax(0,1fr))` },
 					children: groups.flatMap((g) => g.phases.map((p, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "relative flex items-center justify-center rounded-md bg-ink px-2 py-2 text-center text-[13px] font-bold leading-tight text-paper md:text-sm",
+						className: "relative flex items-center justify-center rounded-md bg-ink px-2 py-2 text-center text-sm font-bold leading-tight text-paper md:text-base",
 						children: [p.name, /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ChevronRight, {
-							className: "pointer-events-none absolute -right-3 top-1/2 z-10 h-5 w-5 -translate-y-1/2 text-ink",
+							className: "pointer-events-none absolute -right-3 top-1/2 z-10 h-6 w-6 -translate-y-1/2 text-ink",
 							strokeWidth: 3,
 							"aria-hidden": true,
 							style: { display: g.name === groups[groups.length - 1].name && i === g.phases.length - 1 ? "none" : void 0 }
@@ -1080,11 +1080,21 @@ function OpportunitiesSection() {
 						className: `flex flex-col gap-1.5 overflow-y-auto rounded-md border border-hairline p-1.5 ${groupBg[g.name]}`,
 						children: [...p.apps].sort((a, b) => order[ownership[a] ?? "Unexplored"] - order[ownership[b] ?? "Unexplored"]).map((app) => {
 							return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-								className: `rounded-md border px-2 py-1.5 text-[12px] font-semibold leading-tight md:text-[13px] ${chipClass[ownership[app] ?? "Unexplored"]}`,
+								className: `rounded-md border px-2 py-1.5 text-[13px] font-semibold leading-tight md:text-sm ${chipClass[ownership[app] ?? "Unexplored"]}`,
 								children: app
 							}, app);
 						})
 					}, `col-${g.name}-${p.name}`)))
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "mt-3 flex flex-col items-center justify-center gap-3 rounded-xl border-2 border-ink bg-paper py-3 shadow-lg",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+						className: "text-center text-lg font-black text-ink md:text-xl lg:text-2xl",
+						children: "Where are the valuable AI applications in different functions or project process?"
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+						className: "text-center text-lg font-black text-ink md:text-xl lg:text-2xl",
+						children: "Where are the opportunities we believe we are more advanced so that we can talk broadly with HQ?"
+					})]
 				})
 			]
 		})
