@@ -39,7 +39,7 @@ export function CaseStudySection() {
             <span className="eyebrow text-base">Case Study</span>
           </div>
           <h2
-            className="inline-block text-2xl font-black uppercase tracking-[0.15em] text-ink md:text-3xl lg:text-4xl"
+            className="inline-block font-sans text-2xl font-black uppercase tracking-[0.15em] text-ink md:text-3xl lg:text-4xl"
             style={{ transform: "scaleX(1.08)", transformOrigin: "left" }}
           >
             AI-ASSISTED PROTOCOL DEVIATION
