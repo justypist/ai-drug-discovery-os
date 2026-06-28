@@ -47,7 +47,7 @@ export function LoopSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
-          className="grid h-full gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:gap-12"
+          className="grid h-full gap-4 lg:grid-cols-[1.1fr_0.9fr] lg:gap-8"
         >
           <LoopDiagram />
 
