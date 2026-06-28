@@ -21,7 +21,7 @@ export function Timeline() {
       </div>
 
       {/* Timeline moved lower on the slide */}
-      <div className="mx-auto w-full px-2 pb-8 md:px-4 md:pb-12">
+      <div className="mx-auto w-full max-w-7xl px-4 pb-8 md:px-6 md:pb-12">
         <div className="w-full">
           <div className="flex w-full items-start gap-1 md:gap-2">
             {milestones.map((m, i) => (
@@ -37,7 +37,7 @@ export function Timeline() {
                     />
                   </div>
                 )}
-                <div className="flex min-w-0 flex-auto flex-col items-center text-center">
+                <div className="flex min-w-0 flex-1 flex-col items-center text-center">
                   <div className="font-mono text-sm uppercase tracking-wider text-ink md:text-base lg:text-lg">
                     {m.date}
                   </div>
@@ -52,7 +52,7 @@ export function Timeline() {
                     )}
                   </div>
                   <div
-                    className={`mt-3 w-full text-sm leading-tight md:mt-4 md:text-base ${
+                    className={`mt-3 w-full break-words text-sm leading-snug md:mt-4 md:text-base ${
                       m.highlight ? "font-semibold text-teal" : "text-ink"
                     }`}
                   >
