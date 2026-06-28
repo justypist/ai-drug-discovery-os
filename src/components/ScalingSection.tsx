@@ -374,59 +374,7 @@ export function ScalingSection() {
             </AnimatePresence>
           </svg>
         </div>
-
-        <div className="mt-4 grid gap-4 md:grid-cols-3">
-          <Legend
-            active={showX}
-            label="Action Space"
-            sub="Tools & Data"
-            items={xItems.slice(0, 4)}
-          />
-          <Legend
-            active={showY}
-            label="Agentic Capability"
-            sub="Reasoning & Planning"
-            items={yItems.slice(0, 4)}
-          />
-          <Legend
-            active={showZ}
-            label="Human + Org Uplift"
-            sub="People & Organization"
-            items={zItems}
-          />
-        </div>
       </div>
     </section>
-  );
-}
-
-function Legend({
-  active,
-  label,
-  sub,
-  items,
-}: {
-  active: boolean;
-  label: string;
-  sub: string;
-  items: string[];
-}) {
-  return (
-    <div
-      className={`rounded-lg border p-4 transition-opacity ${
-        active ? "border-teal bg-card opacity-100" : "border-hairline bg-card opacity-40"
-      }`}
-    >
-      <div className="eyebrow text-xs">{sub}</div>
-      <div className="mb-2 text-lg font-semibold text-ink">{label}</div>
-      <ul className="space-y-1 text-sm text-ink">
-        {items.map((t) => (
-          <li key={t} className="flex gap-2">
-            <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-teal" />
-            {t}
-          </li>
-        ))}
-      </ul>
-    </div>
   );
 }
