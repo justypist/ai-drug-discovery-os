@@ -39,6 +39,13 @@
   --color-teal-soft: var(--teal-soft);
   --color-paper: var(--paper);
   --color-hairline: var(--hairline);
+  --color-bg-search: var(--bg-search);
+  --color-bg-clinical: var(--bg-clinical);
+  --color-bg-frontier: var(--bg-frontier);
+  --color-bg-ci: var(--bg-ci);
+  --color-bg-infra: var(--bg-infra);
+  --color-success: var(--success);
+  --color-success-dim: var(--success-dim);
   --font-serif: "Instrument Serif", "Times New Roman", serif;
   --font-sans: "Work Sans", system-ui, sans-serif;
 }
