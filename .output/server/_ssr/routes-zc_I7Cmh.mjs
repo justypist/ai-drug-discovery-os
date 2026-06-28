@@ -2,7 +2,7 @@ import { o as __toESM } from "../_runtime.mjs";
 import { n as require_jsx_runtime, r as require_react } from "../_libs/react+tanstack__react-query.mjs";
 import { a as Play, c as Lightbulb, d as CircleCheck, f as ChevronRight, g as Activity, h as ArrowRight, i as RefreshCw, l as FileSearch, m as Calendar, n as Scaling, o as Network, p as ChevronLeft, r as RotateCcw, s as Moon, t as Sun, u as Compass } from "../_libs/lucide-react.mjs";
 import { t as motion } from "../_libs/framer-motion.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/routes-gHzSvP2-.js
+//#region node_modules/.nitro/vite/services/ssr/assets/routes-zc_I7Cmh.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var links = [
@@ -33,7 +33,7 @@ var links = [
 	},
 	{
 		id: "os",
-		label: "Multi-Agent OS",
+		label: "Multi-agent Platform",
 		Icon: Network
 	},
 	{
@@ -157,7 +157,7 @@ function Timeline() {
 		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 			className: "flex flex-1 flex-col items-center justify-center px-4",
 			children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h1", {
-				className: "text-center text-4xl font-black uppercase tracking-[0.08em] text-ink md:text-5xl lg:text-6xl",
+				className: "font-sans text-center text-4xl font-black uppercase tracking-[0.08em] text-ink md:text-5xl lg:text-6xl",
 				children: "AI Taskforce Update"
 			})
 		}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
@@ -206,7 +206,7 @@ function SectionHeader({ eyebrow, title, lede, className = "" }) {
 				})]
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
-				className: "text-2xl font-black leading-[1.05] text-ink md:text-3xl lg:text-4xl",
+				className: "font-sans text-2xl font-black leading-[1.05] text-ink md:text-3xl lg:text-4xl",
 				children: title
 			}),
 			lede && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
@@ -490,39 +490,81 @@ function LoopDiagram() {
 		})
 	});
 }
-var agents = [
-	{
-		name: "Competitive Intelligence",
-		role: "Pipeline mapping, deal flow, and rival readouts.",
-		icon: "CI"
-	},
-	{
-		name: "Target Research",
-		role: "Disease biology, target validation, and mechanism mining.",
-		icon: "TR"
-	},
-	{
-		name: "Clinical Data Benchmarking",
-		role: "Trial outcomes, endpoint comparisons, cohort analytics.",
-		icon: "CB"
-	},
-	{
-		name: "Medical Monitoring",
-		role: "Safety signals, adverse events, real-world evidence.",
-		icon: "MM"
-	}
+var appItems = [
+	"Target Research",
+	"ADMET Prediction",
+	"Molecule Diff. Analysis",
+	"Animal Model Eval.",
+	"Unmet Medical Needs",
+	"Clinical Study QC/QA",
+	"Protocol Deviation",
+	"Project Risk & Issue Mgmt",
+	"Medical Monitoring",
+	"Protocol Review",
+	"GCTO Operation Platform",
+	"Guidance QA",
+	"Virtual Cell",
+	"Digital Pathology",
+	"Genomics Platform",
+	"PBPK Prediction",
+	"Scientific Finding Tracking",
+	"PV Literature Search",
+	"Disease Deep Dive",
+	"Clinical Data Benchmark",
+	"Competitive Intelligence"
 ];
+var TOP_COUNT = 5;
+var LEFT_COUNT = 5;
+var RIGHT_COUNT = 6;
+var topItems = appItems.slice(0, TOP_COUNT);
+var bottomItems = appItems.slice(TOP_COUNT, 10);
+var leftItems = appItems.slice(10, 15);
+var rightItems = appItems.slice(15, 21);
+var OS = {
+	x: 400,
+	y: 210,
+	w: 200,
+	h: 60
+};
+var TOP_W = 180;
+var TOP_H = 45;
+var SIDE_W = 190;
+var SIDE_H = 45;
+var RIGHT_H = 40;
+var TOP_Y = 40;
+var BOTTOM_Y = 410;
+var LEFT_X = 10;
+var RIGHT_X = 800;
+var LEFT_START_Y = 95;
+var RIGHT_START_Y = 95;
+var TOP_TRUNK_Y = 130;
+var BOTTOM_TRUNK_Y = 350;
+var LEFT_TRUNK_X = 210;
+var RIGHT_TRUNK_X = 790;
+function distribute(count, start, itemSize, max) {
+	const gap = (max - start - itemSize * count) / (count - 1);
+	return Array.from({ length: count }, (_, i) => start + i * (itemSize + gap));
+}
+var topXs = distribute(TOP_COUNT, 20, TOP_W, 980);
+var bottomXs = topXs;
+var leftYs = distribute(LEFT_COUNT, LEFT_START_Y, SIDE_H, 395);
+var rightYs = distribute(RIGHT_COUNT, RIGHT_START_Y, RIGHT_H, 405);
 function OSSection() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
 		id: "os",
-		className: "border-t border-hairline bg-card py-12 md:py-16",
+		className: "border-t border-hairline bg-card py-4 md:py-5",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "mx-auto w-full max-w-7xl px-4 md:px-6",
-			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SectionHeader, {
-				eyebrow: "Multi-Agent AI OS",
-				title: "An operating system that composes specialist agents.",
-				lede: "No single agent solves a drug program. The R&D AI OS routes tasks, shares context, and orchestrates specialized agents — turning fragmented tools into one coherent workflow."
-			}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(motion.div, {
+			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "mb-4 max-w-5xl",
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+					className: "font-sans text-2xl font-black leading-[1.05] text-ink md:text-3xl lg:text-4xl",
+					children: "Multi-agent Platform for Drug R&D AI OS"
+				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+					className: "mt-2 max-w-3xl text-lg leading-relaxed text-ink md:text-xl",
+					children: "Complex problems are rarely solved by a single agent—they require coordinated multi-agent orchestration - turning fragmented into one coherent workflow."
+				})]
+			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(motion.div, {
 				initial: {
 					opacity: 0,
 					y: 24
@@ -536,54 +578,16 @@ function OSSection() {
 					margin: "-100px"
 				},
 				transition: { duration: .6 },
-				children: [
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(OSDiagram, {}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						className: "mt-10 grid gap-px overflow-hidden rounded-lg border border-hairline bg-hairline md:grid-cols-4",
-						children: agents.map((a) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							className: "bg-card p-6",
-							children: [
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-									className: "mb-3 flex h-10 w-10 items-center justify-center rounded-md border border-teal/40 font-mono text-sm text-teal",
-									children: a.icon
-								}),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-									className: "text-base font-semibold text-ink",
-									children: a.name
-								}),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-									className: "mt-1 text-base text-ink",
-									children: a.role
-								})
-							]
-						}, a.name))
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "mt-6 flex flex-wrap items-center gap-x-6 gap-y-2 rounded-md border border-dashed border-teal/40 bg-paper px-5 py-4 text-sm uppercase tracking-[0.2em] text-ink",
-						children: [
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-								className: "text-teal",
-								children: "Kernel"
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Shared memory" }),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "·" }),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Tool registry" }),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "·" }),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Task router" }),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "·" }),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Audit trail" })
-						]
-					})
-				]
+				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(OSDiagram, {})
 			})]
 		})
 	});
 }
 function OSDiagram() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-		className: "relative w-full overflow-hidden rounded-lg border border-hairline bg-paper p-6",
+		className: "relative w-full max-h-[62vh] overflow-hidden rounded-lg border border-hairline bg-paper p-2",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("svg", {
-			viewBox: "0 0 800 380",
+			viewBox: "0 0 1000 480",
 			className: "h-auto w-full",
 			children: [
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("defs", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("marker", {
@@ -591,134 +595,109 @@ function OSDiagram() {
 					viewBox: "0 0 10 10",
 					refX: "8",
 					refY: "5",
-					markerWidth: "6",
-					markerHeight: "6",
+					markerWidth: "5",
+					markerHeight: "5",
 					orient: "auto-start-reverse",
 					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", {
 						d: "M0,0 L10,5 L0,10 z",
 						fill: "currentColor"
 					})
 				}) }),
+				topItems.map((_, i) => {
+					const x = topXs[i] + TOP_W / 2;
+					return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("polyline", {
+						points: `${x},85 ${x},${TOP_TRUNK_Y} ${OS.x + OS.w / 2},${TOP_TRUNK_Y} ${OS.x + OS.w / 2},${OS.y}`,
+						fill: "none",
+						className: "stroke-teal/50 text-teal",
+						strokeWidth: "1.5",
+						markerEnd: "url(#arrow-os)"
+					}, `top-line-${i}`);
+				}),
+				bottomItems.map((_, i) => {
+					const x = bottomXs[i] + TOP_W / 2;
+					return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("polyline", {
+						points: `${x},${BOTTOM_Y} ${x},${BOTTOM_TRUNK_Y} ${OS.x + OS.w / 2},${BOTTOM_TRUNK_Y} ${OS.x + OS.w / 2},${OS.y + OS.h}`,
+						fill: "none",
+						className: "stroke-teal/50 text-teal",
+						strokeWidth: "1.5",
+						markerEnd: "url(#arrow-os)"
+					}, `bottom-line-${i}`);
+				}),
+				leftItems.map((_, i) => {
+					const x = 200;
+					const y = leftYs[i] + SIDE_H / 2;
+					return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("polyline", {
+						points: `${x},${y} ${LEFT_TRUNK_X},${y} ${LEFT_TRUNK_X},${OS.y + OS.h / 2} ${OS.x},${OS.y + OS.h / 2}`,
+						fill: "none",
+						className: "stroke-teal/50 text-teal",
+						strokeWidth: "1.5",
+						markerEnd: "url(#arrow-os)"
+					}, `left-line-${i}`);
+				}),
+				rightItems.map((_, i) => {
+					const x = RIGHT_X;
+					const y = rightYs[i] + RIGHT_H / 2;
+					return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("polyline", {
+						points: `${x},${y} ${RIGHT_TRUNK_X},${y} ${RIGHT_TRUNK_X},${OS.y + OS.h / 2} ${OS.x + OS.w},${OS.y + OS.h / 2}`,
+						fill: "none",
+						className: "stroke-teal/50 text-teal",
+						strokeWidth: "1.5",
+						markerEnd: "url(#arrow-os)"
+					}, `right-line-${i}`);
+				}),
+				topItems.map((name, i) => renderLabel(name, topXs[i], TOP_Y, TOP_W, TOP_H, "center")),
+				bottomItems.map((name, i) => renderLabel(name, bottomXs[i], BOTTOM_Y, TOP_W, TOP_H, "center")),
+				leftItems.map((name, i) => renderLabel(name, LEFT_X, leftYs[i], SIDE_W, SIDE_H, "right")),
+				rightItems.map((name, i) => renderLabel(name, RIGHT_X, rightYs[i], SIDE_W, RIGHT_H, "left")),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("g", { children: [
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("rect", {
-						x: "320",
-						y: "150",
-						width: "160",
-						height: "80",
-						rx: "6",
+						x: OS.x,
+						y: OS.y,
+						width: OS.w,
+						height: OS.h,
+						rx: "8",
 						className: "fill-ink"
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("text", {
-						x: "400",
-						y: "188",
+						x: OS.x + OS.w / 2,
+						y: OS.y + OS.h / 2 - 2,
 						textAnchor: "middle",
+						dominantBaseline: "middle",
 						className: "font-serif fill-paper",
-						fontSize: "26",
+						fontSize: "22",
 						children: "Drug R&D AI OS"
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("text", {
-						x: "400",
-						y: "215",
+						x: OS.x + OS.w / 2,
+						y: OS.y + OS.h - 10,
 						textAnchor: "middle",
-						fontSize: "12",
+						fontSize: "11",
 						letterSpacing: "3",
 						className: "fill-teal-soft",
 						children: "KERNEL"
 					})
-				] }),
-				[
-					{
-						x: 80,
-						y: 50,
-						label: "Competitive Intelligence",
-						tag: "CI"
-					},
-					{
-						x: 560,
-						y: 50,
-						label: "Target Research",
-						tag: "TR"
-					},
-					{
-						x: 80,
-						y: 270,
-						label: "Clinical Benchmarking",
-						tag: "CB"
-					},
-					{
-						x: 560,
-						y: 270,
-						label: "Medical Monitoring",
-						tag: "MM"
-					}
-				].map((s) => {
-					const cx = s.x + 80;
-					const cy = s.y + 30;
-					return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("g", { children: [
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("line", {
-							x1: cx < 400 ? s.x + 160 : s.x,
-							y1: cy,
-							x2: cx < 400 ? 320 : 480,
-							y2: 190,
-							className: "stroke-teal/50 text-teal",
-							strokeWidth: "1",
-							markerEnd: "url(#arrow-os)"
-						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("rect", {
-							x: s.x,
-							y: s.y,
-							width: "160",
-							height: "60",
-							rx: "6",
-							className: "fill-card stroke-hairline"
-						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("rect", {
-							x: s.x + 12,
-							y: s.y + 14,
-							width: "28",
-							height: "28",
-							rx: "4",
-							fill: "none",
-							className: "stroke-teal"
-						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("text", {
-							x: s.x + 26,
-							y: s.y + 35,
-							textAnchor: "middle",
-							fontSize: "12",
-							className: "fill-teal",
-							fontFamily: "monospace",
-							children: s.tag
-						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("text", {
-							x: s.x + 50,
-							y: s.y + 38,
-							fontSize: "15",
-							className: "fill-ink",
-							children: s.label
-						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("text", {
-							x: s.x + 50,
-							y: s.y + 55,
-							fontSize: "11",
-							letterSpacing: "2",
-							className: "fill-ink-soft",
-							children: "AGENT"
-						})
-					] }, s.tag);
-				}),
-				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("text", {
-					x: "400",
-					y: "354",
-					textAnchor: "middle",
-					fontSize: "12",
-					letterSpacing: "3",
-					className: "fill-ink-soft",
-					children: "SHARED MEMORY · TOOL REGISTRY · TASK ROUTER"
-				})
+				] })
 			]
 		})
 	});
+}
+function renderLabel(name, x, y, w, h, align) {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("foreignObject", {
+		x,
+		y,
+		width: w,
+		height: h,
+		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+			className: "flex h-full w-full items-center",
+			children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+				className: `w-full rounded-md border border-hairline bg-card px-2 py-1 shadow-sm ${align === "left" ? "text-left" : align === "right" ? "text-right" : "text-center"}`,
+				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+					className: "inline-block text-xs font-semibold leading-tight text-ink md:text-sm",
+					children: name
+				})
+			})
+		})
+	}, name);
 }
 var xItems = [
 	"Target Research",
@@ -834,8 +813,9 @@ function ScalingSection() {
 							e.stopPropagation();
 							next();
 						},
-						className: "rounded-full bg-ink px-5 py-1.5 text-sm font-semibold text-paper shadow-sm transition-transform hover:scale-105 active:scale-95 md:text-base",
-						children: "Next"
+						"aria-label": "Next step",
+						className: "inline-flex items-center justify-center rounded-full bg-ink p-3 text-paper shadow-sm transition-transform hover:scale-105 active:scale-95",
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Play, { className: "h-6 w-6" })
 					})
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
@@ -914,26 +894,199 @@ function RowFragment({ r, step, labelOn, label }) {
 		}, c);
 	})] });
 }
-function PlaceholderSection({ id, eyebrow, title, lede, note }) {
+var ownership = {
+	"External Environment Monitoring": "China",
+	"Disease Deep-dive": "China",
+	"Target Research & Novel Target Alerts": "China",
+	"Asset Benchmarking": "China",
+	"Animal Model Translatability Eval.": "China",
+	"Molecular Differentiation Analysis": "China",
+	"Project Risk & Issue Management": "China",
+	"Clinical Data Benchmarking": "China",
+	"ADMET Prediction": "China & HQ",
+	"Binding Affinity Prediction": "China & HQ",
+	"Competitive Intelligence Monitoring": "China & HQ",
+	"Scientific Finding Tracking": "China & HQ",
+	"Virtual Cell": "China & HQ",
+	"Site Selection": "China & HQ",
+	"Clinical Study QC/QA": "China & HQ",
+	"Protocol Deviation": "China & HQ",
+	"CSR Drafting": "China & HQ",
+	"Medical Monitoring": "China & HQ",
+	"Protocol Drafting": "HQ",
+	"ICF Drafting": "HQ",
+	"IB Updates": "HQ",
+	"Digital Pathology": "HQ",
+	"AI-assisted Drafting": "HQ",
+	"Unmet Medical Needs Identification": "Unexplored",
+	"Protocol Review": "Unexplored",
+	"IB Drafting": "Unexplored",
+	"Patient Recruitment": "Unexplored",
+	"Operation Management Platform": "Unexplored",
+	"AI for RWE": "Unexplored",
+	"AI-based Virtual Review": "Unexplored",
+	"AE/SAE Detection": "Unexplored",
+	"Audit Report": "Unexplored"
+};
+var groups = [
+	{
+		name: "Search & Evaluation",
+		phases: [
+			{
+				name: "Innovation Focus & Ideation",
+				apps: [
+					"External Environment Monitoring",
+					"Disease Deep-dive",
+					"Target Research & Novel Target Alerts",
+					"Competitive Intelligence Monitoring",
+					"Scientific Finding Tracking",
+					"Virtual Cell",
+					"Unmet Medical Needs Identification"
+				]
+			},
+			{
+				name: "Search & Evaluation",
+				apps: [
+					"Asset Benchmarking",
+					"Animal Model Translatability Eval.",
+					"Molecular Differentiation Analysis"
+				]
+			},
+			{
+				name: "Data Generation & Validation",
+				apps: ["ADMET Prediction", "Binding Affinity Prediction"]
+			}
+		]
+	},
+	{
+		name: "Clinical Development",
+		phases: [
+			{
+				name: "Study Planning",
+				apps: [
+					"Site Selection",
+					"Protocol Drafting",
+					"ICF Drafting",
+					"Protocol Review",
+					"IB Drafting"
+				]
+			},
+			{
+				name: "Execution",
+				apps: [
+					"Clinical Study QC/QA",
+					"Protocol Deviation",
+					"Project Risk & Issue Management",
+					"CSR Drafting",
+					"IB Updates",
+					"Medical Monitoring",
+					"Patient Recruitment",
+					"Operation Management Platform",
+					"AE/SAE Detection",
+					"Digital Pathology",
+					"Audit Report",
+					"AI for RWE"
+				]
+			},
+			{
+				name: "Analysis & Reporting",
+				apps: ["Clinical Data Benchmarking"]
+			}
+		]
+	},
+	{
+		name: "Regulatory Affairs",
+		phases: [{
+			name: "Regulatory Affairs",
+			apps: ["AI-assisted Drafting", "AI-based Virtual Review"]
+		}]
+	}
+];
+var order = {
+	"China": 0,
+	"China & HQ": 1,
+	"HQ": 2,
+	"Unexplored": 3
+};
+var chipClass = {
+	"China": "bg-emerald-500/15 border-emerald-600/50 text-emerald-900 dark:text-emerald-200",
+	"China & HQ": "bg-sky-500/15 border-sky-600/50 text-sky-900 dark:text-sky-200",
+	"HQ": "bg-amber-500/20 border-amber-600/50 text-amber-900 dark:text-amber-200",
+	"Unexplored": "bg-zinc-400/15 border-zinc-500/60 border-dashed text-ink/70"
+};
+var dotClass = {
+	"China": "bg-emerald-500",
+	"China & HQ": "bg-sky-500",
+	"HQ": "bg-amber-500",
+	"Unexplored": "bg-zinc-400"
+};
+var groupBg = {
+	"Search & Evaluation": "bg-bg-search/40",
+	"Clinical Development": "bg-bg-clinical/40",
+	"Regulatory Affairs": "bg-bg-frontier/40"
+};
+var totalPhases = groups.reduce((n, g) => n + g.phases.length, 0);
+function OpportunitiesSection() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
-		id,
-		className: "border-t border-hairline bg-paper py-12 md:py-16",
+		id: "opportunities",
+		className: "h-full bg-paper",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			className: "mx-auto w-full max-w-7xl px-4 md:px-6",
-			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SectionHeader, {
-				eyebrow,
-				title,
-				lede
-			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				className: "mt-8 flex min-h-[280px] items-center justify-center rounded-2xl border border-dashed border-hairline bg-card/40 p-12 text-center",
-				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					className: "font-mono text-sm uppercase tracking-[0.3em] text-teal",
-					children: "Placeholder"
-				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-					className: "mt-4 text-xl text-ink/70",
-					children: note ?? "Content for this section is coming soon."
-				})] })
-			})]
+			className: "mx-auto flex h-full w-full max-w-[1600px] flex-col px-4 py-4 md:px-6",
+			children: [
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "mb-3 flex items-end justify-between gap-4",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+						className: "font-sans text-2xl font-black leading-[1.05] text-ink md:text-3xl lg:text-4xl",
+						children: "Opportunities Across R&D Value Chain"
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+						className: "mt-1 text-base text-ink/70 md:text-lg",
+						children: "\n"
+					})] }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: "flex flex-wrap items-center gap-3 text-sm",
+						children: Object.keys(chipClass).map((k) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "flex items-center gap-1.5",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: `h-3 w-3 rounded-sm ${dotClass[k]}` }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+								className: "font-medium text-ink",
+								children: k
+							})]
+						}, k))
+					})]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					className: "mb-1 grid gap-1",
+					style: { gridTemplateColumns: groups.map((g) => `${g.phases.length}fr`).join(" ") },
+					children: groups.map((g) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: `rounded-md border border-hairline px-3 py-1.5 text-center text-sm font-bold uppercase tracking-wider text-ink ${groupBg[g.name]}`,
+						children: g.name
+					}, g.name))
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					className: "grid items-stretch gap-1",
+					style: { gridTemplateColumns: `repeat(${totalPhases}, minmax(0,1fr))` },
+					children: groups.flatMap((g) => g.phases.map((p, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "relative flex items-center justify-center rounded-md bg-ink px-2 py-2 text-center text-[13px] font-bold leading-tight text-paper md:text-sm",
+						children: [p.name, /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ChevronRight, {
+							className: "pointer-events-none absolute -right-3 top-1/2 z-10 h-5 w-5 -translate-y-1/2 text-ink",
+							strokeWidth: 3,
+							"aria-hidden": true,
+							style: { display: g.name === groups[groups.length - 1].name && i === g.phases.length - 1 ? "none" : void 0 }
+						})]
+					}, `${g.name}-${p.name}`)))
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					className: "mt-1 grid min-h-0 flex-1 gap-1",
+					style: { gridTemplateColumns: `repeat(${totalPhases}, minmax(0,1fr))` },
+					children: groups.flatMap((g) => g.phases.map((p) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: `flex flex-col gap-1.5 overflow-y-auto rounded-md border border-hairline p-1.5 ${groupBg[g.name]}`,
+						children: [...p.apps].sort((a, b) => order[ownership[a] ?? "Unexplored"] - order[ownership[b] ?? "Unexplored"]).map((app) => {
+							return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								className: `rounded-md border px-2 py-1.5 text-[12px] font-semibold leading-tight md:text-[13px] ${chipClass[ownership[app] ?? "Unexplored"]}`,
+								children: app
+							}, app);
+						})
+					}, `col-${g.name}-${p.name}`)))
+				})
+			]
 		})
 	});
 }
@@ -1149,12 +1302,13 @@ function ProgressSection() {
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "mb-8 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
-						className: "text-2xl font-black leading-[1.05] text-ink md:text-3xl lg:text-4xl",
+						className: "font-sans text-2xl font-black leading-[1.05] text-ink md:text-3xl lg:text-4xl",
 						children: "Current Project Progress"
-					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
 						onClick: handlePlay,
-						className: "inline-flex items-center gap-2 rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-paper shadow-sm transition-colors hover:bg-teal focus:outline-none focus:ring-2 focus:ring-teal focus:ring-offset-2",
-						children: [hasPlayed ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(RotateCcw, { className: "h-4 w-4" }) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Play, { className: "h-4 w-4" }), hasPlayed ? "Replay" : "Play Progress"]
+						"aria-label": hasPlayed ? "Replay progress" : "Play progress",
+						className: "inline-flex items-center justify-center rounded-full bg-ink p-3 text-paper shadow-sm transition-colors hover:bg-teal focus:outline-none focus:ring-2 focus:ring-teal focus:ring-offset-2",
+						children: hasPlayed ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(RotateCcw, { className: "h-6 w-6" }) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Play, { className: "h-6 w-6" })
 					})]
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
@@ -1336,7 +1490,7 @@ function NewProjectsSection() {
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 					className: "mb-8",
 					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
-						className: "text-2xl font-black leading-[1.05] text-ink md:text-3xl lg:text-4xl",
+						className: "font-sans text-2xl font-black leading-[1.05] text-ink md:text-3xl lg:text-4xl",
 						children: "Project Overview"
 					})
 				}),
@@ -1443,7 +1597,7 @@ function CaseStudySection() {
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 					className: "mb-6",
 					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
-						className: "text-2xl font-black leading-[1.05] text-ink md:text-3xl lg:text-4xl",
+						className: "font-sans text-2xl font-black leading-[1.05] text-ink md:text-3xl lg:text-4xl",
 						children: [
 							"Case Study ",
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
@@ -1845,12 +1999,7 @@ function Index() {
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Slide, {
 				id: "opportunities",
-				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(PlaceholderSection, {
-					id: "opportunities-inner",
-					eyebrow: "Opportunities",
-					title: "Opportunities across the R&D value chain.",
-					lede: "Where agentic systems can compound value next — from discovery through translational, clinical, regulatory, and commercial."
-				})
+				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(OpportunitiesSection, {})
 			})
 		] })]
 	});
