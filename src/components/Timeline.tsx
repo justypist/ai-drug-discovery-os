@@ -13,17 +13,17 @@ const milestones = [
 export function Timeline() {
   return (
     <section className="border-b border-hairline bg-paper/60">
-      <div className="mx-auto max-w-6xl px-6 py-10">
+      <div className="mx-auto w-full max-w-7xl px-4 py-8 md:px-6 md:py-10">
         <div className="mb-6 flex items-center gap-3">
           <span className="h-px w-8 bg-teal" />
           <span className="eyebrow text-base">Program Timeline · 2026</span>
         </div>
-        <div className="relative overflow-x-auto pb-2">
-          <div className="relative flex min-w-[900px] items-start">
+        <div className="w-full">
+          <div className="flex w-full items-start gap-1 md:gap-2">
             {milestones.map((m, i) => (
               <Fragment key={i}>
                 {i > 0 && (
-                  <div className="flex min-w-[24px] flex-1 items-start pt-[40px]">
+                  <div className="flex min-w-[8px] flex-1 items-start pt-[40px]">
                     <div
                       className={`h-0 w-full ${
                         i >= 4
@@ -33,11 +33,11 @@ export function Timeline() {
                     />
                   </div>
                 )}
-                <div className="flex min-w-[120px] max-w-[150px] flex-1 shrink-0 flex-col items-center text-center">
-                  <div className="font-mono text-lg uppercase tracking-wider text-ink">
+                <div className="flex min-w-0 flex-1 flex-col items-center text-center">
+                  <div className="font-mono text-sm uppercase tracking-wider text-ink md:text-base lg:text-lg">
                     {m.date}
                   </div>
-                  <div className="relative mt-3 flex h-4 items-center justify-center">
+                  <div className="relative mt-2 flex h-4 items-center justify-center md:mt-3">
                     {m.highlight ? (
                       <span className="relative flex h-4 w-4">
                         <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-teal opacity-75" />
@@ -48,7 +48,7 @@ export function Timeline() {
                     )}
                   </div>
                   <div
-                    className={`mt-4 max-w-[140px] text-base leading-snug ${
+                    className={`mt-3 max-w-[120px] break-words text-sm leading-snug md:mt-4 md:max-w-[160px] md:text-base ${
                       m.highlight ? "font-semibold text-teal" : "text-ink"
                     }`}
                   >
