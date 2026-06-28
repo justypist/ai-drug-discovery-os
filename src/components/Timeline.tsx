@@ -37,7 +37,7 @@ export function Timeline() {
                     />
                   </div>
                 )}
-                <div className="flex min-w-0 flex-1 flex-col items-center text-center">
+                <div className="flex min-w-[50px] flex-1 flex-col items-center text-center sm:min-w-[70px] md:min-w-[110px] lg:min-w-[120px]">
                   <div className="font-mono text-sm uppercase tracking-wider text-ink md:text-base lg:text-lg">
                     {m.date}
                   </div>
