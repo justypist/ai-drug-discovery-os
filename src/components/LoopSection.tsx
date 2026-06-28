@@ -5,14 +5,15 @@ export function LoopSection() {
   return (
     <section
       id="loop"
-      className="border-t border-hairline bg-paper py-12 md:py-16"
+      className="border-t border-hairline bg-paper py-6 md:py-8"
     >
       <div className="mx-auto w-full max-w-7xl px-4 md:px-6">
         <SectionHeader
+          className="mb-4"
           title="Loop Engineering for Self-Evolving Agents"
         />
 
-        <div className="mb-6 grid gap-4 sm:grid-cols-2 lg:mb-8">
+        <div className="mb-4 grid gap-3 sm:grid-cols-2">
           {[
             {
               title: "Learn",
@@ -33,7 +34,7 @@ export function LoopSection() {
           ].map((item) => (
             <div key={item.title} className="flex items-start gap-3">
               <span className="mt-2.5 h-2.5 w-2.5 shrink-0 rounded-full bg-teal" />
-              <div className="text-lg text-ink md:text-xl lg:text-2xl">
+              <div className="text-base text-ink md:text-lg lg:text-xl">
                 <span className="font-semibold text-ink">{item.title}</span>
                 <span className="text-ink-soft"> — {item.desc}</span>
               </div>
