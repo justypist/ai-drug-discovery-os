@@ -33,13 +33,6 @@ const yItems = [
   "Multi-Agent Framework",
 ];
 
-const STEPS = [
-  "Start: anchor the destination.",
-  "Step 1 · Scale the Action Space — tiles spread across applications.",
-  "Step 2 · Scale Agentic Capability — tiles climb the reasoning ladder.",
-  "Step 3 · Fill the matrix — converge on Drug R&D Super Intelligence.",
-];
-
 const COLS = 20;
 const ROWS = yItems.length; // 6
 const STEP1_END = COLS - 3; // 17 — fill right to the 4th-from-last column
