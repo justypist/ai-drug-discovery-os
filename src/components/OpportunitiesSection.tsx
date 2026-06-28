@@ -186,7 +186,7 @@ export function OpportunitiesSection() {
           {groups.map((g) => (
             <div
               key={g.name}
-              className={`rounded-md border border-hairline px-3 py-1.5 text-center text-sm font-bold uppercase tracking-wider text-ink ${groupBg[g.name]}`}
+              className={`rounded-md border border-hairline px-3 py-1.5 text-center text-base font-bold uppercase tracking-wider text-ink ${groupBg[g.name]}`}
             >
               {g.name}
             </div>
@@ -202,12 +202,12 @@ export function OpportunitiesSection() {
             g.phases.map((p, i) => (
               <div
                 key={`${g.name}-${p.name}`}
-                className="relative flex items-center justify-center rounded-md bg-ink px-2 py-2 text-center text-[13px] font-bold leading-tight text-paper md:text-sm"
+                className="relative flex items-center justify-center rounded-md bg-ink px-2 py-2 text-center text-sm font-bold leading-tight text-paper md:text-base"
               >
                 {p.name}
                 {/* Arrow chevron between consecutive phases */}
                 <ChevronRight
-                  className="pointer-events-none absolute -right-3 top-1/2 z-10 h-5 w-5 -translate-y-1/2 text-ink"
+                  className="pointer-events-none absolute -right-3 top-1/2 z-10 h-6 w-6 -translate-y-1/2 text-ink"
                   strokeWidth={3}
                   aria-hidden
                   style={{
