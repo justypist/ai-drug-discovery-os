@@ -95,12 +95,12 @@ function ProgressBar({ value = 50, showLabels = false }: { value?: number; showL
 
 function FeasibilityBadge() {
   return (
-    <div className="mt-1 inline-flex items-center gap-1.5 rounded-full bg-teal/10 px-2 py-0.5 text-sm font-semibold uppercase tracking-wider text-teal">
-      <svg width="14" height="14" viewBox="0 0 12 12" fill="none">
+    <div className="mt-1 inline-flex items-center gap-1 rounded-full bg-teal/10 px-2 py-0.5 text-xs font-semibold uppercase tracking-wider text-teal">
+      <svg width="10" height="10" viewBox="0 0 12 12" fill="none">
         <circle cx="6" cy="6" r="6" fill="currentColor" />
         <path d="M3.5 6.2L5.2 7.8L8.5 4.5" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
-      Feasibility Analysis
+      Feasibility
     </div>
   );
 }
@@ -109,14 +109,16 @@ function ProjectItem({ project, showLabels }: { project: Project; showLabels?: b
   return (
     <div className="py-1">
       <div className="flex items-start gap-2">
-        <span className="mt-1.5 h-2 w-2 flex-shrink-0 rounded-full bg-ink" />
+        <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-ink" />
         <div className="text-lg font-semibold leading-none text-ink">{project.name}</div>
       </div>
-      {project.feasibility ? (
-        <FeasibilityBadge />
-      ) : (
-        <ProgressBar value={project.value ?? 50} showLabels={showLabels} />
-      )}
+      <div className="ml-[14px]">
+        {project.feasibility ? (
+          <FeasibilityBadge />
+        ) : (
+          <ProgressBar value={project.value ?? 50} showLabels={showLabels} />
+        )}
+      </div>
       {project.sub && (
         <div className="mt-2 space-y-2 border-l-2 border-ink/20 pl-4">
           {project.sub.map((s) => (
@@ -171,10 +173,12 @@ export function ProgressSection() {
             {ciItems.map((item) => (
               <div key={item.name} className="py-1">
                 <div className="flex items-start gap-2">
-                  <span className="mt-1.5 h-2 w-2 flex-shrink-0 rounded-full bg-ink" />
+                  <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-ink" />
                   <div className="text-lg font-semibold leading-none text-ink">{item.name}</div>
                 </div>
-                <ProgressBar value={item.value} />
+                <div className="ml-[14px]">
+                  <ProgressBar value={item.value} />
+                </div>
               </div>
             ))}
           </div>

@@ -68,7 +68,7 @@ function NameOnlyItem({ name, gray, sub }: { name: string; gray?: boolean; sub?:
   return (
     <div className="py-1">
       <div className="flex items-start gap-2">
-        <span className={`mt-1.5 h-2 w-2 flex-shrink-0 rounded-full ${gray ? "bg-ink/60" : "bg-ink"}`} />
+        <span className={`mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full ${gray ? "bg-ink/60" : "bg-ink"}`} />
         <div className={`text-lg leading-none ${gray ? "font-medium text-ink/60" : "font-semibold text-ink"}`}>
           {name}
         </div>
@@ -88,7 +88,7 @@ function CandidateItem({ name }: { name: string }) {
   return (
     <div className="py-1">
       <div className="flex items-start gap-2">
-        <span className="mt-1.5 h-2 w-2 flex-shrink-0 rounded-full bg-ink/60" />
+        <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-ink/60" />
         <div className="text-lg font-medium leading-none text-ink/60">{name}</div>
       </div>
     </div>
