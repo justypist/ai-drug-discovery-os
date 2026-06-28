@@ -5,55 +5,58 @@ export function LoopSection() {
   return (
     <section
       id="loop"
-      className="border-t border-hairline bg-paper py-12 md:py-16"
+      className="border-t border-hairline bg-paper py-0"
     >
       <div className="mx-auto w-full max-w-7xl px-4 md:px-6">
         <SectionHeader
-          eyebrow="Self-Evolving Agent · Loop Engineering + RL"
-          title="An agent that gets better by living inside its task."
-          lede="The AI Agent uses inference to attempt a task. The task evaluates the outcome and returns a reward signal. That signal updates the agent — closing the loop. Loop Engineering + RL turns each attempt into training data."
+          className="mb-2"
+          title="Loop Engineering for Self-Evolving Agents"
         />
+
+        <div className="mb-2 grid gap-2 sm:grid-cols-2">
+          {[
+            {
+              title: "Learn",
+              desc: "Capture outcomes from every execution to build experiential knowledge",
+            },
+            {
+              title: "Reflect",
+              desc: "Enable agents to analyze their own decisions and identify improvement opportunities",
+            },
+            {
+              title: "Adapt",
+              desc: "Close the feedback loop so agents automatically refine strategies and expand capabilities",
+            },
+            {
+              title: "Scale",
+              desc: "Turn each iteration into a compounding intelligence upgrade across the organization",
+            },
+          ].map((item) => (
+            <div key={item.title} className="flex items-start gap-3">
+              <span className="mt-2.5 h-2.5 w-2.5 shrink-0 rounded-full bg-teal" />
+              <div className="text-base text-ink md:text-lg lg:text-xl">
+                <span className="font-semibold text-ink">{item.title}</span>
+                <span className="text-ink-soft"> — {item.desc}</span>
+              </div>
+            </div>
+          ))}
+        </div>
 
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
-          className="grid h-full gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:gap-12"
+          className="grid h-full gap-2 lg:grid-cols-[1.1fr_0.9fr] lg:gap-4"
         >
           <LoopDiagram />
 
-          <div className="flex h-full flex-col justify-between">
-            <div className="space-y-4">
-              {[
-                {
-                  k: "Inference → Action",
-                  v: "The agent reasons over the task, drafts a plan, and executes — producing a trajectory of decisions and tool calls.",
-                },
-                {
-                  k: "Outcome Evaluation",
-                  v: "The task scores the result against ground truth, expert rubrics, or downstream metrics — yielding a dense reward.",
-                },
-                {
-                  k: "Policy Update",
-                  v: "The signal flows back through RL fine-tuning, updating the agent so the next inference is measurably better.",
-                },
-              ].map((row) => (
-                <div
-                  key={row.k}
-                  className="border-l-2 border-teal/40 pl-5 transition-colors hover:border-teal"
-                >
-                  <div className="eyebrow text-base mb-2">{row.k}</div>
-                  <p className="text-base text-ink md:text-lg">{row.v}</p>
-                </div>
-              ))}
-            </div>
-
-            <div className="mt-4 rounded-lg border border-hairline bg-card p-4 md:p-5">
-              <div className="eyebrow text-sm mb-3 md:text-base">
+          <div className="flex h-full flex-col justify-center">
+            <div className="rounded-lg border border-hairline bg-card p-3 md:p-4">
+              <div className="eyebrow text-sm mb-2 md:text-base">
                 Enhancing Agentic Capability
               </div>
-              <div className="space-y-3">
+              <div className="space-y-2">
                 {[
                   {
                     title: "Prompt Engineering",
@@ -72,13 +75,13 @@ export function LoopSection() {
                     desc: "Close the execution-evaluation-update loop so every task outcome becomes a training signal for the agent.",
                   },
                 ].map((item) => (
-                  <div key={item.title} className="flex gap-3">
+                  <div key={item.title} className="flex gap-2">
                     <div className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-teal" />
                     <div>
-                      <div className="text-base font-semibold text-ink md:text-lg">
+                      <div className="text-sm font-semibold text-ink md:text-base">
                         {item.title}
                       </div>
-                      <p className="text-sm text-ink-soft md:text-base">
+                      <p className="text-xs text-ink-soft md:text-sm">
                         {item.desc}
                       </p>
                     </div>

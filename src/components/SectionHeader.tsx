@@ -2,11 +2,12 @@ type Props = {
   eyebrow?: string;
   title: string;
   lede?: string;
+  className?: string;
 };
 
-export function SectionHeader({ eyebrow, title, lede }: Props) {
+export function SectionHeader({ eyebrow, title, lede, className = "" }: Props) {
   return (
-    <div className="mb-10 max-w-5xl">
+    <div className={`mb-10 max-w-5xl ${className}`}>
       {eyebrow && (
         <div className="mb-3 flex items-center gap-3">
           <span className="h-px w-12 bg-teal/60" />
