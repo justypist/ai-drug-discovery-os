@@ -143,7 +143,7 @@ function LoopDiagram() {
             cx="120"
             cy="220"
             r="70"
-            className="fill-teal/15 stroke-teal"
+            className="fill-paper stroke-teal"
             strokeWidth="1.5"
           />
           <text
