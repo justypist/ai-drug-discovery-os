@@ -110,11 +110,11 @@ export function ProgressSection() {
   return (
     <section id="progress" className="border-t border-hairline bg-paper pt-2 pb-6">
       <div className="mx-auto w-full max-w-7xl px-4 md:px-6">
-        <SectionHeader
-          eyebrow="Current Project Progress"
-          title="Five streams, three tiers."
-          lede=""
-        />
+        <div className="mb-3 flex items-center gap-3">
+          <span className="h-px w-12 bg-teal/60" />
+          <span className="eyebrow text-base">Current Project Progress</span>
+        </div>
+
 
         {/* Tier 3: Applications */}
         <div className="grid grid-cols-1 gap-3 md:grid-cols-3">
