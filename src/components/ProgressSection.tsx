@@ -195,7 +195,7 @@ export function ProgressSection() {
         <Arrows count={3} />
 
         {/* Tier 1: IT Infrastructure — flat, cool tint */}
-        <div className="rounded-2xl border border-hairline bg-bg-infra px-3 py-2.5 text-center shadow-sm">
+        <div className="rounded-2xl border border-hairline bg-bg-panel px-3 py-2.5 text-center shadow-sm">
           <div className="text-xl font-bold uppercase tracking-[0.12em] text-ink">
             IT Infrastructure Excellence Enablement
           </div>
