@@ -4,7 +4,7 @@ import { Timeline } from "@/components/Timeline";
 import { LoopSection } from "@/components/LoopSection";
 import { OSSection } from "@/components/OSSection";
 import { ScalingSection } from "@/components/ScalingSection";
-import { PlaceholderSection } from "@/components/PlaceholderSection";
+import { OpportunitiesSection } from "@/components/OpportunitiesSection";
 import { ProgressSection } from "@/components/ProgressSection";
 import { NewProjectsSection } from "@/components/NewProjectsSection";
 import { CaseStudySection } from "@/components/CaseStudySection";
@@ -58,12 +58,7 @@ function Index() {
           <ScalingSection />
         </Slide>
         <Slide id="opportunities">
-          <PlaceholderSection
-            id="opportunities-inner"
-            eyebrow="Opportunities"
-            title="Opportunities across the R&D value chain."
-            lede="Where agentic systems can compound value next — from discovery through translational, clinical, regulatory, and commercial."
-          />
+          <OpportunitiesSection />
         </Slide>
       </SlideDeck>
     </div>
