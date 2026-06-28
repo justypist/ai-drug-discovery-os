@@ -240,7 +240,7 @@ function LoopDiagram() {
           />
           <text
             x="235"
-            y="245"
+            y="340"
             textAnchor="middle"
             fontSize="14"
             className="fill-ink"
@@ -249,7 +249,7 @@ function LoopDiagram() {
           </text>
           <text
             x="235"
-            y="262"
+            y="357"
             textAnchor="middle"
             fontSize="11"
             letterSpacing="2"
