@@ -29,7 +29,7 @@ export function CaseStudySection() {
         <div className="mb-3 max-w-4xl">
           <div className="mb-1 flex items-center gap-3">
             <span className="h-px w-12 bg-teal/60" />
-            <span className="eyebrow text-base">Case Study</span>
+            <span className="eyebrow text-base">Case Study <span className="mx-1 text-ink/40">·</span> AI-Assisted Protocol Deviation</span>
           </div>
           <h2
             className="inline-block font-sans text-2xl font-black uppercase tracking-[0.15em] text-ink md:text-3xl lg:text-4xl"
@@ -65,6 +65,16 @@ export function CaseStudySection() {
                 </div>
               </div>
             ))}
+          </div>
+          <div className="mt-3 rounded-xl border-2 border-dashed border-teal bg-paper p-2.5 text-center md:p-3">
+            <div className="text-sm font-black uppercase tracking-wider text-ink md:text-base">
+              Human review-based feedback and manual AI tool tuning
+              <span className="mx-2 text-teal">·</span>
+              <span className="text-teal">87%</span>
+              <span className="ml-2 text-xs font-semibold normal-case tracking-normal text-ink/70 md:text-sm">
+                of total time spent
+              </span>
+            </div>
           </div>
         </div>
 
@@ -208,17 +218,6 @@ export function CaseStudySection() {
           </div>
         </div>
 
-        {/* Bottom highlight */}
-        <div className="mt-3 rounded-2xl border-2 border-dashed border-teal bg-card p-3 text-center md:p-4">
-          <div className="text-base font-black uppercase tracking-wider text-ink md:text-xl">
-            Human review-based feedback and manual AI tool tuning
-            <span className="mx-2 text-teal">·</span>
-            <span className="text-teal">87%</span>
-            <span className="ml-2 text-xs font-semibold normal-case tracking-normal text-ink/70 md:text-sm">
-              of total time spent
-            </span>
-          </div>
-        </div>
       </div>
     </section>
   );
