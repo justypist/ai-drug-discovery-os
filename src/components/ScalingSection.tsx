@@ -174,6 +174,22 @@ export function ScalingSection() {
               </div>
             </div>
           </div>
+
+          {/* Minimal control row */}
+          <div className="mt-2 flex items-center justify-center gap-4">
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                next();
+              }}
+              className="rounded-full bg-ink px-6 py-1.5 text-sm font-semibold text-paper shadow-sm transition-transform hover:scale-105 active:scale-95 md:text-base"
+            >
+              Next
+            </button>
+            <span className="text-sm text-ink-soft md:text-base">
+              {step === 0 ? "Start" : `Step ${step} / 3`}
+            </span>
+          </div>
         </div>
       </div>
     </section>
