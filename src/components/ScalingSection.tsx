@@ -33,16 +33,12 @@ const yItems = [
   "Multi-Agent Framework",
 ];
 
-const COLS = 20;
+const COLS = xItems.length; // 17 application columns
 const ROWS = yItems.length; // 6
-const STEP1_END = COLS - 3; // 17 — fill right to the 4th-from-last column
+const STEP1_END = COLS - 3; // 14 — fill right to the 4th-from-last column
 
-// X-axis labels: first N are the real applications, last 3 are ellipses
-const xLabels: string[] = Array.from({ length: COLS }, (_, i) => {
-  if (i < xItems.length) return xItems[i];
-  if (i >= COLS - 3) return "…";
-  return "";
-});
+// X-axis labels: each application gets its own column
+const xLabels: string[] = [...xItems];
 
 // Gradient height when going up: leftmost 2 columns reach the top,
 // then next 2 reach the second-to-last row, gradually decreasing.
