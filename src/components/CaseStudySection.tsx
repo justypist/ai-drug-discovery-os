@@ -218,17 +218,6 @@ export function CaseStudySection() {
           </div>
         </div>
 
-        {/* Bottom highlight */}
-        <div className="mt-3 rounded-2xl border-2 border-dashed border-teal bg-card p-3 text-center md:p-4">
-          <div className="text-base font-black uppercase tracking-wider text-ink md:text-xl">
-            Human review-based feedback and manual AI tool tuning
-            <span className="mx-2 text-teal">·</span>
-            <span className="text-teal">87%</span>
-            <span className="ml-2 text-xs font-semibold normal-case tracking-normal text-ink/70 md:text-sm">
-              of total time spent
-            </span>
-          </div>
-        </div>
       </div>
     </section>
   );
