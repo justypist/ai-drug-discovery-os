@@ -55,12 +55,12 @@ export function SiteNav() {
           <button
             onClick={toggleTheme}
             aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
-            className="flex h-11 w-11 items-center justify-center rounded-full border border-hairline bg-card text-ink transition-colors hover:border-teal hover:text-teal"
+            className="flex h-12 w-12 items-center justify-center rounded-full border border-hairline bg-card text-ink shadow-sm transition-colors hover:border-teal hover:text-teal"
           >
             {theme === "dark" ? (
-              <Sun className="h-5 w-5" />
+              <Sun className="h-6 w-6" />
             ) : (
-              <Moon className="h-5 w-5" />
+              <Moon className="h-6 w-6" />
             )}
           </button>
         </div>
