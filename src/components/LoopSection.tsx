@@ -9,11 +9,11 @@ export function LoopSection() {
     >
       <div className="mx-auto w-full max-w-7xl px-4 md:px-6">
         <SectionHeader
-          className="mb-4"
+          className="mb-2"
           title="Loop Engineering for Self-Evolving Agents"
         />
 
-        <div className="mb-2 grid gap-3 sm:grid-cols-2">
+        <div className="mb-2 grid gap-2 sm:grid-cols-2">
           {[
             {
               title: "Learn",
