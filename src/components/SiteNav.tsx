@@ -19,7 +19,7 @@ const links: { id: string; label: string; Icon: LucideIcon }[] = [
   { id: "progress", label: "Current Project Progress", Icon: Activity },
   { id: "case-study", label: "Case Study", Icon: FileSearch },
   { id: "loop", label: "Self-Evolving Agent", Icon: RefreshCw },
-  { id: "os", label: "Multi-Agent OS", Icon: Network },
+  { id: "os", label: "Multi-agent Platform", Icon: Network },
   { id: "scaling", label: "Two-way Scaling", Icon: Scaling },
   { id: "opportunities", label: "Opportunities", Icon: Compass },
 ];
