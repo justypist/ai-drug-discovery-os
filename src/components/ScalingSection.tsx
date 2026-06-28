@@ -75,16 +75,16 @@ function Axis({
   items: [string, string][];
 }) {
   return (
-    <div className="rounded-lg border border-hairline bg-card p-7">
-      <div className="eyebrow mb-2">{subtitle}</div>
-      <h3 className="mb-5 text-2xl text-ink">{title}</h3>
-      <ul className="space-y-3">
+    <div className="rounded-lg border border-hairline bg-card p-8">
+      <div className="eyebrow text-base mb-2">{subtitle}</div>
+      <h3 className="mb-5 text-3xl text-ink">{title}</h3>
+      <ul className="space-y-4">
         {items.map(([k, v]) => (
-          <li key={k} className="flex gap-4 border-t border-hairline pt-3">
-            <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-teal" />
+          <li key={k} className="flex gap-4 border-t border-hairline pt-4">
+            <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-teal" />
             <div>
-              <div className="text-sm font-medium text-ink">{k}</div>
-              <div className="text-sm text-ink-soft">{v}</div>
+              <div className="text-base font-semibold text-ink">{k}</div>
+              <div className="text-base text-ink">{v}</div>
             </div>
           </li>
         ))}
