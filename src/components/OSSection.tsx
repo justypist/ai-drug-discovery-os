@@ -104,19 +104,19 @@ function OSDiagram() {
           />
           <text
             x="400"
-            y="185"
+            y="188"
             textAnchor="middle"
             className="font-serif"
-            fontSize="20"
+            fontSize="26"
             fill="oklch(0.97 0.01 240)"
           >
             Drug R&amp;D AI OS
           </text>
           <text
             x="400"
-            y="208"
+            y="215"
             textAnchor="middle"
-            fontSize="9"
+            fontSize="12"
             letterSpacing="3"
             fill="oklch(0.82 0.05 210)"
           >
