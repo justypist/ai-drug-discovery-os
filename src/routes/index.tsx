@@ -32,7 +32,9 @@ function Index() {
     <div className="min-h-screen bg-paper text-ink">
       <SiteNav />
       <main>
+        <Timeline />
         <Hero />
+
         <LoopSection />
         <OSSection />
         <ScalingSection />
