@@ -96,6 +96,30 @@ export function SlideDeck({ children }: SlideDeckProps) {
     return () => document.removeEventListener("click", onClick);
   }, []);
 
+  // Dispatch slidechange events for nav scrollspy.
+  useEffect(() => {
+    const root = scrollerRef.current;
+    if (!root) return;
+    let last = "";
+    const onScroll = () => {
+      const slides = getSlides();
+      const top = root.scrollTop + root.clientHeight * 0.3;
+      let currentId = slides[0]?.dataset.slideId ?? "";
+      for (const s of slides) {
+        if (s.offsetTop <= top) currentId = s.dataset.slideId ?? currentId;
+      }
+      if (currentId && currentId !== last) {
+        last = currentId;
+        window.dispatchEvent(
+          new CustomEvent("slidechange", { detail: currentId })
+        );
+      }
+    };
+    onScroll();
+    root.addEventListener("scroll", onScroll, { passive: true });
+    return () => root.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
     <div className="relative h-screen overflow-hidden">
       <div
