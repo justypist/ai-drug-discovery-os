@@ -235,17 +235,23 @@ export function OpportunitiesSection() {
                 key={`col-${g.name}-${p.name}`}
                 className={`flex flex-col gap-1.5 overflow-y-auto rounded-md border border-hairline p-1.5 ${groupBg[g.name]}`}
               >
-                {p.apps.map((app) => {
-                  const own = ownership[app] ?? "Unexplored";
-                  return (
-                    <div
-                      key={app}
-                      className={`rounded-md border px-2 py-1.5 text-[12px] font-semibold leading-tight md:text-[13px] ${chipClass[own]}`}
-                    >
-                      {app}
-                    </div>
-                  );
-                })}
+                {[...p.apps]
+                  .sort(
+                    (a, b) =>
+                      order[ownership[a] ?? "Unexplored"] -
+                      order[ownership[b] ?? "Unexplored"]
+                  )
+                  .map((app) => {
+                    const own = ownership[app] ?? "Unexplored";
+                    return (
+                      <div
+                        key={app}
+                        className={`rounded-md border px-2 py-1.5 text-[12px] font-semibold leading-tight md:text-[13px] ${chipClass[own]}`}
+                      >
+                        {app}
+                      </div>
+                    );
+                  })}
               </div>
             ))
           )}
