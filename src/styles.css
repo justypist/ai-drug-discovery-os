@@ -44,6 +44,7 @@
   --color-bg-frontier: var(--bg-frontier);
   --color-bg-ci: var(--bg-ci);
   --color-bg-infra: var(--bg-infra);
+  --color-bg-panel: var(--bg-panel);
   --color-success: var(--success);
   --color-success-dim: var(--success-dim);
   --font-serif: "Instrument Serif", "Times New Roman", serif;
