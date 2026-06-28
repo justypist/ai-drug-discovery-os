@@ -36,13 +36,13 @@ export function SiteNav() {
             <li key={l.id}>
               <a
                 href={`#${l.id}`}
-                className={`text-base transition-colors ${
+                className={`text-base font-medium transition-colors ${
                   active === l.id
                     ? "text-teal"
-                    : "text-ink-soft hover:text-ink"
+                    : "text-ink hover:text-teal"
                 }`}
               >
-                <span className="mr-2 font-mono text-sm text-ink-soft/60">
+                <span className="mr-2 font-mono text-base text-ink/50">
                   {String(links.indexOf(l) + 1).padStart(2, "0")}
                 </span>
                 {l.label}
