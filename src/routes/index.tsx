@@ -5,6 +5,7 @@ import { LoopSection } from "@/components/LoopSection";
 import { OSSection } from "@/components/OSSection";
 import { ScalingSection } from "@/components/ScalingSection";
 import { PlaceholderSection } from "@/components/PlaceholderSection";
+import { ProgressSection } from "@/components/ProgressSection";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -35,12 +36,7 @@ function Index() {
           <Timeline />
         </section>
 
-        <PlaceholderSection
-          id="progress"
-          eyebrow="Current Project Progress"
-          title="Where the eight project teams stand today."
-          lede="A snapshot of the active projects kicked off in March — milestones reached, blockers, and what is on deck for the next sprint."
-        />
+        <ProgressSection />
 
         <PlaceholderSection
           id="new-projects"
