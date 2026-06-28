@@ -64,74 +64,16 @@ const ciItems: { name: string; value: number; candidates?: string[] }[] = [
   { name: "Competitive Intelligence Monitoring", value: 50 },
 ];
 
-function ProgressBar({ value = 50, showLabels = false }: { value?: number; showLabels?: boolean }) {
-  return (
-    <div className="mt-1 w-[65%]">
-      {/* Markers above the bar, pointing down */}
-      <div className="relative h-3 w-full">
-        <div className="absolute -translate-x-1/2" style={{ left: "80%" }}>
-          <div className="h-0 w-0 border-x-[5px] border-t-[7px] border-x-transparent border-t-teal drop-shadow-[0_1px_1px_rgba(0,0,0,0.2)]" />
-        </div>
-        <div className="absolute -translate-x-1/2" style={{ left: "100%" }}>
-          <div className="h-0 w-0 border-x-[5px] border-t-[7px] border-x-transparent border-t-ink drop-shadow-[0_1px_1px_rgba(0,0,0,0.2)]" />
-        </div>
-      </div>
-
-      {/* Progress track */}
-      <div className="relative h-3 w-full overflow-hidden rounded-full bg-progress-track">
-        <div
-          className="h-full rounded-full"
-          style={{
-            width: `${value}%`,
-            backgroundImage:
-              "repeating-linear-gradient(45deg, var(--success) 0 5px, var(--success-dim) 5px 10px)",
-          }}
-        />
-      </div>
-      {showLabels && (
-        <div className="relative mt-1 h-12 text-sm font-semibold uppercase tracking-wider text-ink/80">
-          <div className="absolute text-right leading-tight whitespace-nowrap" style={{ left: "80%", transform: "translateX(-100%)" }}>
-            <div>Pilot</div>
-            <div className="font-normal text-ink/60">Sep</div>
-          </div>
-          <div className="absolute text-left leading-tight whitespace-nowrap" style={{ left: "100%" }}>
-            <div>MASSIVE USE</div>
-            <div className="font-normal text-ink/60">Nov</div>
-          </div>
-        </div>
-      )}
-    </div>
-  );
-}
-
-function FeasibilityBadge() {
-  return (
-    <div className="mt-1 inline-flex items-center gap-1.5 rounded-full bg-teal/10 px-2 py-0.5 text-xs font-semibold uppercase tracking-wider text-teal">
-      <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-        <circle cx="6" cy="6" r="6" fill="currentColor" />
-        <path d="M3.5 6.2L5.2 7.8L8.5 4.5" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-      </svg>
-      Feasibility Analysis
-    </div>
-  );
-}
-
-function ProjectItem({ project, showLabels }: { project: Project; showLabels?: boolean }) {
+function NameOnlyItem({ name, gray, sub }: { name: string; gray?: boolean; sub?: Project["sub"] }) {
   return (
     <div className="py-1">
-      <div className="text-base font-semibold leading-tight text-ink">{project.name}</div>
-      {project.feasibility ? (
-        <FeasibilityBadge />
-      ) : (
-        <ProgressBar value={project.value ?? 50} showLabels={showLabels} />
-      )}
-      {project.sub && (
+      <div className={`text-base leading-tight ${gray ? "font-medium text-ink/60" : "font-semibold text-ink"}`}>
+        {name}
+      </div>
+      {sub && sub.length > 0 && (
         <div className="mt-2 space-y-2 border-l-2 border-ink/20 pl-4">
-          {project.sub.map((s) => (
-            <div key={s.name}>
-              <div className="text-sm font-medium text-ink/90">{s.name}</div>
-              {s.feasibility ? <FeasibilityBadge /> : <ProgressBar value={s.value ?? 50} />}
-            </div>
+          {sub.map((s) => (
+            <NameOnlyItem key={s.name} name={s.name} gray={gray || !!s.feasibility} />
           ))}
         </div>
       )}
@@ -147,8 +89,8 @@ function CandidateItem({ name }: { name: string }) {
   );
 }
 
+
 export function NewProjectsSection() {
-  let firstShown = false;
   return (
     <section id="new-projects" className="border-t border-hairline bg-paper pt-6 pb-6">
       <div className="mx-auto w-full max-w-7xl px-4 md:px-6">
@@ -168,11 +110,9 @@ export function NewProjectsSection() {
                 {stream.title}
               </div>
               <div className="space-y-3">
-                {stream.projects.map((p) => {
-                  const needsLabels = !firstShown && !p.feasibility;
-                  if (needsLabels) firstShown = true;
-                  return <ProjectItem key={p.name} project={p} showLabels={needsLabels} />;
-                })}
+                {stream.projects.map((p) => (
+                  <NameOnlyItem key={p.name} name={p.name} sub={p.sub} />
+                ))}
               </div>
               {stream.candidates.length > 0 && (
                 <>
@@ -196,14 +136,11 @@ export function NewProjectsSection() {
           <div className="grid grid-cols-1 gap-x-5 gap-y-2 md:grid-cols-2">
             {ciItems.map((item) => (
               <div key={item.name} className="py-1">
-                <div className="text-base font-semibold leading-tight text-ink">{item.name}</div>
-                <ProgressBar value={item.value} />
+                <NameOnlyItem name={item.name} />
                 {item.candidates && item.candidates.length > 0 && (
-                  <div className="mt-2 space-y-1 border-l-2 border-ink/20 pl-4">
+                  <div className="mt-2 space-y-2 border-l-2 border-ink/20 pl-4">
                     {item.candidates.map((c) => (
-                      <div key={c} className="text-base font-medium leading-tight text-ink/60">
-                        {c}
-                      </div>
+                      <NameOnlyItem key={c} name={c} gray />
                     ))}
                   </div>
                 )}
@@ -213,9 +150,13 @@ export function NewProjectsSection() {
         </div>
 
         {/* Tier 1: IT Infrastructure */}
-        <div className="mt-5 rounded-2xl border border-hairline bg-bg-panel px-4 py-3 text-center shadow-sm">
-          <div className="text-xl font-bold uppercase tracking-[0.12em] text-ink">
+        <div className="mt-5 rounded-2xl border border-hairline bg-bg-panel p-4 shadow-sm">
+          <div className="mb-3 text-center text-xl font-bold uppercase tracking-[0.12em] text-ink">
             IT Infrastructure Excellence Enablement
+          </div>
+          <div className="grid grid-cols-1 gap-x-5 gap-y-1 md:grid-cols-2">
+            <NameOnlyItem name="GPU Resource for AI Model Training and Inference" gray />
+            <NameOnlyItem name="Data Lake" gray />
           </div>
         </div>
       </div>
