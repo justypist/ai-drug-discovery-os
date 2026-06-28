@@ -50,14 +50,14 @@ function ProgressBar({ value = 50, showLabels = false }: { value?: number; showL
         />
       </div>
       {/* Markers below the bar pointing up */}
-      <div className="relative h-3">
-        <div className="absolute top-0 -translate-x-1/2" style={{ left: "80%" }}>
-          <div className="h-0 w-0 border-x-[7px] border-b-[10px] border-x-transparent border-b-ink" />
+        <div className="relative h-3">
+          <div className="absolute top-0 -translate-x-1/2" style={{ left: "80%" }}>
+            <div className="h-0 w-0 border-x-[7px] border-b-[10px] border-x-transparent border-b-teal" />
+          </div>
+          <div className="absolute top-0 -translate-x-1/2" style={{ left: "100%" }}>
+            <div className="h-0 w-0 border-x-[7px] border-b-[10px] border-x-transparent border-b-ink" />
+          </div>
         </div>
-        <div className="absolute top-0 -translate-x-1/2" style={{ left: "100%" }}>
-          <div className="h-0 w-0 border-x-[7px] border-b-[10px] border-x-transparent border-b-ink" />
-        </div>
-      </div>
       {showLabels && (
         <div className="relative mt-1 h-12 text-sm font-semibold uppercase tracking-wider text-ink/80">
           <div className="absolute text-center leading-tight" style={{ left: "80%", transform: "translateX(-50%)" }}>
@@ -96,13 +96,13 @@ function ProjectItem({ project, showLabels }: { project: Project; showLabels?: b
 function Arrows({ count }: { count: number }) {
   return (
     <div
-      className="grid items-center justify-items-center py-1"
+      className="grid items-center justify-items-center py-0.5"
       style={{ gridTemplateColumns: `repeat(${count}, minmax(0, 1fr))` }}
     >
       {Array.from({ length: count }).map((_, i) => (
-        <svg key={i} width="22" height="26" viewBox="0 0 22 26" className="text-ink/60">
-          <line x1="11" y1="26" x2="11" y2="8" stroke="currentColor" strokeWidth="2.5" />
-          <polygon points="11,0 4,10 18,10" fill="currentColor" />
+        <svg key={i} width="18" height="16" viewBox="0 0 18 16" className="text-ink/60">
+          <line x1="9" y1="16" x2="9" y2="5" stroke="currentColor" strokeWidth="2.5" />
+          <polygon points="9,0 2,8 16,8" fill="currentColor" />
         </svg>
       ))}
     </div>
