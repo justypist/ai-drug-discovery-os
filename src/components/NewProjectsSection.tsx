@@ -89,13 +89,6 @@ function CandidateItem({ name }: { name: string }) {
   );
 }
 
-function CandidateItem({ name }: { name: string }) {
-  return (
-    <div className="py-1">
-      <div className="text-base font-medium leading-tight text-ink/60">{name}</div>
-    </div>
-  );
-}
 
 export function NewProjectsSection() {
   let firstShown = false;
