@@ -37,7 +37,6 @@ function Index() {
 
         <PlaceholderSection
           id="progress"
-          number="02"
           eyebrow="Current Project Progress"
           title="Where the eight project teams stand today."
           lede="A snapshot of the active projects kicked off in March — milestones reached, blockers, and what is on deck for the next sprint."
@@ -45,7 +44,6 @@ function Index() {
 
         <PlaceholderSection
           id="new-projects"
-          number="03"
           eyebrow="Potential New Projects"
           title="Candidate projects under evaluation."
           lede="A shortlist of new opportunities being scoped for the next wave — problem statements, hypotheses, and expected value."
@@ -53,7 +51,6 @@ function Index() {
 
         <PlaceholderSection
           id="case-study"
-          number="04"
           eyebrow="Case Study"
           title="AI-assisted Protocol Deviation."
           lede="A worked example of how an agentic workflow detects, classifies, and triages protocol deviations end-to-end."
@@ -65,7 +62,6 @@ function Index() {
 
         <PlaceholderSection
           id="opportunities"
-          number="08"
           eyebrow="Opportunities"
           title="Opportunities across the R&D value chain."
           lede="Where agentic systems can compound value next — from discovery through translational, clinical, regulatory, and commercial."
