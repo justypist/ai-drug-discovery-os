@@ -161,8 +161,7 @@ export function OpportunitiesSection() {
               Opportunities Across R&amp;D Value Chain
             </h2>
             <p className="mt-1 text-base text-ink/70 md:text-lg">
-              AI applications across the seven stages — coverage today and the
-              white space ahead.
+              {"\n"}
             </p>
           </div>
           <div className="flex flex-wrap items-center gap-3 text-sm">
