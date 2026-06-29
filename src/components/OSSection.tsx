@@ -77,10 +77,10 @@ export function OSSection() {
   return (
     <section
       id="os"
-      className="border-t border-hairline bg-card py-1 md:py-2"
+      className="border-t border-hairline bg-card py-0 md:py-0"
     >
       <div className="mx-auto w-full max-w-7xl px-4 md:px-6">
-        <div className="mb-1 max-w-6xl">
+        <div className="mb-0 max-w-6xl">
           <h2 className="font-sans text-2xl font-black leading-[1.05] text-ink md:text-3xl lg:text-4xl">
             Multi-agent Platform for Drug R&D AI OS
           </h2>
@@ -104,7 +104,7 @@ export function OSSection() {
 
 function OSDiagram() {
   return (
-    <div className="relative w-full max-h-[72vh] overflow-hidden rounded-lg border border-hairline bg-paper p-1">
+    <div className="relative w-full max-h-[72vh] overflow-hidden">
       <svg viewBox="0 0 1000 480" className="h-auto w-full">
         <defs>
           <marker
