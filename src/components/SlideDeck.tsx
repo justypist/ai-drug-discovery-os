@@ -161,7 +161,7 @@ export function Slide({ id, children, className = "", contentClassName = "" }: S
       data-slide-id={id}
       className={`flex h-screen w-full snap-start snap-always flex-col overflow-hidden ${className}`}
     >
-      <div className={`flex h-full w-full flex-col justify-start overflow-auto pt-8 md:pt-10 ${contentClassName}`}>
+      <div className={`flex h-full w-full flex-col justify-start overflow-auto pt-6 md:pt-8 ${contentClassName}`}>
         {children}
       </div>
     </section>

@@ -34,7 +34,7 @@ export function CaseStudySection() {
         </div>
 
         {/* Timeline */}
-        <div className="rounded-2xl border border-hairline bg-card p-2">
+        <div className="rounded-2xl bg-card p-2">
           <div className="mb-1.5 flex items-center gap-3">
             <span className="h-px w-8 bg-teal" />
             <span className="eyebrow text-base">Project Timeline</span>
