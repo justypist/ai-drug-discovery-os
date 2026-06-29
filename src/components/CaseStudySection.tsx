@@ -203,37 +203,38 @@ export function CaseStudySection() {
                 </div>
               </div>
             </div>
-            {/* Accuracy improvement — placed directly under the workflow arrows */}
-            <div className="mt-1.5 grid gap-2 md:grid-cols-2">
-              {metrics.map((m) => (
-                <div
-                  key={m.label}
-                  className="rounded-xl border border-hairline bg-paper p-2 shadow-sm"
-                >
-                  <div className="text-base font-semibold leading-tight text-ink md:text-lg">
-                    {m.label}
+          </div>
+
+          {/* Accuracy improvement — placed directly under the workflow arrows */}
+          <div className="mt-1.5 grid gap-2 md:grid-cols-2">
+            {metrics.map((m) => (
+              <div
+                key={m.label}
+                className="rounded-xl border border-hairline bg-paper p-2 shadow-sm"
+              >
+                <div className="text-base font-semibold leading-tight text-ink md:text-lg">
+                  {m.label}
+                </div>
+                <div className="mt-1.5 flex items-center justify-between gap-3">
+                  <div className="text-center">
+                    <div className="text-xl font-bold text-ink/60 md:text-2xl">
+                      {m.before.toFixed(1)}%
+                    </div>
                   </div>
-                  <div className="mt-1.5 flex items-center justify-between gap-3">
-                    <div className="text-center">
-                      <div className="text-xl font-bold text-ink/60 md:text-2xl">
-                        {m.before.toFixed(1)}%
-                      </div>
-                    </div>
-                    <div className="flex flex-col items-center">
-                      <ArrowRight className="h-5 w-5 text-teal" />
-                      <span className="text-sm font-bold text-teal">
-                        1st round optimization
-                      </span>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-xl font-bold text-teal md:text-2xl">
-                        {m.after.toFixed(1)}%
-                      </div>
+                  <div className="flex flex-col items-center">
+                    <ArrowRight className="h-5 w-5 text-teal" />
+                    <span className="text-sm font-bold text-teal">
+                      1st round optimization
+                    </span>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-xl font-bold text-teal md:text-2xl">
+                      {m.after.toFixed(1)}%
                     </div>
                   </div>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         </div>
 
