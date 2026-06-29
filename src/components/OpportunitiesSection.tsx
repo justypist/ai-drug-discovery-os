@@ -164,7 +164,7 @@ export function OpportunitiesSection() {
               {"\n"}
             </p>
           </div>
-          <div className="flex flex-wrap items-center justify-end gap-3">
+          <div className="flex flex-wrap items-center justify-end gap-5 md:gap-6">
             <span className="text-xs font-semibold text-ink/70 md:text-sm">
               Data from the MRL GenAI Functional Taskforce
             </span>
