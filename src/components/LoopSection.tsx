@@ -14,32 +14,20 @@ export function LoopSection() {
 
         <div className="mb-2 grid gap-2 sm:grid-cols-2">
           {[
-            {
-              title: "Learn",
-              desc: "Capture outcomes from every execution to build experiential knowledge",
-            },
-            {
-              title: "Reflect",
-              desc: "Enable agents to analyze their own decisions and identify improvement opportunities",
-            },
-            {
-              title: "Adapt",
-              desc: "Close the feedback loop so agents automatically refine strategies and expand capabilities",
-            },
-            {
-              title: "Scale",
-              desc: "Turn each iteration into a compounding intelligence upgrade across the organization",
-            },
-          ].map((item) => (
-            <div key={item.title} className="flex items-start gap-3">
+            "Learn",
+            "Reflect",
+            "Adapt",
+            "Scale",
+          ].map((title) => (
+            <div key={title} className="flex items-start gap-3">
               <span className="mt-2.5 h-2.5 w-2.5 shrink-0 rounded-full bg-teal" />
-              <div className="text-base text-ink md:text-lg lg:text-xl">
-                <span className="font-semibold text-ink">{item.title}</span>
-                <span className="text-ink-soft"> — {item.desc}</span>
+              <div className="text-base font-semibold text-ink md:text-lg lg:text-xl">
+                {title}
               </div>
             </div>
           ))}
         </div>
+
 
         <motion.div
           initial={{ opacity: 0, y: 24 }}
