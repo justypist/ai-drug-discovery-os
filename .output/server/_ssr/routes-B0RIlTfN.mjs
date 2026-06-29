@@ -1,8 +1,8 @@
 import { o as __toESM } from "../_runtime.mjs";
 import { n as require_jsx_runtime, r as require_react } from "../_libs/react+tanstack__react-query.mjs";
-import { a as Play, c as Lightbulb, d as CircleCheck, f as ChevronRight, g as Activity, h as ArrowRight, i as RefreshCw, l as FileSearch, m as Calendar, n as Scaling, o as Network, p as ChevronLeft, r as RotateCcw, s as Moon, t as Sun, u as Compass } from "../_libs/lucide-react.mjs";
+import { S as Activity, _ as ChevronRight, a as Scaling, b as BrainCircuit, c as Play, d as Lightbulb, f as FileSearch, g as CircleAlert, h as CircleCheck, i as Stethoscope, l as Network, m as Compass, n as TrendingUp, o as RotateCcw, p as FileInput, r as Sun, s as RefreshCw, t as Users, u as Moon, v as ChevronLeft, x as ArrowRight, y as Calendar } from "../_libs/lucide-react.mjs";
 import { t as motion } from "../_libs/framer-motion.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/routes-BSSUfZDp.js
+//#region node_modules/.nitro/vite/services/ssr/assets/routes-B0RIlTfN.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var links = [
@@ -1120,7 +1120,9 @@ var streams$1 = [
 			},
 			{
 				name: "Animal Model Translatability Evaluation",
-				value: 20
+				value: 20,
+				greenLabel: "Q1 2027",
+				blackLabel: "Q2 2027"
 			}
 		]
 	},
@@ -1137,7 +1139,9 @@ var streams$1 = [
 			}]
 		}, {
 			name: "Project Risk & Issue Identification & Management",
-			feasibility: true
+			value: 15,
+			greenLabel: "NOV",
+			blackLabel: "Q1 2027"
 		}]
 	},
 	{
@@ -1146,10 +1150,14 @@ var streams$1 = [
 		color: "bg-bg-panel",
 		projects: [{
 			name: "Virtual Cell",
-			value: 20
+			value: 20,
+			greenLabel: "Q1 2027",
+			blackLabel: "Q2 2027"
 		}, {
 			name: "Digital Pathology",
-			feasibility: true
+			value: 15,
+			greenLabel: "Q1 2027",
+			blackLabel: "TBD"
 		}]
 	}
 ];
@@ -1171,7 +1179,19 @@ var ciItems$1 = [
 		value: 50
 	}
 ];
-function ProgressBar({ value = 50, showLabels = false, animate = false, resetting = false }) {
+function ProgressLegend() {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+		className: "flex items-center gap-5 text-base font-semibold uppercase tracking-wider text-ink",
+		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+			className: "flex items-center gap-1.5",
+			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "h-0 w-0 border-x-[5px] border-t-[7px] border-x-transparent border-t-teal drop-shadow-[0_1px_1px_rgba(0,0,0,0.2)]" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "PILOT" })]
+		}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+			className: "flex items-center gap-1.5",
+			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "h-0 w-0 border-x-[5px] border-t-[7px] border-x-transparent border-t-ink drop-shadow-[0_1px_1px_rgba(0,0,0,0.2)]" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "MASSIVE USE" })]
+		})]
+	});
+}
+function ProgressBar({ value = 50, animate = false, resetting = false, greenLabel = "SEP", blackLabel = "NOV" }) {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 		className: "mt-1 w-[65%]",
 		children: [
@@ -1197,25 +1217,19 @@ function ProgressBar({ value = 50, showLabels = false, animate = false, resettin
 					}
 				})
 			}),
-			showLabels && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				className: "relative mt-1 h-12 text-base font-semibold uppercase tracking-wider text-ink/80",
-				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "relative mt-1 h-6 text-base font-semibold uppercase tracking-wider text-ink/80",
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 					className: "absolute text-right leading-none whitespace-nowrap",
 					style: {
 						left: "80%",
 						transform: "translateX(-100%)"
 					},
-					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { children: "Pilot" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						className: "font-normal leading-none text-ink/60",
-						children: "Sep"
-					})]
-				}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					children: greenLabel
+				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 					className: "absolute text-left leading-none whitespace-nowrap",
 					style: { left: "100%" },
-					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { children: "MASSIVE USE" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						className: "font-normal leading-none text-ink/60",
-						children: "Nov"
-					})]
+					children: blackLabel
 				})]
 			})
 		]
@@ -1245,27 +1259,28 @@ function FeasibilityBadge() {
 		}), "Feasibility"]
 	});
 }
-function ProjectItem({ project, showLabels, animate, resetting }) {
+function ProjectItem({ project, animate, resetting }) {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 		className: "py-1",
 		children: [
 			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 				className: "flex items-start gap-2",
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-ink" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "text-lg leading-none text-ink",
+					className: "text-lg leading-snug text-ink",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 						className: "font-semibold",
 						children: project.name
 					}), project.feasibility && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [" ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(FeasibilityBadge, {})] })]
 				})]
 			}),
-			!project.feasibility && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+			(!project.feasibility || project.greenLabel || project.blackLabel) && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 				className: "ml-[14px]",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ProgressBar, {
-					value: project.value ?? 50,
-					showLabels,
+					value: project.feasibility ? 0 : project.value ?? 50,
 					animate,
-					resetting
+					resetting,
+					greenLabel: project.greenLabel,
+					blackLabel: project.blackLabel
 				})
 			}),
 			project.sub && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
@@ -1276,10 +1291,12 @@ function ProjectItem({ project, showLabels, animate, resetting }) {
 						className: "font-medium",
 						children: s.name
 					}), s.feasibility && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [" ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(FeasibilityBadge, {})] })]
-				}), !s.feasibility && /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ProgressBar, {
-					value: s.value ?? 50,
+				}), (!s.feasibility || s.greenLabel || s.blackLabel) && /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ProgressBar, {
+					value: s.feasibility ? 0 : s.value ?? 50,
 					animate,
-					resetting
+					resetting,
+					greenLabel: s.greenLabel,
+					blackLabel: s.blackLabel
 				})] }, s.name))
 			})
 		]
@@ -1289,7 +1306,6 @@ function ProgressSection() {
 	const [animate, setAnimate] = (0, import_react.useState)(false);
 	const [resetting, setResetting] = (0, import_react.useState)(false);
 	const [hasPlayed, setHasPlayed] = (0, import_react.useState)(false);
-	let firstShown = false;
 	const handlePlay = () => {
 		if (hasPlayed) {
 			setResetting(true);
@@ -1314,11 +1330,14 @@ function ProgressSection() {
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
 						className: "font-sans text-2xl font-black leading-[1.05] text-ink md:text-3xl lg:text-4xl",
 						children: "Current Project Progress"
-					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
-						onClick: handlePlay,
-						"aria-label": hasPlayed ? "Replay progress" : "Play progress",
-						className: "inline-flex items-center justify-center rounded-full bg-ink p-3 text-paper shadow-sm transition-colors hover:bg-teal focus:outline-none focus:ring-2 focus:ring-teal focus:ring-offset-2",
-						children: hasPlayed ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(RotateCcw, { className: "h-6 w-6" }) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Play, { className: "h-6 w-6" })
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "flex items-center gap-5",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ProgressLegend, {}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+							onClick: handlePlay,
+							"aria-label": hasPlayed ? "Replay progress" : "Play progress",
+							className: "inline-flex items-center justify-center rounded-full bg-ink p-3 text-paper shadow-sm transition-colors hover:bg-teal focus:outline-none focus:ring-2 focus:ring-teal focus:ring-offset-2",
+							children: hasPlayed ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(RotateCcw, { className: "h-6 w-6" }) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Play, { className: "h-6 w-6" })
+						})]
 					})]
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
@@ -1330,28 +1349,23 @@ function ProgressSection() {
 							children: stream.title
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 							className: "space-y-2",
-							children: stream.projects.map((p) => {
-								const needsLabels = !firstShown && !p.feasibility;
-								if (needsLabels) firstShown = true;
-								return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ProjectItem, {
-									project: p,
-									showLabels: needsLabels,
-									animate,
-									resetting
-								}, p.name);
-							})
+							children: stream.projects.map((p) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ProjectItem, {
+								project: p,
+								animate,
+								resetting
+							}, p.name))
 						})]
 					}, stream.id))
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "mt-5 rounded-2xl border border-hairline bg-bg-panel p-4 shadow-sm",
+					className: "mt-3 rounded-2xl border border-hairline bg-bg-panel p-3 shadow-sm",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						className: "mb-3 text-center text-lg font-bold uppercase tracking-[0.12em] text-teal",
+						className: "mb-2 text-center text-lg font-bold uppercase tracking-[0.12em] text-teal",
 						children: "Competitive Intelligence & Scientific Finding Tracking"
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						className: "grid grid-cols-1 gap-x-5 gap-y-2 md:grid-cols-2",
+						className: "grid grid-cols-1 gap-x-5 gap-y-1 md:grid-cols-2",
 						children: ciItems$1.map((item) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							className: "py-1",
+							className: "py-0",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 								className: "flex items-start gap-2",
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-ink" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
@@ -1370,7 +1384,7 @@ function ProgressSection() {
 					})]
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					className: "mt-5 rounded-2xl border border-hairline bg-bg-panel px-4 py-3 text-center shadow-sm",
+					className: "mt-3 rounded-2xl border border-hairline bg-bg-panel px-4 py-3 text-center shadow-sm",
 					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 						className: "text-lg font-bold uppercase tracking-[0.12em] text-teal",
 						children: "IT Infrastructure Excellence Enablement"
@@ -1688,105 +1702,166 @@ function CaseStudySection() {
 							children: "PD Analysis Workflow"
 						})]
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "flex flex-col items-stretch gap-3 md:flex-row",
+						className: "relative mx-auto grid max-w-5xl grid-cols-1 gap-4 md:grid-cols-[1fr_auto_1fr]",
 						children: [
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								className: "flex flex-1 flex-col justify-center gap-1.5",
-								children: [
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-										className: "rounded-lg border border-hairline bg-paper p-1.5 text-center",
-										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-											className: "text-sm font-bold uppercase tracking-wider text-ink md:text-base",
-											children: "CRA Input"
+								className: "flex flex-col gap-1.5",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "mb-1 flex items-center justify-center gap-2",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+										className: "flex h-7 w-7 items-center justify-center rounded-lg border border-hairline bg-paper text-ink/60",
+										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleAlert, { className: "h-4 w-4" })
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+										className: "font-sans text-base font-bold text-ink md:text-lg",
+										children: "Status Quo"
+									})]
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "relative flex flex-col gap-1",
+									children: [
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											className: "flex items-center justify-center gap-2.5 rounded-xl border-2 border-dashed border-hairline bg-paper p-2",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+												className: "flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-ink/5 text-ink/60",
+												children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(FileInput, { className: "h-3.5 w-3.5" })
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
+												className: "text-sm font-bold text-ink md:text-base",
+												children: "CRA Input"
+											})]
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+											className: "flex justify-center py-0.5",
+											children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "h-4 w-4 rotate-90 text-ink/30" })
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											className: "flex items-center justify-center gap-2.5 rounded-xl border-2 border-dashed border-hairline bg-paper p-2",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+												className: "flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-ink/5 text-ink/60",
+												children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Users, { className: "h-3.5 w-3.5" })
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
+												className: "text-sm font-bold text-ink md:text-base",
+												children: "Physician Review"
+											})]
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+											className: "flex justify-center py-0.5",
+											children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "h-4 w-4 rotate-90 text-ink/30" })
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											className: "grid grid-cols-2 gap-1.5",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+												className: "flex items-center justify-center gap-1 rounded-xl border-2 border-dashed border-hairline bg-paper p-2 text-center",
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+													className: "flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-ink/5 text-ink/60",
+													children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+														className: "text-[10px] font-bold",
+														children: "PD"
+													})
+												}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
+													className: "text-xs font-bold uppercase tracking-wider text-ink md:text-sm",
+													children: "PD Classification"
+												})]
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+												className: "flex items-center justify-center gap-1 rounded-xl border-2 border-dashed border-hairline bg-paper p-2 text-center",
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+													className: "flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-ink/5 text-ink/60",
+													children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+														className: "text-[10px] font-bold",
+														children: "IPD"
+													})
+												}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
+													className: "text-xs font-bold uppercase tracking-wider text-ink md:text-sm",
+													children: "IPD Determination"
+												})]
+											})]
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+											className: "flex justify-center py-0.5",
+											children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "h-4 w-4 rotate-90 text-ink/30" })
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											className: "flex items-center justify-center gap-2.5 rounded-xl border-2 border-dashed border-hairline bg-paper p-2 opacity-80",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+												className: "flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-ink/5 text-ink/60",
+												children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(TrendingUp, { className: "h-3.5 w-3.5" })
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
+												className: "text-sm font-bold text-ink md:text-base",
+												children: "Trend Analysis"
+											})]
 										})
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-										className: "flex items-center justify-center",
-										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "h-4 w-4 rotate-90 text-ink/40" })
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-										className: "rounded-lg border border-hairline bg-paper p-1.5 text-center",
-										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-											className: "text-sm font-bold uppercase tracking-wider text-ink md:text-base",
-											children: "Physician Review"
-										})
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-										className: "flex items-center justify-center",
-										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "h-4 w-4 rotate-90 text-ink/40" })
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-										className: "grid grid-cols-2 gap-1.5",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-											className: "rounded-lg border border-hairline bg-paper p-1.5 text-center",
-											children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-												className: "text-xs font-bold uppercase tracking-wider text-ink md:text-sm",
-												children: "PD Classification"
-											})
-										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-											className: "rounded-lg border border-hairline bg-paper p-1.5 text-center",
-											children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-												className: "text-xs font-bold uppercase tracking-wider text-ink md:text-sm",
-												children: "IPD Determination"
-											})
-										})]
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-										className: "flex items-center justify-center",
-										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "h-4 w-4 rotate-90 text-ink/40" })
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-										className: "rounded-lg border border-hairline bg-paper p-1.5 text-center",
-										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-											className: "text-sm font-bold uppercase tracking-wider text-ink md:text-base",
-											children: "Trend Analysis"
-										})
-									})
-								]
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								className: "flex flex-col items-center justify-center gap-1 px-2",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "h-6 w-6 rotate-90 text-teal md:rotate-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-									className: "text-center text-xs font-black uppercase tracking-wider text-teal md:text-sm",
-									children: "AI Transformation"
+									]
 								})]
 							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								className: "hidden md:flex flex-col items-center justify-center py-2",
+								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "h-full w-px bg-gradient-to-b from-transparent via-teal to-transparent" })
+							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								className: "flex flex-1 flex-col justify-center gap-1.5",
-								children: [
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-										className: "rounded-lg border border-hairline bg-paper p-1.5 text-center",
-										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-											className: "text-sm font-bold uppercase tracking-wider text-ink md:text-base",
-											children: "CRA Input"
+								className: "flex flex-col gap-1.5",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "mb-1 flex items-center justify-center gap-2",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+										className: "flex h-7 w-7 items-center justify-center rounded-lg bg-teal text-primary-foreground shadow-md shadow-teal/20",
+										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrainCircuit, { className: "h-4 w-4" })
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+										className: "font-sans text-base font-bold text-ink md:text-lg",
+										children: "AI-Assisted"
+									})]
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "relative flex flex-col gap-1",
+									children: [
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											className: "flex items-center justify-center gap-2.5 rounded-xl border border-teal/30 bg-paper p-2 shadow-sm ring-1 ring-teal/10",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+												className: "flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-teal/10 text-teal",
+												children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(FileInput, { className: "h-3.5 w-3.5" })
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
+												className: "text-sm font-bold text-ink md:text-base",
+												children: "CRA Input"
+											})]
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+											className: "flex justify-center py-0.5",
+											children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "h-4 w-4 rotate-90 text-teal" })
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											className: "flex flex-col items-center justify-center gap-2 rounded-xl border border-teal/30 bg-gradient-to-br from-teal/10 to-teal/5 p-2 shadow-md ring-1 ring-teal/20",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+												className: "flex items-center justify-center gap-2.5",
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+													className: "flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-teal text-primary-foreground",
+													children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BrainCircuit, { className: "h-3.5 w-3.5" })
+												}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
+													className: "text-sm font-bold text-ink md:text-base",
+													children: "AI Agent"
+												})]
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+												className: "flex flex-wrap items-center justify-center gap-1",
+												children: [
+													"PD Category",
+													"IPD Determination",
+													"Trend Analysis"
+												].map((tag) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+													className: "rounded-md border border-teal/20 bg-paper px-1.5 py-0.5 text-xs font-bold uppercase tracking-wider text-teal md:text-sm",
+													children: tag
+												}, tag))
+											})]
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+											className: "flex justify-center py-0.5",
+											children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "h-4 w-4 rotate-90 text-teal" })
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											className: "flex items-center justify-center gap-2.5 rounded-xl border border-teal/30 bg-paper p-2 shadow-sm ring-1 ring-teal/10",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+												className: "flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-teal/10 text-teal",
+												children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Stethoscope, { className: "h-3.5 w-3.5" })
+											}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
+												className: "text-sm font-bold text-ink md:text-base",
+												children: "Physician Review"
+											})]
 										})
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-										className: "flex items-center justify-center",
-										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "h-4 w-4 rotate-90 text-teal" })
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-										className: "rounded-lg border border-teal/30 bg-teal/5 p-1.5 text-center",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-											className: "text-sm font-bold uppercase tracking-wider text-teal md:text-base",
-											children: "AI Agent"
-										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-											className: "mt-1 text-xs font-semibold uppercase tracking-wider text-teal/80 md:text-sm",
-											children: "PD CATEGORY · IPD DETERMINATION · TREND ANALYSIS"
-										})]
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-										className: "flex items-center justify-center",
-										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "h-4 w-4 rotate-90 text-teal" })
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-										className: "rounded-lg border border-hairline bg-paper p-1.5 text-center",
-										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-											className: "text-sm font-bold uppercase tracking-wider text-ink md:text-base",
-											children: "Physician Review"
-										})
-									})
-								]
+									]
+								})]
 							})
 						]
 					})]
