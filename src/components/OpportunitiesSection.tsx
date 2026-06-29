@@ -164,13 +164,18 @@ export function OpportunitiesSection() {
               {"\n"}
             </p>
           </div>
-          <div className="flex flex-wrap items-center gap-3 text-base">
-            {(Object.keys(chipClass) as Ownership[]).map((k) => (
-              <div key={k} className="flex items-center gap-1.5">
-                <span className={`h-4 w-4 rounded-sm ${dotClass[k]}`} />
-                <span className="font-medium text-ink">{k}</span>
-              </div>
-            ))}
+          <div className="flex flex-wrap items-center justify-end gap-3">
+            <span className="text-xs font-semibold text-ink/70 md:text-sm">
+              Data from the MRL GenAI Functional Taskforce
+            </span>
+            <div className="flex flex-wrap items-center gap-3 text-base">
+              {(Object.keys(chipClass) as Ownership[]).map((k) => (
+                <div key={k} className="flex items-center gap-1.5">
+                  <span className={`h-4 w-4 rounded-sm ${dotClass[k]}`} />
+                  <span className="font-medium text-ink">{k}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 
