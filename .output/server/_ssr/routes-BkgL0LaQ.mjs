@@ -1,8 +1,8 @@
 import { o as __toESM } from "../_runtime.mjs";
 import { n as require_jsx_runtime, r as require_react } from "../_libs/react+tanstack__react-query.mjs";
-import { S as Activity, _ as ChevronRight, a as Scaling, b as BrainCircuit, c as Play, d as Lightbulb, f as FileSearch, g as CircleAlert, h as CircleCheck, i as Stethoscope, l as Network, m as Compass, n as TrendingUp, o as RotateCcw, p as FileInput, r as Sun, s as RefreshCw, t as Users, u as Moon, v as ChevronLeft, x as ArrowRight, y as Calendar } from "../_libs/lucide-react.mjs";
+import { _ as ChevronLeft, a as Scaling, b as ArrowRight, c as Play, d as Lightbulb, f as FileSearch, g as ChevronRight, h as CircleAlert, i as Stethoscope, l as Network, m as Compass, n as TrendingUp, o as RotateCcw, p as FileInput, r as Sun, s as RefreshCw, t as Users, u as Moon, v as Calendar, x as Activity, y as BrainCircuit } from "../_libs/lucide-react.mjs";
 import { t as motion } from "../_libs/framer-motion.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/routes-B0RIlTfN.js
+//#region node_modules/.nitro/vite/services/ssr/assets/routes-BkgL0LaQ.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var links = [
@@ -552,16 +552,16 @@ var rightYs = distribute(RIGHT_COUNT, RIGHT_START_Y, RIGHT_H, 405);
 function OSSection() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
 		id: "os",
-		className: "border-t border-hairline bg-card py-4 md:py-5",
+		className: "border-t border-hairline bg-card py-1 md:py-2",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "mx-auto w-full max-w-7xl px-4 md:px-6",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				className: "mb-4 max-w-5xl",
+				className: "mb-1 max-w-6xl",
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
 					className: "font-sans text-2xl font-black leading-[1.05] text-ink md:text-3xl lg:text-4xl",
 					children: "Multi-agent Platform for Drug R&D AI OS"
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-					className: "mt-2 max-w-3xl text-lg leading-relaxed text-ink md:text-xl",
+					className: "mt-0.5 max-w-5xl text-lg leading-snug text-ink md:text-xl",
 					children: "Complex problems are rarely solved by a single agent—they require coordinated multi-agent orchestration - turning fragmented into one coherent workflow."
 				})]
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(motion.div, {
@@ -585,7 +585,7 @@ function OSSection() {
 }
 function OSDiagram() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-		className: "relative w-full max-h-[62vh] overflow-hidden rounded-lg border border-hairline bg-paper p-2",
+		className: "relative w-full max-h-[72vh] overflow-hidden rounded-lg border border-hairline bg-paper p-1",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("svg", {
 			viewBox: "0 0 1000 480",
 			className: "h-auto w-full",
@@ -1036,7 +1036,7 @@ function OpportunitiesSection() {
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "mb-3 flex items-end justify-between gap-4",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
-						className: "font-sans text-3xl font-black leading-[1.05] text-ink md:text-4xl lg:text-5xl",
+						className: "font-sans text-2xl font-black leading-[1.05] text-ink md:text-3xl lg:text-4xl",
 						children: "Opportunities Across R&D Value Chain"
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 						className: "mt-1 text-base text-ink/70 md:text-lg",
@@ -1261,7 +1261,7 @@ function FeasibilityBadge() {
 }
 function ProjectItem({ project, animate, resetting }) {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-		className: "py-1",
+		className: "py-0.5",
 		children: [
 			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 				className: "flex items-start gap-2",
@@ -1321,12 +1321,12 @@ function ProgressSection() {
 	};
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
 		id: "progress",
-		className: "border-t border-hairline bg-paper pt-6 pb-6",
+		className: "border-t border-hairline bg-paper pt-4 pb-4",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "mx-auto w-full max-w-7xl px-4 md:px-6",
 			children: [
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "mb-8 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center",
+					className: "mb-5 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
 						className: "font-sans text-2xl font-black leading-[1.05] text-ink md:text-3xl lg:text-4xl",
 						children: "Current Project Progress"
@@ -1341,14 +1341,14 @@ function ProgressSection() {
 					})]
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					className: "grid grid-cols-1 gap-5 md:grid-cols-3",
+					className: "grid grid-cols-1 gap-3 md:grid-cols-3",
 					children: streams$1.map((stream) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: `rounded-2xl border border-hairline p-4 shadow-sm ${stream.color}`,
+						className: `rounded-2xl border border-hairline p-3 shadow-sm ${stream.color}`,
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-							className: "mb-3 text-center text-lg font-bold uppercase tracking-[0.12em] text-teal",
+							className: "mb-2 text-center text-lg font-bold uppercase tracking-[0.12em] text-teal",
 							children: stream.title
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-							className: "space-y-2",
+							className: "space-y-1",
 							children: stream.projects.map((p) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ProjectItem, {
 								project: p,
 								animate,
@@ -1358,12 +1358,12 @@ function ProgressSection() {
 					}, stream.id))
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "mt-3 rounded-2xl border border-hairline bg-bg-panel p-3 shadow-sm",
+					className: "mt-2 rounded-2xl border border-hairline bg-bg-panel p-2.5 shadow-sm",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						className: "mb-2 text-center text-lg font-bold uppercase tracking-[0.12em] text-teal",
+						className: "mb-1 text-center text-lg font-bold uppercase tracking-[0.12em] text-teal",
 						children: "Competitive Intelligence & Scientific Finding Tracking"
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						className: "grid grid-cols-1 gap-x-5 gap-y-1 md:grid-cols-2",
+						className: "grid grid-cols-1 gap-x-5 gap-y-0.5 md:grid-cols-2",
 						children: ciItems$1.map((item) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 							className: "py-0",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
@@ -1384,7 +1384,7 @@ function ProgressSection() {
 					})]
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					className: "mt-3 rounded-2xl border border-hairline bg-bg-panel px-4 py-3 text-center shadow-sm",
+					className: "mt-2 rounded-2xl border border-hairline bg-bg-panel px-4 py-2 text-center shadow-sm",
 					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 						className: "text-lg font-bold uppercase tracking-[0.12em] text-teal",
 						children: "IT Infrastructure Excellence Enablement"
@@ -1884,15 +1884,12 @@ function CaseStudySection() {
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 								className: "mt-1.5 flex items-center justify-between gap-3",
 								children: [
-									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 										className: "text-center",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-											className: "text-3xl font-bold text-ink/60 md:text-4xl",
+										children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											className: "text-xl font-bold text-ink/60 md:text-2xl",
 											children: [m.before.toFixed(1), "%"]
-										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-											className: "mt-0.5 text-sm uppercase tracking-wider text-ink/50",
-											children: "Before"
-										})]
+										})
 									}),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 										className: "flex flex-col items-center",
@@ -1905,15 +1902,12 @@ function CaseStudySection() {
 											]
 										})]
 									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 										className: "text-center",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-											className: "text-3xl font-bold text-teal md:text-4xl",
+										children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+											className: "text-xl font-bold text-teal md:text-2xl",
 											children: [m.after.toFixed(1), "%"]
-										}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-											className: "mt-0.5 flex items-center justify-center gap-1 text-sm uppercase tracking-wider text-teal",
-											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, { className: "h-3.5 w-3.5" }), "After"]
-										})]
+										})
 									})
 								]
 							})]
@@ -2027,13 +2021,13 @@ function SlideDeck({ children }) {
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
 				onClick: prev,
 				"aria-label": "Previous slide",
-				className: "fixed bottom-6 right-24 z-40 flex h-12 w-12 items-center justify-center rounded-full border border-hairline bg-card text-ink shadow-lg transition-colors hover:border-teal hover:text-teal",
+				className: "fixed bottom-12 right-24 z-40 flex h-12 w-12 items-center justify-center rounded-full border border-hairline bg-card text-ink shadow-lg transition-colors hover:border-teal hover:text-teal",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ChevronLeft, { className: "h-6 w-6" })
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
 				onClick: next,
 				"aria-label": "Next slide",
-				className: "fixed bottom-6 right-6 z-40 flex h-12 w-12 items-center justify-center rounded-full border border-hairline bg-card text-ink shadow-lg transition-colors hover:border-teal hover:text-teal",
+				className: "fixed bottom-12 right-6 z-40 flex h-12 w-12 items-center justify-center rounded-full border border-hairline bg-card text-ink shadow-lg transition-colors hover:border-teal hover:text-teal",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ChevronRight, { className: "h-6 w-6" })
 			})
 		]

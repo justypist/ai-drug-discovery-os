@@ -282,21 +282,6 @@ var CircleAlert = createLucideIcon("circle-alert", [
 * This source code is licensed under the ISC license.
 * See the LICENSE file in the root directory of this source tree.
 */
-var CircleCheck = createLucideIcon("circle-check", [["circle", {
-	cx: "12",
-	cy: "12",
-	r: "10",
-	key: "1mglay"
-}], ["path", {
-	d: "m9 12 2 2 4-4",
-	key: "dzmm74"
-}]]);
-/**
-* @license lucide-react v0.575.0 - ISC
-*
-* This source code is licensed under the ISC license.
-* See the LICENSE file in the root directory of this source tree.
-*/
 var Compass = createLucideIcon("compass", [["circle", {
 	cx: "12",
 	cy: "12",
@@ -613,4 +598,4 @@ var Users = createLucideIcon("users", [
 	}]
 ]);
 //#endregion
-export { Activity as S, ChevronRight as _, Scaling as a, BrainCircuit as b, Play as c, Lightbulb as d, FileSearch as f, CircleAlert as g, CircleCheck as h, Stethoscope as i, Network as l, Compass as m, TrendingUp as n, RotateCcw as o, FileInput as p, Sun as r, RefreshCw as s, Users as t, Moon as u, ChevronLeft as v, ArrowRight as x, Calendar as y };
+export { ChevronLeft as _, Scaling as a, ArrowRight as b, Play as c, Lightbulb as d, FileSearch as f, ChevronRight as g, CircleAlert as h, Stethoscope as i, Network as l, Compass as m, TrendingUp as n, RotateCcw as o, FileInput as p, Sun as r, RefreshCw as s, Users as t, Moon as u, Calendar as v, Activity as x, BrainCircuit as y };
