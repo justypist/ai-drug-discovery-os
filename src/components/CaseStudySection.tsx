@@ -79,18 +79,10 @@ export function CaseStudySection() {
             <span className="eyebrow text-base">PD Analysis Workflow</span>
           </div>
 
-          <div className="relative mx-auto grid max-w-4xl grid-cols-1 gap-3 md:grid-cols-[1fr_auto_1fr]">
-            {/* Center divider + transformation icon */}
-            <div className="hidden md:flex flex-col items-center justify-center py-2">
-              <div className="h-full w-px bg-hairline" />
-              <div className="absolute flex h-10 w-10 items-center justify-center rounded-full border border-hairline bg-card shadow-md">
-                <Sparkles className="h-5 w-5 text-teal" />
-              </div>
-            </div>
-
+          <div className="relative mx-auto grid max-w-5xl grid-cols-1 gap-4 md:grid-cols-[1fr_auto_1fr]">
             {/* Status Quo lane */}
             <div className="flex flex-col gap-1.5">
-              <div className="mb-1 flex items-center gap-2">
+              <div className="mb-1 flex items-center justify-center gap-2">
                 <div className="flex h-7 w-7 items-center justify-center rounded-lg border border-hairline bg-paper text-ink/60">
                   <AlertCircle className="h-4 w-4" />
                 </div>
@@ -101,7 +93,7 @@ export function CaseStudySection() {
 
               <div className="relative flex flex-col gap-1">
                 {/* Step 1 */}
-                <div className="flex items-center gap-2.5 rounded-xl border-2 border-dashed border-hairline bg-paper p-2">
+                <div className="flex items-center justify-center gap-2.5 rounded-xl border-2 border-dashed border-hairline bg-paper p-2">
                   <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-ink/5 text-ink/60">
                     <FileInput className="h-3.5 w-3.5" />
                   </div>
@@ -113,7 +105,7 @@ export function CaseStudySection() {
                 </div>
 
                 {/* Step 2 */}
-                <div className="flex items-center gap-2.5 rounded-xl border-2 border-dashed border-hairline bg-paper p-2">
+                <div className="flex items-center justify-center gap-2.5 rounded-xl border-2 border-dashed border-hairline bg-paper p-2">
                   <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-ink/5 text-ink/60">
                     <Users className="h-3.5 w-3.5" />
                   </div>
@@ -126,16 +118,16 @@ export function CaseStudySection() {
 
                 {/* Step 3 - split branch */}
                 <div className="grid grid-cols-2 gap-1.5">
-                  <div className="flex flex-col items-center gap-1 rounded-xl border-2 border-dashed border-hairline bg-paper p-2 text-center">
-                    <div className="flex h-6 w-6 items-center justify-center rounded-md bg-ink/5 text-ink/60">
+                  <div className="flex items-center justify-center gap-1 rounded-xl border-2 border-dashed border-hairline bg-paper p-2 text-center">
+                    <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-ink/5 text-ink/60">
                       <span className="text-[10px] font-bold">PD</span>
                     </div>
                     <h4 className="text-xs font-bold uppercase tracking-wider text-ink md:text-sm">
                       PD Classification
                     </h4>
                   </div>
-                  <div className="flex flex-col items-center gap-1 rounded-xl border-2 border-dashed border-hairline bg-paper p-2 text-center">
-                    <div className="flex h-6 w-6 items-center justify-center rounded-md bg-ink/5 text-ink/60">
+                  <div className="flex items-center justify-center gap-1 rounded-xl border-2 border-dashed border-hairline bg-paper p-2 text-center">
+                    <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-ink/5 text-ink/60">
                       <span className="text-[10px] font-bold">IPD</span>
                     </div>
                     <h4 className="text-xs font-bold uppercase tracking-wider text-ink md:text-sm">
@@ -149,7 +141,7 @@ export function CaseStudySection() {
                 </div>
 
                 {/* Step 4 */}
-                <div className="flex items-center gap-2.5 rounded-xl border-2 border-dashed border-hairline bg-paper p-2 opacity-80">
+                <div className="flex items-center justify-center gap-2.5 rounded-xl border-2 border-dashed border-hairline bg-paper p-2 opacity-80">
                   <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-ink/5 text-ink/60">
                     <TrendingUp className="h-3.5 w-3.5" />
                   </div>
@@ -158,9 +150,22 @@ export function CaseStudySection() {
               </div>
             </div>
 
+            {/* Center divider + transformation icon */}
+            <div className="hidden md:flex flex-col items-center justify-center py-2">
+              <div className="h-full w-px bg-gradient-to-b from-transparent via-teal to-transparent" />
+              <div className="absolute flex flex-col items-center gap-1">
+                <div className="flex h-10 w-10 items-center justify-center rounded-full border border-teal bg-card shadow-lg shadow-teal/20">
+                  <Sparkles className="h-5 w-5 text-teal" />
+                </div>
+                <span className="rounded-full border border-teal/30 bg-paper px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-teal">
+                  AI Transform
+                </span>
+              </div>
+            </div>
+
             {/* AI-assisted lane */}
             <div className="flex flex-col gap-1.5">
-              <div className="mb-1 flex items-center gap-2">
+              <div className="mb-1 flex items-center justify-center gap-2">
                 <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-teal text-primary-foreground shadow-md shadow-teal/20">
                   <BrainCircuit className="h-4 w-4" />
                 </div>
@@ -171,7 +176,7 @@ export function CaseStudySection() {
 
               <div className="relative flex flex-col gap-1">
                 {/* Step 1 */}
-                <div className="flex items-center gap-2.5 rounded-xl border border-teal/30 bg-paper p-2 shadow-sm ring-1 ring-teal/10">
+                <div className="flex items-center justify-center gap-2.5 rounded-xl border border-teal/30 bg-paper p-2 shadow-sm ring-1 ring-teal/10">
                   <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-teal/10 text-teal">
                     <FileInput className="h-3.5 w-3.5" />
                   </div>
@@ -183,14 +188,14 @@ export function CaseStudySection() {
                 </div>
 
                 {/* Step 2 - AI Agent */}
-                <div className="rounded-xl border border-teal/30 bg-gradient-to-br from-teal/10 to-teal/5 p-2 shadow-md ring-1 ring-teal/20">
-                  <div className="flex items-center gap-2.5">
+                <div className="flex flex-col items-center justify-center gap-2 rounded-xl border border-teal/30 bg-gradient-to-br from-teal/10 to-teal/5 p-2 shadow-md ring-1 ring-teal/20">
+                  <div className="flex items-center justify-center gap-2.5">
                     <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-teal text-primary-foreground">
                       <BrainCircuit className="h-3.5 w-3.5" />
                     </div>
                     <h4 className="text-sm font-bold text-ink md:text-base">AI Agent</h4>
                   </div>
-                  <div className="mt-1.5 flex flex-wrap gap-1">
+                  <div className="flex flex-wrap items-center justify-center gap-1">
                     {["PD Category", "IPD Determination", "Trend Analysis"].map((tag) => (
                       <span
                         key={tag}
@@ -207,7 +212,7 @@ export function CaseStudySection() {
                 </div>
 
                 {/* Step 3 */}
-                <div className="flex items-center gap-2.5 rounded-xl border border-teal/30 bg-paper p-2 shadow-sm ring-1 ring-teal/10">
+                <div className="flex items-center justify-center gap-2.5 rounded-xl border border-teal/30 bg-paper p-2 shadow-sm ring-1 ring-teal/10">
                   <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-teal/10 text-teal">
                     <Stethoscope className="h-3.5 w-3.5" />
                   </div>
