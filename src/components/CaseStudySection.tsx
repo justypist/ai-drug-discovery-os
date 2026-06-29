@@ -23,10 +23,10 @@ const metrics = [
 
 export function CaseStudySection() {
   return (
-    <section id="case-study" className="border-t border-hairline bg-paper py-3 md:py-4">
+    <section id="case-study" className="border-t border-hairline bg-paper py-2 md:py-3">
       <div className="mx-auto w-full max-w-7xl px-2 md:px-3">
         {/* Title */}
-        <div className="mb-6">
+        <div className="mb-3">
           <h2 className="font-sans text-2xl font-black leading-[1.05] text-ink md:text-3xl lg:text-4xl">
             Case Study <span className="text-ink/40">·</span>{" "}
             <span className="text-teal">AI-Assisted Protocol Deviation</span>
@@ -34,8 +34,8 @@ export function CaseStudySection() {
         </div>
 
         {/* Timeline */}
-        <div className="rounded-2xl border border-hairline bg-card p-2 md:p-3">
-          <div className="mb-2 flex items-center gap-3">
+        <div className="rounded-2xl border border-hairline bg-card p-2">
+          <div className="mb-1.5 flex items-center gap-3">
             <span className="h-px w-8 bg-teal" />
             <span className="eyebrow text-base">Project Timeline</span>
           </div>
@@ -45,7 +45,7 @@ export function CaseStudySection() {
                 <div className="font-mono text-base font-semibold uppercase tracking-wider text-ink md:text-lg">
                   {m.date}
                 </div>
-                <div className="relative my-1.5 flex h-4 w-full items-center justify-center">
+                <div className="relative my-1 flex h-4 w-full items-center justify-center">
                   <span className="z-10 h-3 w-3 rounded-full bg-teal ring-4 ring-teal/20" />
                   {i < timeline.length - 1 && (
                     <div className="absolute left-1/2 right-0 top-1/2 h-0 -translate-y-1/2 border-t border-dashed border-ink/30" />
@@ -54,18 +54,18 @@ export function CaseStudySection() {
                     <div className="absolute left-0 right-1/2 top-1/2 h-0 -translate-y-1/2 border-t border-dashed border-ink/30" />
                   )}
                 </div>
-                <div className="w-full break-words px-1 text-base font-medium leading-tight text-ink md:text-lg">
+                <div className="w-full break-words px-1 text-sm font-medium leading-tight text-ink md:text-base">
                   {m.label}
                 </div>
               </div>
             ))}
           </div>
-          <div className="mt-2 rounded-xl border-2 border-dashed border-teal bg-paper p-2 text-center">
-            <div className="text-base font-black uppercase tracking-wider text-ink md:text-lg">
+          <div className="mt-1.5 rounded-xl border-2 border-dashed border-teal bg-paper p-1.5 text-center">
+            <div className="text-sm font-black uppercase tracking-wider text-ink md:text-base">
               Human review-based feedback and manual AI tool tuning
               <span className="mx-2 text-teal">·</span>
               <span className="text-teal">87%</span>
-              <span className="ml-2 text-sm font-semibold normal-case tracking-normal text-ink/70 md:text-base">
+              <span className="ml-2 text-xs font-semibold normal-case tracking-normal text-ink/70 md:text-sm">
                 of total time spent
               </span>
             </div>
@@ -73,15 +73,15 @@ export function CaseStudySection() {
         </div>
 
         {/* Before AI vs With AI — split comparison */}
-        <div className="mt-2 rounded-2xl border border-hairline bg-card p-3 md:p-4">
-          <div className="mb-3 flex items-center gap-3">
+        <div className="mt-1.5 rounded-2xl border border-hairline bg-card p-2 md:p-3">
+          <div className="mb-2 flex items-center gap-3">
             <span className="h-px w-8 bg-teal" />
             <span className="eyebrow text-base">PD Analysis Workflow</span>
           </div>
 
-          <div className="relative mx-auto grid max-w-5xl grid-cols-1 gap-4 md:grid-cols-[1fr_auto_1fr]">
+          <div className="relative mx-auto grid max-w-5xl grid-cols-1 gap-3 md:grid-cols-[1fr_auto_1fr]">
             {/* Status Quo lane */}
-            <div className="flex flex-col gap-1.5">
+            <div className="flex flex-col gap-1">
               <div className="mb-1 flex items-center justify-center gap-2">
                 <div className="flex h-7 w-7 items-center justify-center rounded-lg border border-hairline bg-paper text-ink/60">
                   <AlertCircle className="h-4 w-4" />
@@ -100,8 +100,8 @@ export function CaseStudySection() {
                   <h4 className="text-sm font-bold text-ink md:text-base">CRA Input</h4>
                 </div>
 
-                <div className="flex justify-center py-0.5">
-                  <ArrowRight className="h-4 w-4 rotate-90 text-ink/30" />
+                <div className="flex justify-center py-0">
+                  <ArrowRight className="h-3.5 w-3.5 rotate-90 text-ink/30" />
                 </div>
 
                 {/* Step 2 */}
@@ -112,8 +112,8 @@ export function CaseStudySection() {
                   <h4 className="text-sm font-bold text-ink md:text-base">Physician Review</h4>
                 </div>
 
-                <div className="flex justify-center py-0.5">
-                  <ArrowRight className="h-4 w-4 rotate-90 text-ink/30" />
+                <div className="flex justify-center py-0">
+                  <ArrowRight className="h-3.5 w-3.5 rotate-90 text-ink/30" />
                 </div>
 
                 {/* Step 3 - split branch */}
@@ -136,8 +136,8 @@ export function CaseStudySection() {
                   </div>
                 </div>
 
-                <div className="flex justify-center py-0.5">
-                  <ArrowRight className="h-4 w-4 rotate-90 text-ink/30" />
+                <div className="flex justify-center py-0">
+                  <ArrowRight className="h-3.5 w-3.5 rotate-90 text-ink/30" />
                 </div>
 
                 {/* Step 4 */}
@@ -151,12 +151,12 @@ export function CaseStudySection() {
             </div>
 
             {/* Center divider */}
-            <div className="hidden md:flex flex-col items-center justify-center py-2">
+            <div className="hidden md:flex flex-col items-center justify-center py-0">
               <div className="h-full w-px bg-gradient-to-b from-transparent via-teal to-transparent" />
             </div>
 
             {/* AI-assisted lane */}
-            <div className="flex flex-col gap-1.5">
+            <div className="flex flex-col gap-1">
               <div className="mb-1 flex items-center justify-center gap-2">
                 <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-teal text-primary-foreground shadow-md shadow-teal/20">
                   <BrainCircuit className="h-4 w-4" />
@@ -175,12 +175,12 @@ export function CaseStudySection() {
                   <h4 className="text-sm font-bold text-ink md:text-base">CRA Input</h4>
                 </div>
 
-                <div className="flex justify-center py-0.5">
-                  <ArrowRight className="h-4 w-4 rotate-90 text-teal" />
+                <div className="flex justify-center py-0">
+                  <ArrowRight className="h-3.5 w-3.5 rotate-90 text-teal" />
                 </div>
 
                 {/* Step 2 - AI Agent */}
-                <div className="flex flex-col items-center justify-center gap-2 rounded-xl border border-teal/30 bg-gradient-to-br from-teal/10 to-teal/5 p-2 shadow-md ring-1 ring-teal/20">
+                <div className="flex flex-col items-center justify-center gap-1.5 rounded-xl border border-teal/30 bg-gradient-to-br from-teal/10 to-teal/5 p-1.5 shadow-md ring-1 ring-teal/20">
                   <div className="flex items-center justify-center gap-2.5">
                     <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-teal text-primary-foreground">
                       <BrainCircuit className="h-3.5 w-3.5" />
@@ -199,8 +199,8 @@ export function CaseStudySection() {
                   </div>
                 </div>
 
-                <div className="flex justify-center py-0.5">
-                  <ArrowRight className="h-4 w-4 rotate-90 text-teal" />
+                <div className="flex justify-center py-0">
+                  <ArrowRight className="h-3.5 w-3.5 rotate-90 text-teal" />
                 </div>
 
                 {/* Step 3 */}
@@ -218,8 +218,8 @@ export function CaseStudySection() {
 
 
         {/* Accuracy improvement */}
-        <div className="mt-2 rounded-2xl border border-hairline bg-card p-2 md:p-3">
-          <div className="mb-2 flex items-center gap-3">
+        <div className="mt-1.5 rounded-2xl border border-hairline bg-card p-2">
+          <div className="mb-1.5 flex items-center gap-3">
             <span className="h-px w-8 bg-teal" />
             <span className="eyebrow text-base">After One Round of Optimization</span>
           </div>
