@@ -12,16 +12,16 @@ const milestones = [
 
 export function Timeline() {
   return (
-    <section className="relative flex h-full flex-col items-center bg-paper/60">
-      {/* Hero title centered in the page */}
-      <div className="absolute inset-0 flex items-center justify-center px-4">
+  <section className="relative flex h-full flex-col items-center bg-paper/60">
+      {/* Hero title at 2/5 page height */}
+      <div className="absolute top-[40%] left-0 right-0 -translate-y-1/2 px-4">
         <h1 className="font-sans text-center text-4xl font-black uppercase tracking-[0.08em] text-ink md:text-5xl lg:text-6xl">
           AI Taskforce Update
         </h1>
       </div>
 
-      {/* Timeline anchored at the bottom */}
-      <div className="mt-auto w-full max-w-7xl px-4 pb-8 md:px-6">
+      {/* Timeline anchored at 4/5 page height */}
+      <div className="absolute top-[80%] left-0 right-0 w-full max-w-7xl px-4 md:px-6">
         <div className="w-full">
           <div className="flex w-full items-start gap-1 md:gap-2">
 
