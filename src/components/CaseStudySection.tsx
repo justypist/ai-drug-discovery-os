@@ -180,7 +180,7 @@ export function CaseStudySection() {
                 </div>
 
                 {/* Step 2 - AI Agent */}
-                <div className="flex flex-col items-center justify-center gap-2 rounded-xl border border-teal/30 bg-gradient-to-br from-teal/10 to-teal/5 p-2 shadow-md ring-1 ring-teal/20">
+                <div className="flex flex-col items-center justify-center gap-1.5 rounded-xl border border-teal/30 bg-gradient-to-br from-teal/10 to-teal/5 p-1.5 shadow-md ring-1 ring-teal/20">
                   <div className="flex items-center justify-center gap-2.5">
                     <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-teal text-primary-foreground">
                       <BrainCircuit className="h-3.5 w-3.5" />
