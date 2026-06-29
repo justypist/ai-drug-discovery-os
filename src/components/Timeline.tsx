@@ -13,17 +13,20 @@ const milestones = [
 export function Timeline() {
   return (
     <section className="flex h-full flex-col bg-paper/60">
-      {/* Hero title stays near the top so the timeline sits higher */}
+      {/* Hero title stays near the top */}
       <div className="flex flex-none flex-col items-center justify-start px-4 pt-6 pb-2 md:pt-8 md:pb-4">
         <h1 className="font-sans text-center text-4xl font-black uppercase tracking-[0.08em] text-ink md:text-5xl lg:text-6xl">
           AI Taskforce Update
         </h1>
       </div>
 
-      {/* Timeline shifted upward on the slide */}
-      <div className="mx-auto w-full max-w-7xl px-4 pb-4 md:px-6 md:pb-6">
+      {/* Push the timeline down so the gap below it is about one-third of the original */}
+      <div className="flex-[2]" />
+
+      <div className="mx-auto w-full max-w-7xl px-4 md:px-6">
         <div className="w-full">
           <div className="flex w-full items-start gap-1 md:gap-2">
+
             {milestones.map((m, i) => (
               <Fragment key={i}>
                 {i > 0 && (
@@ -64,6 +67,10 @@ export function Timeline() {
           </div>
         </div>
       </div>
+
+      {/* Reserve the bottom one-third of the original empty space */}
+      <div className="flex-1" />
     </section>
+
   );
 }
