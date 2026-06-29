@@ -14,7 +14,7 @@ export function Timeline() {
   return (
     <section className="flex h-full flex-col bg-paper/60">
       {/* Hero title stays near the top so the timeline sits higher */}
-      <div className="flex flex-none flex-col items-center justify-start px-4 pt-20 pb-4 md:pt-28 md:pb-6">
+      <div className="flex flex-none flex-col items-center justify-start px-4 pt-6 pb-2 md:pt-8 md:pb-4">
         <h1 className="font-sans text-center text-4xl font-black uppercase tracking-[0.08em] text-ink md:text-5xl lg:text-6xl">
           AI Taskforce Update
         </h1>

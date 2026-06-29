@@ -59,7 +59,7 @@ export function SiteNav() {
   };
 
   return (
-    <header className="fixed left-0 right-0 top-0 z-50 border-b border-hairline bg-paper/85 backdrop-blur">
+    <header className="fixed left-0 right-0 top-0 z-50 bg-paper/85 backdrop-blur">
       <nav className="mx-auto flex w-full max-w-7xl items-center justify-between gap-3 px-3 py-2 md:px-4">
         <div className="flex items-center gap-1 md:gap-2">
           <ul className="hidden flex-wrap items-center justify-start gap-1 md:flex">
