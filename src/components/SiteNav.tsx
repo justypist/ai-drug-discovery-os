@@ -61,14 +61,9 @@ export function SiteNav() {
   return (
     <header className="fixed left-0 right-0 top-0 z-50 border-b border-hairline bg-paper/85 backdrop-blur">
       <nav className="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-4 py-3 md:px-6">
-        <a href="#top" className="flex shrink-0 items-baseline gap-2">
-          <span className="font-wide text-xl font-normal uppercase text-ink md:text-2xl">
-            AI TF Update
-          </span>
-        </a>
         <div className="flex items-center gap-2 md:gap-3">
-          <ul className="hidden flex-wrap items-center justify-end gap-1.5 md:flex">
-            {links.map((l, idx) => {
+          <ul className="hidden flex-wrap items-center justify-start gap-1.5 md:flex">
+            {links.map((l) => {
               const isActive = active === l.id;
               const { Icon } = l;
               return (
@@ -95,14 +90,14 @@ export function SiteNav() {
               );
             })}
           </ul>
-          <button
-            onClick={toggleTheme}
-            aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
-            className="flex h-11 w-11 items-center justify-center rounded-full border border-hairline bg-card text-ink shadow-sm transition-colors hover:border-teal hover:text-teal"
-          >
-            {theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
-          </button>
         </div>
+        <button
+          onClick={toggleTheme}
+          aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
+          className="flex h-11 w-11 items-center justify-center rounded-full border border-hairline bg-card text-ink shadow-sm transition-colors hover:border-teal hover:text-teal"
+        >
+          {theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+        </button>
       </nav>
     </header>
   );
