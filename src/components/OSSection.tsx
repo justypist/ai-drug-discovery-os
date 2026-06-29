@@ -77,7 +77,7 @@ export function OSSection() {
   return (
     <section
       id="os"
-      className="bg-card py-0 md:py-0"
+      className="bg-paper"
     >
       <div className="mx-auto w-full max-w-7xl px-4 md:px-6">
         <div className="mb-8 max-w-6xl">
