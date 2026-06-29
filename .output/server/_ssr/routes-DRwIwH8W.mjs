@@ -2,7 +2,7 @@ import { o as __toESM } from "../_runtime.mjs";
 import { n as require_jsx_runtime, r as require_react } from "../_libs/react+tanstack__react-query.mjs";
 import { _ as ChevronLeft, a as Scaling, b as ArrowRight, c as Play, d as Lightbulb, f as FileSearch, g as ChevronRight, h as CircleAlert, i as Stethoscope, l as Network, m as Compass, n as TrendingUp, o as RotateCcw, p as FileInput, r as Sun, s as RefreshCw, t as Users, u as Moon, v as Calendar, x as Activity, y as BrainCircuit } from "../_libs/lucide-react.mjs";
 import { t as motion } from "../_libs/framer-motion.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/routes-BkgL0LaQ.js
+//#region node_modules/.nitro/vite/services/ssr/assets/routes-DRwIwH8W.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var links = [
@@ -552,11 +552,11 @@ var rightYs = distribute(RIGHT_COUNT, RIGHT_START_Y, RIGHT_H, 405);
 function OSSection() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
 		id: "os",
-		className: "border-t border-hairline bg-card py-1 md:py-2",
+		className: "border-t border-hairline bg-card py-0 md:py-0",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "mx-auto w-full max-w-7xl px-4 md:px-6",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				className: "mb-1 max-w-6xl",
+				className: "mb-0 max-w-6xl",
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
 					className: "font-sans text-2xl font-black leading-[1.05] text-ink md:text-3xl lg:text-4xl",
 					children: "Multi-agent Platform for Drug R&D AI OS"
@@ -585,7 +585,7 @@ function OSSection() {
 }
 function OSDiagram() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-		className: "relative w-full max-h-[72vh] overflow-hidden rounded-lg border border-hairline bg-paper p-1",
+		className: "relative w-full max-h-[72vh] overflow-hidden",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("svg", {
 			viewBox: "0 0 1000 480",
 			className: "h-auto w-full",
@@ -1041,15 +1041,21 @@ function OpportunitiesSection() {
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 						className: "mt-1 text-base text-ink/70 md:text-lg",
 						children: "\n"
-					})] }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						className: "flex flex-wrap items-center gap-3 text-base",
-						children: Object.keys(chipClass).map((k) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							className: "flex items-center gap-1.5",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: `h-4 w-4 rounded-sm ${dotClass[k]}` }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-								className: "font-medium text-ink",
-								children: k
-							})]
-						}, k))
+					})] }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "flex flex-wrap items-center justify-end gap-5 md:gap-6",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+							className: "text-xs font-semibold text-ink/70 md:text-sm",
+							children: "Data from the MRL GenAI Functional Taskforce"
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+							className: "flex flex-wrap items-center gap-3 text-base",
+							children: Object.keys(chipClass).map((k) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "flex items-center gap-1.5",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: `h-4 w-4 rounded-sm ${dotClass[k]}` }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+									className: "font-medium text-ink",
+									children: k
+								})]
+							}, k))
+						})]
 					})]
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
@@ -1614,12 +1620,12 @@ var metrics = [{
 function CaseStudySection() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
 		id: "case-study",
-		className: "border-t border-hairline bg-paper py-3 md:py-4",
+		className: "border-t border-hairline bg-paper py-2 md:py-3",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "mx-auto w-full max-w-7xl px-2 md:px-3",
 			children: [
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					className: "mb-6",
+					className: "mb-3",
 					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
 						className: "font-sans text-2xl font-black leading-[1.05] text-ink md:text-3xl lg:text-4xl",
 						children: [
@@ -1637,10 +1643,10 @@ function CaseStudySection() {
 					})
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "rounded-2xl border border-hairline bg-card p-2 md:p-3",
+					className: "rounded-2xl border border-hairline bg-card p-2",
 					children: [
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							className: "mb-2 flex items-center gap-3",
+							className: "mb-1.5 flex items-center gap-3",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "h-px w-8 bg-teal" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 								className: "eyebrow text-base",
 								children: "Project Timeline"
@@ -1656,7 +1662,7 @@ function CaseStudySection() {
 										children: m.date
 									}),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-										className: "relative my-1.5 flex h-4 w-full items-center justify-center",
+										className: "relative my-1 flex h-4 w-full items-center justify-center",
 										children: [
 											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "z-10 h-3 w-3 rounded-full bg-teal ring-4 ring-teal/20" }),
 											i < timeline.length - 1 && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute left-1/2 right-0 top-1/2 h-0 -translate-y-1/2 border-t border-dashed border-ink/30" }),
@@ -1664,16 +1670,16 @@ function CaseStudySection() {
 										]
 									}),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-										className: "w-full break-words px-1 text-base font-medium leading-tight text-ink md:text-lg",
+										className: "w-full break-words px-1 text-sm font-medium leading-tight text-ink md:text-base",
 										children: m.label
 									})
 								]
 							}, i))
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-							className: "mt-2 rounded-xl border-2 border-dashed border-teal bg-paper p-2 text-center",
+							className: "mt-1.5 rounded-xl border-2 border-dashed border-teal bg-paper p-1.5 text-center",
 							children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								className: "text-base font-black uppercase tracking-wider text-ink md:text-lg",
+								className: "text-sm font-black uppercase tracking-wider text-ink md:text-base",
 								children: [
 									"Human review-based feedback and manual AI tool tuning",
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
@@ -1685,7 +1691,7 @@ function CaseStudySection() {
 										children: "87%"
 									}),
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-										className: "ml-2 text-sm font-semibold normal-case tracking-normal text-ink/70 md:text-base",
+										className: "ml-2 text-xs font-semibold normal-case tracking-normal text-ink/70 md:text-sm",
 										children: "of total time spent"
 									})
 								]
@@ -1694,18 +1700,18 @@ function CaseStudySection() {
 					]
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "mt-2 rounded-2xl border border-hairline bg-card p-3 md:p-4",
+					className: "mt-1.5 rounded-2xl border border-hairline bg-card p-2 md:p-3",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "mb-3 flex items-center gap-3",
+						className: "mb-2 flex items-center gap-3",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "h-px w-8 bg-teal" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 							className: "eyebrow text-base",
 							children: "PD Analysis Workflow"
 						})]
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "relative mx-auto grid max-w-5xl grid-cols-1 gap-4 md:grid-cols-[1fr_auto_1fr]",
+						className: "relative mx-auto grid max-w-5xl grid-cols-1 gap-3 md:grid-cols-[1fr_auto_1fr]",
 						children: [
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								className: "flex flex-col gap-1.5",
+								className: "flex flex-col gap-1",
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 									className: "mb-1 flex items-center justify-center gap-2",
 									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
@@ -1729,8 +1735,8 @@ function CaseStudySection() {
 											})]
 										}),
 										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-											className: "flex justify-center py-0.5",
-											children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "h-4 w-4 rotate-90 text-ink/30" })
+											className: "flex justify-center py-0",
+											children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "h-3.5 w-3.5 rotate-90 text-ink/30" })
 										}),
 										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 											className: "flex items-center justify-center gap-2.5 rounded-xl border-2 border-dashed border-hairline bg-paper p-2",
@@ -1743,8 +1749,8 @@ function CaseStudySection() {
 											})]
 										}),
 										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-											className: "flex justify-center py-0.5",
-											children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "h-4 w-4 rotate-90 text-ink/30" })
+											className: "flex justify-center py-0",
+											children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "h-3.5 w-3.5 rotate-90 text-ink/30" })
 										}),
 										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 											className: "grid grid-cols-2 gap-1.5",
@@ -1775,8 +1781,8 @@ function CaseStudySection() {
 											})]
 										}),
 										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-											className: "flex justify-center py-0.5",
-											children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "h-4 w-4 rotate-90 text-ink/30" })
+											className: "flex justify-center py-0",
+											children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "h-3.5 w-3.5 rotate-90 text-ink/30" })
 										}),
 										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 											className: "flex items-center justify-center gap-2.5 rounded-xl border-2 border-dashed border-hairline bg-paper p-2 opacity-80",
@@ -1792,11 +1798,11 @@ function CaseStudySection() {
 								})]
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-								className: "hidden md:flex flex-col items-center justify-center py-2",
+								className: "hidden md:flex flex-col items-center justify-center py-0",
 								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "h-full w-px bg-gradient-to-b from-transparent via-teal to-transparent" })
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								className: "flex flex-col gap-1.5",
+								className: "flex flex-col gap-1",
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 									className: "mb-1 flex items-center justify-center gap-2",
 									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
@@ -1820,11 +1826,11 @@ function CaseStudySection() {
 											})]
 										}),
 										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-											className: "flex justify-center py-0.5",
-											children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "h-4 w-4 rotate-90 text-teal" })
+											className: "flex justify-center py-0",
+											children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "h-3.5 w-3.5 rotate-90 text-teal" })
 										}),
 										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-											className: "flex flex-col items-center justify-center gap-2 rounded-xl border border-teal/30 bg-gradient-to-br from-teal/10 to-teal/5 p-2 shadow-md ring-1 ring-teal/20",
+											className: "flex flex-col items-center justify-center gap-1.5 rounded-xl border border-teal/30 bg-gradient-to-br from-teal/10 to-teal/5 p-1.5 shadow-md ring-1 ring-teal/20",
 											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 												className: "flex items-center justify-center gap-2.5",
 												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
@@ -1847,8 +1853,8 @@ function CaseStudySection() {
 											})]
 										}),
 										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-											className: "flex justify-center py-0.5",
-											children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "h-4 w-4 rotate-90 text-teal" })
+											className: "flex justify-center py-0",
+											children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "h-3.5 w-3.5 rotate-90 text-teal" })
 										}),
 										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 											className: "flex items-center justify-center gap-2.5 rounded-xl border border-teal/30 bg-paper p-2 shadow-sm ring-1 ring-teal/10",
@@ -1867,9 +1873,9 @@ function CaseStudySection() {
 					})]
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "mt-2 rounded-2xl border border-hairline bg-card p-2 md:p-3",
+					className: "mt-1.5 rounded-2xl border border-hairline bg-card p-2",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "mb-2 flex items-center gap-3",
+						className: "mb-1.5 flex items-center gap-3",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "h-px w-8 bg-teal" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 							className: "eyebrow text-base",
 							children: "After One Round of Optimization"
@@ -2033,13 +2039,13 @@ function SlideDeck({ children }) {
 		]
 	});
 }
-function Slide({ id, children, className = "" }) {
+function Slide({ id, children, className = "", contentClassName = "" }) {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
 		"data-slide": true,
 		"data-slide-id": id,
 		className: `flex h-screen w-full snap-start snap-always flex-col overflow-hidden ${className}`,
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-			className: "flex h-full w-full flex-col justify-center overflow-auto pt-16 md:pt-20",
+			className: `flex h-full w-full flex-col justify-center overflow-auto pt-16 md:pt-20 ${contentClassName}`,
 			children
 		})
 	});
@@ -2070,6 +2076,7 @@ function Index() {
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Slide, {
 				id: "os",
+				contentClassName: "pt-8 md:pt-12",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(OSSection, {})
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Slide, {
