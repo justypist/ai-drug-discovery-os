@@ -12,21 +12,9 @@ export function LoopSection() {
           title="Loop Engineering for Self-Evolving Agents"
         />
 
-        <div className="mb-1 grid gap-2 sm:grid-cols-2">
-          {[
-            "Learn",
-            "Reflect",
-            "Adapt",
-            "Scale",
-          ].map((title) => (
-            <div key={title} className="flex items-start gap-3">
-              <span className="mt-2.5 h-2.5 w-2.5 shrink-0 rounded-full bg-teal" />
-              <div className="text-base font-semibold text-ink md:text-lg lg:text-xl">
-                {title}
-              </div>
-            </div>
-          ))}
-        </div>
+        <p className="mx-auto max-w-4xl text-center text-base font-medium text-ink md:text-lg lg:text-xl">
+          Systematic design of closed feedback loops that enable AI agents to continuously learn, self-correct, and evolve through autonomous iteration.
+        </p>
 
 
         <motion.div
