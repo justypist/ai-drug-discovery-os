@@ -223,7 +223,7 @@ export function CaseStudySection() {
                 {/* Bars */}
                 <div className="absolute inset-x-0 bottom-0 h-full flex items-end justify-center gap-6 px-4">
                   {/* Before bar */}
-                  <div className="flex flex-col items-center">
+                  <div className="flex h-full flex-col items-center justify-end">
                     <span className="mb-1 text-lg font-black text-ink/80 md:text-xl">
                       {m.before.toFixed(1)}%
                     </span>
@@ -239,7 +239,7 @@ export function CaseStudySection() {
                   </div>
 
                   {/* After bar */}
-                  <div className="flex flex-col items-center">
+                  <div className="flex h-full flex-col items-center justify-end">
                     <span className="mb-1 text-lg font-black text-teal md:text-xl">
                       {m.after.toFixed(1)}%
                     </span>
