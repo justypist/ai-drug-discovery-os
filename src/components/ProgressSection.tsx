@@ -191,7 +191,7 @@ function ProjectItem({
   resetting?: boolean;
 }) {
   return (
-    <div className="py-1">
+    <div className="py-0.5">
       <div className="flex items-start gap-2">
         <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-ink" />
         <div className="text-lg leading-snug text-ink">
@@ -266,9 +266,9 @@ export function ProgressSection() {
   };
 
   return (
-    <section id="progress" className="border-t border-hairline bg-paper pt-6 pb-6">
+    <section id="progress" className="border-t border-hairline bg-paper pt-4 pb-4">
       <div className="mx-auto w-full max-w-7xl px-4 md:px-6">
-        <div className="mb-8 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
+        <div className="mb-5 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
           <h2 className="font-sans text-2xl font-black leading-[1.05] text-ink md:text-3xl lg:text-4xl">
             Current Project Progress
           </h2>
@@ -289,16 +289,16 @@ export function ProgressSection() {
         </div>
 
         {/* Tier 3: Applications */}
-        <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-3 md:grid-cols-3">
           {streams.map((stream) => (
             <div
               key={stream.id}
-              className={`rounded-2xl border border-hairline p-4 shadow-sm ${stream.color}`}
+              className={`rounded-2xl border border-hairline p-3 shadow-sm ${stream.color}`}
             >
-              <div className="mb-3 text-center text-lg font-bold uppercase tracking-[0.12em] text-teal">
+              <div className="mb-2 text-center text-lg font-bold uppercase tracking-[0.12em] text-teal">
                 {stream.title}
               </div>
-              <div className="space-y-2">
+              <div className="space-y-1">
                 {stream.projects.map((p) => (
                   <ProjectItem
                     key={p.name}
@@ -313,11 +313,11 @@ export function ProgressSection() {
         </div>
 
         {/* Tier 2: CI & Scientific Finding Tracking — flat, warm tint */}
-        <div className="mt-3 rounded-2xl border border-hairline bg-bg-panel p-3 shadow-sm">
-          <div className="mb-2 text-center text-lg font-bold uppercase tracking-[0.12em] text-teal">
+        <div className="mt-2 rounded-2xl border border-hairline bg-bg-panel p-2.5 shadow-sm">
+          <div className="mb-1 text-center text-lg font-bold uppercase tracking-[0.12em] text-teal">
             Competitive Intelligence & Scientific Finding Tracking
           </div>
-          <div className="grid grid-cols-1 gap-x-5 gap-y-1 md:grid-cols-2">
+          <div className="grid grid-cols-1 gap-x-5 gap-y-0.5 md:grid-cols-2">
             {ciItems.map((item) => (
               <div key={item.name} className="py-0">
                 <div className="flex items-start gap-2">
@@ -339,7 +339,7 @@ export function ProgressSection() {
         </div>
 
         {/* Tier 1: IT Infrastructure — flat, cool tint */}
-        <div className="mt-3 rounded-2xl border border-hairline bg-bg-panel px-4 py-3 text-center shadow-sm">
+        <div className="mt-2 rounded-2xl border border-hairline bg-bg-panel px-4 py-2 text-center shadow-sm">
           <div className="text-lg font-bold uppercase tracking-[0.12em] text-teal">
             IT Infrastructure Excellence Enablement
           </div>
