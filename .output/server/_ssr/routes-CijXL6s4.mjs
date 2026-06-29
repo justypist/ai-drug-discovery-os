@@ -2,7 +2,7 @@ import { o as __toESM } from "../_runtime.mjs";
 import { n as require_jsx_runtime, r as require_react } from "../_libs/react+tanstack__react-query.mjs";
 import { _ as ChevronLeft, a as Scaling, b as ArrowRight, c as Play, d as Lightbulb, f as FileSearch, g as ChevronRight, h as CircleAlert, i as Stethoscope, l as Network, m as Compass, n as TrendingUp, o as RotateCcw, p as FileInput, r as Sun, s as RefreshCw, t as Users, u as Moon, v as Calendar, x as Activity, y as BrainCircuit } from "../_libs/lucide-react.mjs";
 import { t as motion } from "../_libs/framer-motion.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/routes-DRwIwH8W.js
+//#region node_modules/.nitro/vite/services/ssr/assets/routes-CijXL6s4.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var links = [
@@ -75,21 +75,14 @@ function SiteNav() {
 		setActive(id);
 	};
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("header", {
-		className: "fixed left-0 right-0 top-0 z-50 border-b border-hairline bg-paper/85 backdrop-blur",
+		className: "fixed left-0 right-0 top-0 z-50 bg-paper/85 backdrop-blur",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("nav", {
-			className: "mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-4 py-3 md:px-6",
-			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-				href: "#top",
-				className: "flex shrink-0 items-baseline gap-2",
-				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-					className: "font-wide text-xl font-normal uppercase text-ink md:text-2xl",
-					children: "AI TF Update"
-				})
-			}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				className: "flex items-center gap-2 md:gap-3",
-				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
-					className: "hidden flex-wrap items-center justify-end gap-1.5 md:flex",
-					children: links.map((l, idx) => {
+			className: "mx-auto flex w-full max-w-7xl items-center justify-between gap-3 px-3 py-2 md:px-4",
+			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+				className: "flex items-center gap-1 md:gap-2",
+				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
+					className: "hidden flex-wrap items-center justify-start gap-1 md:flex",
+					children: links.map((l) => {
 						const isActive = active === l.id;
 						const { Icon } = l;
 						return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
@@ -99,23 +92,23 @@ function SiteNav() {
 								onClick: () => handleClick(l.id),
 								"aria-label": l.label,
 								title: l.label,
-								className: `relative flex h-11 w-11 items-center justify-center rounded-lg border transition-all ${isActive ? "border-teal bg-teal text-primary-foreground shadow-sm" : "border-hairline bg-card text-ink hover:border-teal hover:text-teal"}`,
+								className: `relative flex h-6 w-6 items-center justify-center rounded-md border transition-all ${isActive ? "border-teal bg-teal text-primary-foreground shadow-sm" : "border-hairline bg-card text-ink hover:border-teal hover:text-teal"}`,
 								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Icon, {
-									className: "h-5 w-5",
-									strokeWidth: 2.25
+									className: "h-3 w-3",
+									strokeWidth: 2.5
 								})
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-								className: "pointer-events-none absolute left-1/2 top-full z-50 mt-2 -translate-x-1/2 whitespace-nowrap rounded-md border border-hairline bg-ink px-2.5 py-1 text-xs font-semibold text-paper opacity-0 shadow-lg transition-opacity duration-150 group-hover:opacity-100",
+								className: "pointer-events-none absolute left-1/2 top-full z-50 mt-1.5 -translate-x-1/2 whitespace-nowrap rounded-md border border-hairline bg-ink px-2 py-0.5 text-[10px] font-semibold text-paper opacity-0 shadow-lg transition-opacity duration-150 group-hover:opacity-100",
 								children: l.label
 							})]
 						}, l.id);
 					})
-				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
-					onClick: toggleTheme,
-					"aria-label": theme === "dark" ? "Switch to light mode" : "Switch to dark mode",
-					className: "flex h-11 w-11 items-center justify-center rounded-full border border-hairline bg-card text-ink shadow-sm transition-colors hover:border-teal hover:text-teal",
-					children: theme === "dark" ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Sun, { className: "h-5 w-5" }) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Moon, { className: "h-5 w-5" })
-				})]
+				})
+			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+				onClick: toggleTheme,
+				"aria-label": theme === "dark" ? "Switch to light mode" : "Switch to dark mode",
+				className: "flex h-6 w-6 items-center justify-center rounded-full border border-hairline bg-card text-ink shadow-sm transition-colors hover:border-teal hover:text-teal",
+				children: theme === "dark" ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Sun, { className: "h-3 w-3" }) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Moon, { className: "h-3 w-3" })
 			})]
 		})
 	});
@@ -153,15 +146,15 @@ var milestones = [
 ];
 function Timeline() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
-		className: "flex h-full flex-col bg-paper/60",
+		className: "relative flex h-full flex-col items-center bg-paper/60",
 		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-			className: "flex flex-1 flex-col items-center justify-center px-4",
+			className: "absolute top-[40%] left-0 right-0 -translate-y-1/2 px-4",
 			children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h1", {
 				className: "font-sans text-center text-4xl font-black uppercase tracking-[0.08em] text-ink md:text-5xl lg:text-6xl",
 				children: "AI Taskforce Update"
 			})
 		}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-			className: "mx-auto w-full max-w-7xl px-4 pb-8 md:px-6 md:pb-12",
+			className: "absolute top-[70%] left-1/2 w-full max-w-7xl -translate-x-1/2 px-4 md:px-6",
 			children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 				className: "w-full",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
@@ -196,21 +189,18 @@ function Timeline() {
 }
 function SectionHeader({ eyebrow, title, lede, className = "" }) {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-		className: `mb-10 max-w-5xl ${className}`,
+		className: `mb-8 max-w-5xl ${className}`,
 		children: [
-			eyebrow && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				className: "mb-3 flex items-center gap-3",
-				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "h-px w-12 bg-teal/60" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-					className: "text-lg font-semibold uppercase tracking-[0.18em] text-teal md:text-xl",
-					children: eyebrow
-				})]
+			eyebrow && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+				className: "text-sm font-semibold uppercase tracking-[0.18em] text-teal md:text-base",
+				children: eyebrow
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
 				className: "font-sans text-2xl font-black leading-[1.05] text-ink md:text-3xl lg:text-4xl",
 				children: title
 			}),
 			lede && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-				className: "mt-4 max-w-3xl text-xl leading-relaxed text-ink md:text-2xl",
+				className: "mt-2 max-w-3xl text-lg leading-snug text-ink md:text-xl",
 				children: lede
 			})
 		]
@@ -219,46 +209,14 @@ function SectionHeader({ eyebrow, title, lede, className = "" }) {
 function LoopSection() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
 		id: "loop",
-		className: "border-t border-hairline bg-paper pt-6 pb-0",
+		className: "bg-paper pb-0",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "mx-auto w-full max-w-7xl px-4 md:px-6",
 			children: [
-				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SectionHeader, {
-					className: "mb-2",
-					title: "Loop Engineering for Self-Evolving Agents"
-				}),
-				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					className: "mb-2 grid gap-2 sm:grid-cols-2",
-					children: [
-						{
-							title: "Learn",
-							desc: "Capture outcomes from every execution to build experiential knowledge"
-						},
-						{
-							title: "Reflect",
-							desc: "Enable agents to analyze their own decisions and identify improvement opportunities"
-						},
-						{
-							title: "Adapt",
-							desc: "Close the feedback loop so agents automatically refine strategies and expand capabilities"
-						},
-						{
-							title: "Scale",
-							desc: "Turn each iteration into a compounding intelligence upgrade across the organization"
-						}
-					].map((item) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "flex items-start gap-3",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "mt-2.5 h-2.5 w-2.5 shrink-0 rounded-full bg-teal" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							className: "text-base text-ink md:text-lg lg:text-xl",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-								className: "font-semibold text-ink",
-								children: item.title
-							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
-								className: "text-ink-soft",
-								children: [" — ", item.desc]
-							})]
-						})]
-					}, item.title))
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SectionHeader, { title: "Loop Engineering for Self-Evolving Agents" }),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+					className: "max-w-4xl text-left text-base font-medium text-ink md:text-lg lg:text-xl",
+					children: "Systematic design of closed feedback loops that enable AI agents to continuously learn, self-correct, and evolve through autonomous iteration."
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(motion.div, {
 					initial: {
@@ -274,9 +232,9 @@ function LoopSection() {
 						margin: "-100px"
 					},
 					transition: { duration: .6 },
-					className: "grid h-full gap-2 lg:grid-cols-[1fr_1fr] lg:gap-4",
+					className: "grid h-full items-center gap-2 lg:grid-cols-[1fr_1fr] lg:gap-4",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(LoopDiagram, {}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						className: "flex h-full flex-col justify-start pt-6",
+						className: "flex h-full items-center justify-center",
 						children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 							className: "rounded-lg border border-hairline bg-card p-3 md:p-4 ml-3.5",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
@@ -552,16 +510,16 @@ var rightYs = distribute(RIGHT_COUNT, RIGHT_START_Y, RIGHT_H, 405);
 function OSSection() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
 		id: "os",
-		className: "border-t border-hairline bg-card py-0 md:py-0",
+		className: "bg-paper",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "mx-auto w-full max-w-7xl px-4 md:px-6",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				className: "mb-0 max-w-6xl",
+				className: "mb-8 max-w-6xl",
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
 					className: "font-sans text-2xl font-black leading-[1.05] text-ink md:text-3xl lg:text-4xl",
 					children: "Multi-agent Platform for Drug R&D AI OS"
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-					className: "mt-0.5 max-w-5xl text-lg leading-snug text-ink md:text-xl",
+					className: "mt-6 max-w-5xl text-lg leading-snug text-ink md:text-xl",
 					children: "Complex problems are rarely solved by a single agent—they require coordinated multi-agent orchestration - turning fragmented into one coherent workflow."
 				})]
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(motion.div, {
@@ -784,7 +742,7 @@ function ScalingSection() {
 	const next = () => setStep((s) => (s + 1) % 4);
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
 		id: "scaling",
-		className: "bg-paper py-4",
+		className: "bg-paper pb-4",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "mx-auto w-full max-w-7xl px-2 md:px-4",
 			children: [
@@ -1031,10 +989,10 @@ function OpportunitiesSection() {
 		id: "opportunities",
 		className: "h-full bg-paper",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			className: "mx-auto flex h-full w-full max-w-[1600px] flex-col px-4 py-4 md:px-6",
+			className: "mx-auto flex h-full w-full max-w-[1600px] flex-col px-4 pt-0 pb-4 md:px-6",
 			children: [
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "mb-3 flex items-end justify-between gap-4",
+					className: "mb-8 flex items-end justify-between gap-4",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
 						className: "font-sans text-2xl font-black leading-[1.05] text-ink md:text-3xl lg:text-4xl",
 						children: "Opportunities Across R&D Value Chain"
@@ -1327,12 +1285,12 @@ function ProgressSection() {
 	};
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
 		id: "progress",
-		className: "border-t border-hairline bg-paper pt-4 pb-4",
+		className: "bg-paper pb-4",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "mx-auto w-full max-w-7xl px-4 md:px-6",
 			children: [
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "mb-5 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center",
+					className: "mb-8 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-start",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
 						className: "font-sans text-2xl font-black leading-[1.05] text-ink md:text-3xl lg:text-4xl",
 						children: "Current Project Progress"
@@ -1513,7 +1471,7 @@ function CandidateItem({ name }) {
 function NewProjectsSection() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
 		id: "new-projects",
-		className: "border-t border-hairline bg-paper pt-6 pb-6",
+		className: "bg-paper pb-6",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "mx-auto w-full max-w-7xl px-4 md:px-6",
 			children: [
@@ -1620,12 +1578,12 @@ var metrics = [{
 function CaseStudySection() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
 		id: "case-study",
-		className: "border-t border-hairline bg-paper py-2 md:py-3",
+		className: "bg-paper pb-2 md:pb-3",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "mx-auto w-full max-w-7xl px-2 md:px-3",
 			children: [
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					className: "mb-3",
+					className: "mb-8",
 					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h2", {
 						className: "font-sans text-2xl font-black leading-[1.05] text-ink md:text-3xl lg:text-4xl",
 						children: [
@@ -1643,7 +1601,7 @@ function CaseStudySection() {
 					})
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "rounded-2xl border border-hairline bg-card p-2",
+					className: "rounded-2xl bg-card p-2",
 					children: [
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 							className: "mb-1.5 flex items-center gap-3",
@@ -1677,9 +1635,9 @@ function CaseStudySection() {
 							}, i))
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-							className: "mt-1.5 rounded-xl border-2 border-dashed border-teal bg-paper p-1.5 text-center",
+							className: "mt-1.5 text-center",
 							children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								className: "text-sm font-black uppercase tracking-wider text-ink md:text-base",
+								className: "text-sm font-black tracking-wider text-ink md:text-base",
 								children: [
 									"Human review-based feedback and manual AI tool tuning",
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
@@ -1725,7 +1683,7 @@ function CaseStudySection() {
 									className: "relative flex flex-col gap-1",
 									children: [
 										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-											className: "flex items-center justify-center gap-2.5 rounded-xl border-2 border-dashed border-hairline bg-paper p-2",
+											className: "flex items-center justify-center gap-2.5 rounded-xl border-2 border-hairline bg-paper p-2",
 											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 												className: "flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-ink/5 text-ink/60",
 												children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(FileInput, { className: "h-3.5 w-3.5" })
@@ -1739,7 +1697,7 @@ function CaseStudySection() {
 											children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "h-3.5 w-3.5 rotate-90 text-ink/30" })
 										}),
 										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-											className: "flex items-center justify-center gap-2.5 rounded-xl border-2 border-dashed border-hairline bg-paper p-2",
+											className: "flex items-center justify-center gap-2.5 rounded-xl border-2 border-hairline bg-paper p-2",
 											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 												className: "flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-ink/5 text-ink/60",
 												children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Users, { className: "h-3.5 w-3.5" })
@@ -1755,7 +1713,7 @@ function CaseStudySection() {
 										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 											className: "grid grid-cols-2 gap-1.5",
 											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-												className: "flex items-center justify-center gap-1 rounded-xl border-2 border-dashed border-hairline bg-paper p-2 text-center",
+												className: "flex items-center justify-center gap-1 rounded-xl border-2 border-hairline bg-paper p-2 text-center",
 												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 													className: "flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-ink/5 text-ink/60",
 													children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
@@ -1767,7 +1725,7 @@ function CaseStudySection() {
 													children: "PD Classification"
 												})]
 											}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-												className: "flex items-center justify-center gap-1 rounded-xl border-2 border-dashed border-hairline bg-paper p-2 text-center",
+												className: "flex items-center justify-center gap-1 rounded-xl border-2 border-hairline bg-paper p-2 text-center",
 												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 													className: "flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-ink/5 text-ink/60",
 													children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
@@ -1785,7 +1743,7 @@ function CaseStudySection() {
 											children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "h-3.5 w-3.5 rotate-90 text-ink/30" })
 										}),
 										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-											className: "flex items-center justify-center gap-2.5 rounded-xl border-2 border-dashed border-hairline bg-paper p-2 opacity-80",
+											className: "flex items-center justify-center gap-2.5 rounded-xl border-2 border-hairline bg-paper p-2 opacity-80",
 											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 												className: "flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-ink/5 text-ink/60",
 												children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(TrendingUp, { className: "h-3.5 w-3.5" })
@@ -2045,7 +2003,7 @@ function Slide({ id, children, className = "", contentClassName = "" }) {
 		"data-slide-id": id,
 		className: `flex h-screen w-full snap-start snap-always flex-col overflow-hidden ${className}`,
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-			className: `flex h-full w-full flex-col justify-center overflow-auto pt-16 md:pt-20 ${contentClassName}`,
+			className: `flex h-full w-full flex-col justify-start overflow-auto pt-20 ${contentClassName}`,
 			children
 		})
 	});
@@ -2076,7 +2034,6 @@ function Index() {
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Slide, {
 				id: "os",
-				contentClassName: "pt-8 md:pt-12",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(OSSection, {})
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Slide, {
