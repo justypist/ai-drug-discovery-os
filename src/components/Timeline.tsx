@@ -12,18 +12,19 @@ const milestones = [
 
 export function Timeline() {
   return (
-    <section className="flex h-full flex-col bg-paper/60">
-      {/* Hero title centered on the slide */}
-      <div className="flex flex-1 flex-col items-center justify-center px-4">
+    <section className="relative flex h-full flex-col items-center bg-paper/60">
+      {/* Hero title at 2/5 page height */}
+      <div className="absolute top-[40%] left-0 right-0 -translate-y-1/2 px-4">
         <h1 className="font-sans text-center text-4xl font-black uppercase tracking-[0.08em] text-ink md:text-5xl lg:text-6xl">
           AI Taskforce Update
         </h1>
       </div>
 
-      {/* Timeline moved lower on the slide */}
-      <div className="mx-auto w-full max-w-7xl px-4 pb-8 md:px-6 md:pb-12">
+      {/* Timeline centered at 70% page height */}
+      <div className="absolute top-[70%] left-1/2 w-full max-w-7xl -translate-x-1/2 px-4 md:px-6">
         <div className="w-full">
           <div className="flex w-full items-start gap-1 md:gap-2">
+
             {milestones.map((m, i) => (
               <Fragment key={i}>
                 {i > 0 && (

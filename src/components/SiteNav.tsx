@@ -59,16 +59,11 @@ export function SiteNav() {
   };
 
   return (
-    <header className="fixed left-0 right-0 top-0 z-50 border-b border-hairline bg-paper/85 backdrop-blur">
-      <nav className="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-4 py-3 md:px-6">
-        <a href="#top" className="flex shrink-0 items-baseline gap-2">
-          <span className="font-wide text-xl font-normal uppercase text-ink md:text-2xl">
-            AI TF Update
-          </span>
-        </a>
-        <div className="flex items-center gap-2 md:gap-3">
-          <ul className="hidden flex-wrap items-center justify-end gap-1.5 md:flex">
-            {links.map((l, idx) => {
+    <header className="fixed left-0 right-0 top-0 z-50 bg-paper/85 backdrop-blur">
+      <nav className="mx-auto flex w-full max-w-7xl items-center justify-between gap-3 px-3 py-2 md:px-4">
+        <div className="flex items-center gap-1 md:gap-2">
+          <ul className="hidden flex-wrap items-center justify-start gap-1 md:flex">
+            {links.map((l) => {
               const isActive = active === l.id;
               const { Icon } = l;
               return (
@@ -78,16 +73,16 @@ export function SiteNav() {
                     onClick={() => handleClick(l.id)}
                     aria-label={l.label}
                     title={l.label}
-                    className={`relative flex h-11 w-11 items-center justify-center rounded-lg border transition-all ${
+                    className={`relative flex h-6 w-6 items-center justify-center rounded-md border transition-all ${
                       isActive
                         ? "border-teal bg-teal text-primary-foreground shadow-sm"
                         : "border-hairline bg-card text-ink hover:border-teal hover:text-teal"
                     }`}
                   >
-                    <Icon className="h-5 w-5" strokeWidth={2.25} />
+                    <Icon className="h-3 w-3" strokeWidth={2.5} />
                   </a>
                   <span
-                    className="pointer-events-none absolute left-1/2 top-full z-50 mt-2 -translate-x-1/2 whitespace-nowrap rounded-md border border-hairline bg-ink px-2.5 py-1 text-xs font-semibold text-paper opacity-0 shadow-lg transition-opacity duration-150 group-hover:opacity-100"
+                    className="pointer-events-none absolute left-1/2 top-full z-50 mt-1.5 -translate-x-1/2 whitespace-nowrap rounded-md border border-hairline bg-ink px-2 py-0.5 text-[10px] font-semibold text-paper opacity-0 shadow-lg transition-opacity duration-150 group-hover:opacity-100"
                   >
                     {l.label}
                   </span>
@@ -95,14 +90,14 @@ export function SiteNav() {
               );
             })}
           </ul>
-          <button
-            onClick={toggleTheme}
-            aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
-            className="flex h-11 w-11 items-center justify-center rounded-full border border-hairline bg-card text-ink shadow-sm transition-colors hover:border-teal hover:text-teal"
-          >
-            {theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
-          </button>
         </div>
+        <button
+          onClick={toggleTheme}
+          aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
+          className="flex h-6 w-6 items-center justify-center rounded-full border border-hairline bg-card text-ink shadow-sm transition-colors hover:border-teal hover:text-teal"
+        >
+          {theme === "dark" ? <Sun className="h-3 w-3" /> : <Moon className="h-3 w-3" />}
+        </button>
       </nav>
     </header>
   );

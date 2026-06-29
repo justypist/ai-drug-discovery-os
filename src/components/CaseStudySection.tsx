@@ -23,10 +23,10 @@ const metrics = [
 
 export function CaseStudySection() {
   return (
-    <section id="case-study" className="border-t border-hairline bg-paper py-2 md:py-3">
+    <section id="case-study" className="bg-paper pb-2 md:pb-3">
       <div className="mx-auto w-full max-w-7xl px-2 md:px-3">
         {/* Title */}
-        <div className="mb-3">
+        <div className="mb-8">
           <h2 className="font-sans text-2xl font-black leading-[1.05] text-ink md:text-3xl lg:text-4xl">
             Case Study <span className="text-ink/40">·</span>{" "}
             <span className="text-teal">AI-Assisted Protocol Deviation</span>
@@ -34,7 +34,7 @@ export function CaseStudySection() {
         </div>
 
         {/* Timeline */}
-        <div className="rounded-2xl border border-hairline bg-card p-2">
+        <div className="rounded-2xl bg-card p-2">
           <div className="mb-1.5 flex items-center gap-3">
             <span className="h-px w-8 bg-teal" />
             <span className="eyebrow text-base">Project Timeline</span>
@@ -60,8 +60,8 @@ export function CaseStudySection() {
               </div>
             ))}
           </div>
-          <div className="mt-1.5 rounded-xl border-2 border-dashed border-teal bg-paper p-1.5 text-center">
-            <div className="text-sm font-black uppercase tracking-wider text-ink md:text-base">
+          <div className="mt-1.5 text-center">
+            <div className="text-sm font-black tracking-wider text-ink md:text-base">
               Human review-based feedback and manual AI tool tuning
               <span className="mx-2 text-teal">·</span>
               <span className="text-teal">87%</span>
@@ -93,7 +93,7 @@ export function CaseStudySection() {
 
               <div className="relative flex flex-col gap-1">
                 {/* Step 1 */}
-                <div className="flex items-center justify-center gap-2.5 rounded-xl border-2 border-dashed border-hairline bg-paper p-2">
+                <div className="flex items-center justify-center gap-2.5 rounded-xl border-2 border-hairline bg-paper p-2">
                   <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-ink/5 text-ink/60">
                     <FileInput className="h-3.5 w-3.5" />
                   </div>
@@ -105,7 +105,7 @@ export function CaseStudySection() {
                 </div>
 
                 {/* Step 2 */}
-                <div className="flex items-center justify-center gap-2.5 rounded-xl border-2 border-dashed border-hairline bg-paper p-2">
+                <div className="flex items-center justify-center gap-2.5 rounded-xl border-2 border-hairline bg-paper p-2">
                   <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-ink/5 text-ink/60">
                     <Users className="h-3.5 w-3.5" />
                   </div>
@@ -118,7 +118,7 @@ export function CaseStudySection() {
 
                 {/* Step 3 - split branch */}
                 <div className="grid grid-cols-2 gap-1.5">
-                  <div className="flex items-center justify-center gap-1 rounded-xl border-2 border-dashed border-hairline bg-paper p-2 text-center">
+                  <div className="flex items-center justify-center gap-1 rounded-xl border-2 border-hairline bg-paper p-2 text-center">
                     <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-ink/5 text-ink/60">
                       <span className="text-[10px] font-bold">PD</span>
                     </div>
@@ -126,7 +126,7 @@ export function CaseStudySection() {
                       PD Classification
                     </h4>
                   </div>
-                  <div className="flex items-center justify-center gap-1 rounded-xl border-2 border-dashed border-hairline bg-paper p-2 text-center">
+                  <div className="flex items-center justify-center gap-1 rounded-xl border-2 border-hairline bg-paper p-2 text-center">
                     <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-ink/5 text-ink/60">
                       <span className="text-[10px] font-bold">IPD</span>
                     </div>
@@ -141,7 +141,7 @@ export function CaseStudySection() {
                 </div>
 
                 {/* Step 4 */}
-                <div className="flex items-center justify-center gap-2.5 rounded-xl border-2 border-dashed border-hairline bg-paper p-2 opacity-80">
+                <div className="flex items-center justify-center gap-2.5 rounded-xl border-2 border-hairline bg-paper p-2 opacity-80">
                   <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-ink/5 text-ink/60">
                     <TrendingUp className="h-3.5 w-3.5" />
                   </div>
