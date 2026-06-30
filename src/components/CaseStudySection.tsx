@@ -17,7 +17,7 @@ export function CaseStudySection() {
         <div className="mb-8">
           <h2 className="font-sans text-2xl font-black leading-[1.05] text-ink md:text-3xl lg:text-4xl">
             Case Study <span className="text-ink/40">·</span>{" "}
-            <span className="text-teal">AI-Assisted Protocol Deviation</span>
+            <span className="text-teal">AI-Assisted Protocol Deviation Analysis</span>
           </h2>
         </div>
 
