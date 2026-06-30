@@ -2,7 +2,7 @@ import { o as __toESM } from "../_runtime.mjs";
 import { n as require_jsx_runtime, r as require_react } from "../_libs/react+tanstack__react-query.mjs";
 import { S as Activity, _ as ChevronRight, a as Scaling, b as BrainCircuit, c as Play, d as Lightbulb, f as FileSearch, g as CircleAlert, h as CircleCheck, i as Stethoscope, l as Network, m as Compass, n as TrendingUp, o as RotateCcw, p as FileInput, r as Sun, s as RefreshCw, t as Users, u as Moon, v as ChevronLeft, x as ArrowRight, y as Calendar } from "../_libs/lucide-react.mjs";
 import { t as motion } from "../_libs/framer-motion.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/routes-DFOHY2um.js
+//#region node_modules/.nitro/vite/services/ssr/assets/routes-B8ZzPgtS.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var links = [
@@ -524,7 +524,7 @@ function OSSection() {
 				className: "mb-8 max-w-6xl",
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
 					className: "font-sans text-2xl font-black leading-[1.05] text-ink md:text-3xl lg:text-4xl",
-					children: "Multi-agent Platform for Drug R&D AI OS"
+					children: "Multi-agent Platform for Drug R&D AI Operating System"
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 					className: "mt-6 max-w-5xl text-lg leading-snug text-ink md:text-xl",
 					children: "Complex problems are rarely solved by a single agent—they require coordinated multi-agent orchestration - turning fragmented into one coherent workflow."
@@ -754,7 +754,7 @@ function ScalingSection() {
 			className: "mx-auto w-full max-w-7xl px-2 md:px-4",
 			children: [
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SectionHeader, {
-					title: "Drug R&D AI OS",
+					title: "Drug R&D AI Operating System",
 					lede: "Scaling Through Applications × Agentic Capabilities"
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
@@ -862,7 +862,7 @@ function RowFragment({ r, step, labelOn, label }) {
 var ownership = {
 	"External Environment Monitoring": "China",
 	"Disease Deep-dive": "China",
-	"Target Research & Novel Target Alerts": "China",
+	"Target Research": "China",
 	"Asset Benchmarking": "China",
 	"Animal Model Translatability Eval.": "China",
 	"Molecular Differentiation Analysis": "China",
@@ -902,7 +902,7 @@ var groups = [
 				apps: [
 					"External Environment Monitoring",
 					"Disease Deep-dive",
-					"Target Research & Novel Target Alerts",
+					"Target Research",
 					"Competitive Intelligence Monitoring",
 					"Scientific Finding Tracking",
 					"Virtual Cell",
@@ -1109,8 +1109,9 @@ var streams$1 = [
 				value: 70
 			}]
 		}, {
-			name: "Project Risk & Issue Identification & Management",
+			name: "Project Risk & Issue Identification and Management",
 			value: 15,
+			feasibility: true,
 			greenLabel: "NOV",
 			blackLabel: "Q1 2027"
 		}]
@@ -1127,6 +1128,7 @@ var streams$1 = [
 		}, {
 			name: "Digital Pathology",
 			value: 15,
+			feasibility: true,
 			greenLabel: "Q1 2027",
 			blackLabel: "TBD"
 		}]
@@ -1247,7 +1249,7 @@ function ProjectItem({ project, animate, resetting }) {
 			(!project.feasibility || project.greenLabel || project.blackLabel) && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 				className: "ml-[14px]",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ProgressBar, {
-					value: project.feasibility ? 0 : project.value ?? 50,
+					value: project.value ?? (project.feasibility ? 0 : 50),
 					animate,
 					resetting,
 					greenLabel: project.greenLabel,
@@ -1402,7 +1404,7 @@ var streams = [
 				value: 70
 			}]
 		}, {
-			name: "Project Risk & Issue Identification & Management",
+			name: "Project Risk & Issue Identification and Management",
 			feasibility: true
 		}],
 		candidates: [
@@ -1592,7 +1594,7 @@ function CaseStudySection() {
 							" ",
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 								className: "text-teal",
-								children: "AI-Assisted Protocol Deviation"
+								children: "AI-Assisted Protocol Deviation Analysis"
 							})
 						]
 					})
