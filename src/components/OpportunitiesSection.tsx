@@ -33,7 +33,7 @@ const ownership: Record<string, Ownership> = {
   "Protocol Review": "Unexplored",
   "IB Drafting": "Unexplored",
   "Patient Recruitment": "Unexplored",
-  "Operational Data Management": "China & HQ",
+  "Operational Data Management Platform": "China & HQ",
   "AI for RWE": "Unexplored",
   "AI-based Virtual Review": "Unexplored",
 };
@@ -93,7 +93,7 @@ const groups: Group[] = [
           "IB Updates",
           "Medical Monitoring",
           "Patient Recruitment",
-          "Operational Data Management",
+          "Operational Data Management Platform",
           "Digital Pathology",
           "AI for RWE",
         ],
