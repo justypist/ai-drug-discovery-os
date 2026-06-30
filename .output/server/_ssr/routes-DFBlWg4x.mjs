@@ -1,8 +1,8 @@
 import { o as __toESM } from "../_runtime.mjs";
 import { n as require_jsx_runtime, r as require_react } from "../_libs/react+tanstack__react-query.mjs";
-import { _ as ChevronLeft, a as Scaling, b as ArrowRight, c as Play, d as Lightbulb, f as FileSearch, g as ChevronRight, h as CircleAlert, i as Stethoscope, l as Network, m as Compass, n as TrendingUp, o as RotateCcw, p as FileInput, r as Sun, s as RefreshCw, t as Users, u as Moon, v as Calendar, x as Activity, y as BrainCircuit } from "../_libs/lucide-react.mjs";
+import { S as Activity, _ as ChevronRight, a as Scaling, b as BrainCircuit, c as Play, d as Lightbulb, f as FileSearch, g as CircleAlert, h as CircleCheck, i as Stethoscope, l as Network, m as Compass, n as TrendingUp, o as RotateCcw, p as FileInput, r as Sun, s as RefreshCw, t as Users, u as Moon, v as ChevronLeft, x as ArrowRight, y as Calendar } from "../_libs/lucide-react.mjs";
 import { t as motion } from "../_libs/framer-motion.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/routes-CijXL6s4.js
+//#region node_modules/.nitro/vite/services/ssr/assets/routes-DFBlWg4x.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var links = [
@@ -1566,15 +1566,6 @@ var timeline = [
 		label: "First round optimization completed"
 	}
 ];
-var metrics = [{
-	label: "PD Category Classification Accuracy",
-	before: 94.4,
-	after: 97.3
-}, {
-	label: "IPD Determination Accuracy",
-	before: 67.5,
-	after: 80.5
-}];
 function CaseStudySection() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
 		id: "case-study",
@@ -1600,72 +1591,9 @@ function CaseStudySection() {
 						]
 					})
 				}),
-				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "rounded-2xl bg-card p-2",
-					children: [
-						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							className: "mb-1.5 flex items-center gap-3",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "h-px w-8 bg-teal" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-								className: "eyebrow text-base",
-								children: "Project Timeline"
-							})]
-						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-							className: "flex w-full items-start",
-							children: timeline.map((m, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								className: "flex flex-1 flex-col items-center text-center",
-								children: [
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-										className: "font-mono text-base font-semibold uppercase tracking-wider text-ink md:text-lg",
-										children: m.date
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-										className: "relative my-1 flex h-4 w-full items-center justify-center",
-										children: [
-											/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "z-10 h-3 w-3 rounded-full bg-teal ring-4 ring-teal/20" }),
-											i < timeline.length - 1 && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute left-1/2 right-0 top-1/2 h-0 -translate-y-1/2 border-t border-dashed border-ink/30" }),
-											i > 0 && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute left-0 right-1/2 top-1/2 h-0 -translate-y-1/2 border-t border-dashed border-ink/30" })
-										]
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-										className: "w-full break-words px-1 text-sm font-medium leading-tight text-ink md:text-base",
-										children: m.label
-									})
-								]
-							}, i))
-						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-							className: "mt-1.5 text-center",
-							children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								className: "text-sm font-black tracking-wider text-ink md:text-base",
-								children: [
-									"Human review-based feedback and manual AI tool tuning",
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-										className: "mx-2 text-teal",
-										children: "·"
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-										className: "text-teal",
-										children: "87%"
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-										className: "ml-2 text-xs font-semibold normal-case tracking-normal text-ink/70 md:text-sm",
-										children: "of total time spent"
-									})
-								]
-							})
-						})
-					]
-				}),
-				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 					className: "mt-1.5 rounded-2xl border border-hairline bg-card p-2 md:p-3",
-					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "mb-2 flex items-center gap-3",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "h-px w-8 bg-teal" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-							className: "eyebrow text-base",
-							children: "PD Analysis Workflow"
-						})]
-					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 						className: "relative mx-auto grid max-w-5xl grid-cols-1 gap-3 md:grid-cols-[1fr_auto_1fr]",
 						children: [
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
@@ -1828,55 +1756,52 @@ function CaseStudySection() {
 								})]
 							})
 						]
-					})]
+					})
 				}),
-				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "mt-1.5 rounded-2xl border border-hairline bg-card p-2",
-					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "mb-1.5 flex items-center gap-3",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "h-px w-8 bg-teal" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-							className: "eyebrow text-base",
-							children: "After One Round of Optimization"
-						})]
-					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						className: "grid gap-2 md:grid-cols-2",
-						children: metrics.map((m) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							className: "rounded-xl border border-hairline bg-paper p-2 shadow-sm",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-								className: "text-base font-semibold leading-tight text-ink md:text-lg",
-								children: m.label
-							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								className: "mt-1.5 flex items-center justify-between gap-3",
-								children: [
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-										className: "text-center",
-										children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-											className: "text-xl font-bold text-ink/60 md:text-2xl",
-											children: [m.before.toFixed(1), "%"]
-										})
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-										className: "flex flex-col items-center",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowRight, { className: "h-5 w-5 text-teal" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
-											className: "text-sm font-bold text-teal",
-											children: [
-												"+",
-												(m.after - m.before).toFixed(1),
-												"pp"
-											]
-										})]
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-										className: "text-center",
-										children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-											className: "text-xl font-bold text-teal md:text-2xl",
-											children: [m.after.toFixed(1), "%"]
-										})
-									})
-								]
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					className: "mt-4 rounded-2xl bg-card p-2",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: "flex w-full items-start",
+						children: timeline.map((m, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "flex flex-1 flex-col items-center text-center",
+							children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+									className: "font-mono text-base font-semibold uppercase tracking-wider text-ink md:text-lg",
+									children: m.date
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "relative my-1 flex h-4 w-full items-center justify-center",
+									children: [
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "z-10 h-3 w-3 rounded-full bg-teal ring-4 ring-teal/20" }),
+										i < timeline.length - 1 && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute left-1/2 right-0 top-1/2 h-0 -translate-y-1/2 border-t border-dashed border-ink/30" }),
+										i > 0 && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute left-0 right-1/2 top-1/2 h-0 -translate-y-1/2 border-t border-dashed border-ink/30" })
+									]
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+									className: "w-full break-words px-1 text-sm font-medium leading-tight text-ink md:text-base",
+									children: m.label
+								})
+							]
+						}, i))
+					})
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					className: "mt-4 rounded-2xl border border-hairline bg-card p-3 md:p-4",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
+						className: "flex flex-col gap-2",
+						children: [
+							"After one round of optimization, IPD determination accuracy increased from 67.5% to 80.5%, and PD category classification accuracy increased from 94.4% to 97.3%.",
+							"AI enhances consistency across different Physicians.",
+							"AI pre-screening not only improves Physician review efficiency, but also generates more comprehensive trend analysis and insights, further improving clinical study quality.",
+							"Human review-based feedback and manual AI tool tuning during development still consume significant time (87% of total time spent), becoming a bottleneck for AI application development. How can AI learn to improve accuracy by itself?"
+						].map((text, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+							className: "flex items-start gap-2",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, { className: "mt-0.5 h-5 w-5 shrink-0 text-teal" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+								className: "text-sm font-medium leading-snug text-ink md:text-base",
+								children: text
 							})]
-						}, m.label))
-					})]
+						}, i))
+					})
 				})
 			]
 		})
