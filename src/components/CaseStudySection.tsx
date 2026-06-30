@@ -181,6 +181,7 @@ export function CaseStudySection() {
                 </div>
               </div>
             ))}
+          </div>
         </div>
 
         {/* Key takeaways */}
