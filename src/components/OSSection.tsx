@@ -11,7 +11,7 @@ const appItems = [
   "Project Risk & Issue Mgmt",
   "Medical Monitoring",
   "Protocol Review",
-  "GCTO Operation Platform",
+  "Operational Data Management Platform",
   "Guidance QA",
   "Virtual Cell",
   "Digital Pathology",
@@ -180,16 +180,16 @@ function OSDiagram() {
 
         {/* application labels */}
         {topItems.map((name, i) =>
-          renderLabel(name, topXs[i], TOP_Y, TOP_W, TOP_H, "center")
+          renderLabel(name, topXs[i], TOP_Y, TOP_W, TOP_H)
         )}
         {bottomItems.map((name, i) =>
-          renderLabel(name, bottomXs[i], BOTTOM_Y, TOP_W, TOP_H, "center")
+          renderLabel(name, bottomXs[i], BOTTOM_Y, TOP_W, TOP_H)
         )}
         {leftItems.map((name, i) =>
-          renderLabel(name, LEFT_X, leftYs[i], SIDE_W, SIDE_H, "right")
+          renderLabel(name, LEFT_X, leftYs[i], SIDE_W, SIDE_H)
         )}
         {rightItems.map((name, i) =>
-          renderLabel(name, RIGHT_X, rightYs[i], SIDE_W, RIGHT_H, "left")
+          renderLabel(name, RIGHT_X, rightYs[i], SIDE_W, RIGHT_H)
         )}
 
         {/* central OS kernel */}
@@ -233,23 +233,13 @@ function renderLabel(
   x: number,
   y: number,
   w: number,
-  h: number,
-  align: "left" | "right" | "center"
+  h: number
 ) {
-  const alignClass =
-    align === "left"
-      ? "text-left"
-      : align === "right"
-      ? "text-right"
-      : "text-center";
-
   return (
     <foreignObject key={name} x={x} y={y} width={w} height={h}>
-      <div className="flex h-full w-full items-center">
-        <div
-          className={`w-full rounded-md border border-hairline bg-card px-2 py-1 shadow-sm ${alignClass}`}
-        >
-          <span className="inline-block text-xs font-semibold leading-tight text-ink md:text-sm">
+      <div className="flex h-full w-full items-center justify-center">
+        <div className="w-full rounded-md border border-hairline bg-card px-2 py-1 shadow-sm text-center">
+          <span className="block text-xs font-semibold leading-tight text-ink md:text-sm">
             {name}
           </span>
         </div>

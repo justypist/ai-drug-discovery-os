@@ -19,7 +19,6 @@ const ownership: Record<string, Ownership> = {
   "Scientific Finding Tracking": "China & HQ",
   "Virtual Cell": "China & HQ",
   "Site Selection": "China & HQ",
-  "Clinical Study QC/QA": "China & HQ",
   "Protocol Deviation": "China & HQ",
   "CSR Drafting": "China & HQ",
   "Medical Monitoring": "China & HQ",
@@ -27,18 +26,16 @@ const ownership: Record<string, Ownership> = {
   "Protocol Drafting": "HQ",
   "ICF Drafting": "HQ",
   "IB Updates": "HQ",
-  "Digital Pathology": "HQ",
+  "Digital Pathology": "China & HQ",
   "AI-assisted Drafting": "HQ",
   // Unexplored
   "Unmet Medical Needs Identification": "Unexplored",
   "Protocol Review": "Unexplored",
   "IB Drafting": "Unexplored",
   "Patient Recruitment": "Unexplored",
-  "Operation Management Platform": "Unexplored",
+  "Operational Data Management": "China & HQ",
   "AI for RWE": "Unexplored",
   "AI-based Virtual Review": "Unexplored",
-  "AE/SAE Detection": "Unexplored",
-  "Audit Report": "Unexplored",
 };
 
 type Phase = { name: string; apps: string[] };
@@ -90,17 +87,14 @@ const groups: Group[] = [
       {
         name: "Execution",
         apps: [
-          "Clinical Study QC/QA",
           "Protocol Deviation",
           "Project Risk & Issue Management",
           "CSR Drafting",
           "IB Updates",
           "Medical Monitoring",
           "Patient Recruitment",
-          "Operation Management Platform",
-          "AE/SAE Detection",
+          "Operational Data Management",
           "Digital Pathology",
-          "Audit Report",
           "AI for RWE",
         ],
       },
