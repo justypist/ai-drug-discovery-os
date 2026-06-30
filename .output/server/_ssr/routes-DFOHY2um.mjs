@@ -2,7 +2,7 @@ import { o as __toESM } from "../_runtime.mjs";
 import { n as require_jsx_runtime, r as require_react } from "../_libs/react+tanstack__react-query.mjs";
 import { S as Activity, _ as ChevronRight, a as Scaling, b as BrainCircuit, c as Play, d as Lightbulb, f as FileSearch, g as CircleAlert, h as CircleCheck, i as Stethoscope, l as Network, m as Compass, n as TrendingUp, o as RotateCcw, p as FileInput, r as Sun, s as RefreshCw, t as Users, u as Moon, v as ChevronLeft, x as ArrowRight, y as Calendar } from "../_libs/lucide-react.mjs";
 import { t as motion } from "../_libs/framer-motion.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/routes-DFBlWg4x.js
+//#region node_modules/.nitro/vite/services/ssr/assets/routes-DFOHY2um.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var links = [
@@ -260,14 +260,21 @@ function LoopSection() {
 										desc: "Close the execution-evaluation-update loop so every task outcome becomes a training signal for the agent."
 									}
 								].map((item) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									className: "flex gap-2",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "mt-1.5 h-2 w-2 shrink-0 rounded-full bg-teal" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-										className: "text-base font-semibold text-ink md:text-lg",
-										children: item.title
-									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-										className: "text-sm text-ink-soft md:text-base",
-										children: item.desc
-									})] })]
+									className: "grid grid-cols-[auto_1fr] items-start gap-x-2 gap-y-0.5",
+									children: [
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+											className: "flex h-6 items-center justify-center md:h-7",
+											children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "h-2 w-2 rounded-full bg-teal" })
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+											className: "text-base font-semibold text-ink md:text-lg",
+											children: item.title
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+											className: "col-start-2 text-sm text-ink-soft md:text-base",
+											children: item.desc
+										})
+									]
 								}, item.title))
 							})]
 						})
@@ -791,7 +798,7 @@ function ScalingSection() {
 										writingMode: "vertical-rl",
 										transform: "rotate(180deg)"
 									},
-									children: "AI AGENTIC CAPABILITY SCALING-UP"
+									children: "AI AGENTIC CAPABILITY SCALING"
 								})
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 								className: "flex-1",
@@ -819,7 +826,7 @@ function ScalingSection() {
 									]
 								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 									className: "mt-2 text-center text-sm font-bold tracking-[0.2em] text-ink md:text-base",
-									children: "APPLICATION SCALING-UP (TOOL & DATA)"
+									children: "APPLICATION SCALING (TOOL & DATA)"
 								})]
 							})]
 						})
@@ -1401,8 +1408,7 @@ var streams = [
 		candidates: [
 			{ name: "Medical Monitoring" },
 			{ name: "Protocol Review" },
-			{ name: "GCTO Operation Platform" },
-			{ name: "Guidance QA" }
+			{ name: "GCTO Operation Platform" }
 		]
 	},
 	{
@@ -1791,9 +1797,8 @@ function CaseStudySection() {
 						className: "flex flex-col gap-2",
 						children: [
 							"After one round of optimization, IPD determination accuracy increased from 67.5% to 80.5%, and PD category classification accuracy increased from 94.4% to 97.3%.",
-							"AI enhances consistency across different Physicians.",
-							"AI pre-screening not only improves Physician review efficiency, but also generates more comprehensive trend analysis and insights, further improving clinical study quality.",
-							"Human review-based feedback and manual AI tool tuning during development still consume significant time (87% of total time spent), becoming a bottleneck for AI application development. How can AI learn to improve accuracy by itself?"
+							"AI pre-screening not only improves physician review efficiency, but also enhances consistency across physicians and generates more comprehensive trend analysis and insights, further improving clinical study quality.",
+							"Human review-based feedback and manual AI tool tuning during development consume significant time (87% of total time spent), becoming a bottleneck for AI application development. How can AI learn to improve accuracy by itself?"
 						].map((text, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
 							className: "flex items-start gap-2",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, { className: "mt-0.5 h-5 w-5 shrink-0 text-teal" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {

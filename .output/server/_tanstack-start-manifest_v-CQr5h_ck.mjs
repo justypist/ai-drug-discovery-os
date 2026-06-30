@@ -1,19 +1,19 @@
-//#region node_modules/.nitro/vite/services/ssr/assets/_tanstack-start-manifest_v-BYevVdfF.js
+//#region node_modules/.nitro/vite/services/ssr/assets/_tanstack-start-manifest_v-CQr5h_ck.js
 var tsrStartManifest = () => ({ routes: {
 	__root__: {
 		filePath: "/home/typist/ai-drug-discovery-os/src/routes/__root.tsx",
 		children: ["/"],
-		preloads: ["/assets/index-37d-sX6v.js"],
+		preloads: ["/assets/index-DTvs8el_.js"],
 		scripts: [{ attrs: {
 			type: "module",
 			async: !0,
-			src: "/assets/index-37d-sX6v.js"
+			src: "/assets/index-DTvs8el_.js"
 		} }]
 	},
 	"/": {
 		filePath: "/home/typist/ai-drug-discovery-os/src/routes/index.tsx",
 		children: void 0,
-		preloads: ["/assets/routes-CHlcAc9x.js"]
+		preloads: ["/assets/routes-DNKbkJQa.js"]
 	}
 } });
 //#endregion
