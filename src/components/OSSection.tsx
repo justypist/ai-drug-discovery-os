@@ -234,22 +234,13 @@ function renderLabel(
   y: number,
   w: number,
   h: number,
-  align: "left" | "right" | "center"
+  _align: "left" | "right" | "center"
 ) {
-  const alignClass =
-    align === "left"
-      ? "text-left"
-      : align === "right"
-      ? "text-right"
-      : "text-center";
-
   return (
     <foreignObject key={name} x={x} y={y} width={w} height={h}>
-      <div className="flex h-full w-full items-center">
-        <div
-          className={`w-full rounded-md border border-hairline bg-card px-2 py-1 shadow-sm ${alignClass}`}
-        >
-          <span className="inline-block text-xs font-semibold leading-tight text-ink md:text-sm">
+      <div className="flex h-full w-full items-center justify-center">
+        <div className="w-full rounded-md border border-hairline bg-card px-2 py-1 shadow-sm text-center">
+          <span className="block text-xs font-semibold leading-tight text-ink md:text-sm">
             {name}
           </span>
         </div>
