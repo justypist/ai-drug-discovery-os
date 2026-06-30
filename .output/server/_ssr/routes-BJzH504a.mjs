@@ -2,7 +2,7 @@ import { o as __toESM } from "../_runtime.mjs";
 import { n as require_jsx_runtime, r as require_react } from "../_libs/react+tanstack__react-query.mjs";
 import { S as Activity, _ as ChevronRight, a as Scaling, b as BrainCircuit, c as Play, d as Lightbulb, f as FileSearch, g as CircleAlert, h as CircleCheck, i as Stethoscope, l as Network, m as Compass, n as TrendingUp, o as RotateCcw, p as FileInput, r as Sun, s as RefreshCw, t as Users, u as Moon, v as ChevronLeft, x as ArrowRight, y as Calendar } from "../_libs/lucide-react.mjs";
 import { t as motion } from "../_libs/framer-motion.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/routes-B8ZzPgtS.js
+//#region node_modules/.nitro/vite/services/ssr/assets/routes-BJzH504a.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var links = [
@@ -466,7 +466,7 @@ var appItems = [
 	"Project Risk & Issue Mgmt",
 	"Medical Monitoring",
 	"Protocol Review",
-	"GCTO Operation Platform",
+	"Operational Data Management Platform",
 	"Guidance QA",
 	"Virtual Cell",
 	"Digital Pathology",
@@ -610,10 +610,10 @@ function OSDiagram() {
 						markerEnd: "url(#arrow-os)"
 					}, `right-line-${i}`);
 				}),
-				topItems.map((name, i) => renderLabel(name, topXs[i], TOP_Y, TOP_W, TOP_H, "center")),
-				bottomItems.map((name, i) => renderLabel(name, bottomXs[i], BOTTOM_Y, TOP_W, TOP_H, "center")),
-				leftItems.map((name, i) => renderLabel(name, LEFT_X, leftYs[i], SIDE_W, SIDE_H, "right")),
-				rightItems.map((name, i) => renderLabel(name, RIGHT_X, rightYs[i], SIDE_W, RIGHT_H, "left")),
+				topItems.map((name, i) => renderLabel(name, topXs[i], TOP_Y, TOP_W, TOP_H)),
+				bottomItems.map((name, i) => renderLabel(name, bottomXs[i], BOTTOM_Y, TOP_W, TOP_H)),
+				leftItems.map((name, i) => renderLabel(name, LEFT_X, leftYs[i], SIDE_W, SIDE_H)),
+				rightItems.map((name, i) => renderLabel(name, RIGHT_X, rightYs[i], SIDE_W, RIGHT_H)),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("g", { children: [
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("rect", {
 						x: OS.x,
@@ -646,18 +646,18 @@ function OSDiagram() {
 		})
 	});
 }
-function renderLabel(name, x, y, w, h, align) {
+function renderLabel(name, x, y, w, h) {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("foreignObject", {
 		x,
 		y,
 		width: w,
 		height: h,
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-			className: "flex h-full w-full items-center",
+			className: "flex h-full w-full items-center justify-center",
 			children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				className: `w-full rounded-md border border-hairline bg-card px-2 py-1 shadow-sm ${align === "left" ? "text-left" : align === "right" ? "text-right" : "text-center"}`,
+				className: "w-full rounded-md border border-hairline bg-card px-2 py-1 shadow-sm text-center",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-					className: "inline-block text-xs font-semibold leading-tight text-ink md:text-sm",
+					className: "block text-xs font-semibold leading-tight text-ink md:text-sm",
 					children: name
 				})
 			})
@@ -874,24 +874,21 @@ var ownership = {
 	"Scientific Finding Tracking": "China & HQ",
 	"Virtual Cell": "China & HQ",
 	"Site Selection": "China & HQ",
-	"Clinical Study QC/QA": "China & HQ",
 	"Protocol Deviation": "China & HQ",
 	"CSR Drafting": "China & HQ",
 	"Medical Monitoring": "China & HQ",
 	"Protocol Drafting": "HQ",
 	"ICF Drafting": "HQ",
 	"IB Updates": "HQ",
-	"Digital Pathology": "HQ",
+	"Digital Pathology": "China & HQ",
 	"AI-assisted Drafting": "HQ",
 	"Unmet Medical Needs Identification": "Unexplored",
 	"Protocol Review": "Unexplored",
 	"IB Drafting": "Unexplored",
 	"Patient Recruitment": "Unexplored",
-	"Operation Management Platform": "Unexplored",
+	"Operational Data Management": "China & HQ",
 	"AI for RWE": "Unexplored",
-	"AI-based Virtual Review": "Unexplored",
-	"AE/SAE Detection": "Unexplored",
-	"Audit Report": "Unexplored"
+	"AI-based Virtual Review": "Unexplored"
 };
 var groups = [
 	{
@@ -939,17 +936,14 @@ var groups = [
 			{
 				name: "Execution",
 				apps: [
-					"Clinical Study QC/QA",
 					"Protocol Deviation",
 					"Project Risk & Issue Management",
 					"CSR Drafting",
 					"IB Updates",
 					"Medical Monitoring",
 					"Patient Recruitment",
-					"Operation Management Platform",
-					"AE/SAE Detection",
+					"Operational Data Management",
 					"Digital Pathology",
-					"Audit Report",
 					"AI for RWE"
 				]
 			},
@@ -1410,7 +1404,7 @@ var streams = [
 		candidates: [
 			{ name: "Medical Monitoring" },
 			{ name: "Protocol Review" },
-			{ name: "GCTO Operation Platform" }
+			{ name: "GCTO Operational Data Integration & Automation System" }
 		]
 	},
 	{
