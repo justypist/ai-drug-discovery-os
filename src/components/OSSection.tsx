@@ -233,8 +233,7 @@ function renderLabel(
   x: number,
   y: number,
   w: number,
-  h: number,
-  _align: "left" | "right" | "center"
+  h: number
 ) {
   return (
     <foreignObject key={name} x={x} y={y} width={w} height={h}>
