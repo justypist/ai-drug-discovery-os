@@ -90,7 +90,6 @@ const groups: Group[] = [
       {
         name: "Execution",
         apps: [
-          "Clinical Study QC/QA",
           "Protocol Deviation",
           "Project Risk & Issue Management",
           "CSR Drafting",
@@ -98,9 +97,7 @@ const groups: Group[] = [
           "Medical Monitoring",
           "Patient Recruitment",
           "Operational Data Management",
-          "AE/SAE Detection",
           "Digital Pathology",
-          "Audit Report",
           "AI for RWE",
         ],
       },
