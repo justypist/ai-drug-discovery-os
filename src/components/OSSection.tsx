@@ -180,16 +180,16 @@ function OSDiagram() {
 
         {/* application labels */}
         {topItems.map((name, i) =>
-          renderLabel(name, topXs[i], TOP_Y, TOP_W, TOP_H, "center")
+          renderLabel(name, topXs[i], TOP_Y, TOP_W, TOP_H)
         )}
         {bottomItems.map((name, i) =>
-          renderLabel(name, bottomXs[i], BOTTOM_Y, TOP_W, TOP_H, "center")
+          renderLabel(name, bottomXs[i], BOTTOM_Y, TOP_W, TOP_H)
         )}
         {leftItems.map((name, i) =>
-          renderLabel(name, LEFT_X, leftYs[i], SIDE_W, SIDE_H, "right")
+          renderLabel(name, LEFT_X, leftYs[i], SIDE_W, SIDE_H)
         )}
         {rightItems.map((name, i) =>
-          renderLabel(name, RIGHT_X, rightYs[i], SIDE_W, RIGHT_H, "left")
+          renderLabel(name, RIGHT_X, rightYs[i], SIDE_W, RIGHT_H)
         )}
 
         {/* central OS kernel */}
