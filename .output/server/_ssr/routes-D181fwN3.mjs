@@ -2,7 +2,7 @@ import { o as __toESM } from "../_runtime.mjs";
 import { n as require_jsx_runtime, r as require_react } from "../_libs/react+tanstack__react-query.mjs";
 import { S as Activity, _ as ChevronRight, a as Scaling, b as BrainCircuit, c as Play, d as Lightbulb, f as FileSearch, g as CircleAlert, h as CircleCheck, i as Stethoscope, l as Network, m as Compass, n as TrendingUp, o as RotateCcw, p as FileInput, r as Sun, s as RefreshCw, t as Users, u as Moon, v as ChevronLeft, x as ArrowRight, y as Calendar } from "../_libs/lucide-react.mjs";
 import { t as motion } from "../_libs/framer-motion.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/routes-BJzH504a.js
+//#region node_modules/.nitro/vite/services/ssr/assets/routes-D181fwN3.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var links = [
@@ -1526,21 +1526,12 @@ function NewProjectsSection() {
 						}, item.name))
 					})]
 				}),
-				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 					className: "mt-5 rounded-2xl border border-hairline bg-bg-panel p-4 shadow-sm",
-					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						className: "mb-3 text-center text-lg font-bold uppercase tracking-[0.12em] text-teal",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: "text-center text-lg font-bold uppercase tracking-[0.12em] text-teal",
 						children: "IT Infrastructure Excellence Enablement"
-					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "grid grid-cols-1 gap-x-5 gap-y-1 md:grid-cols-2",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(NameOnlyItem, {
-							name: "GPU Resource for AI Model Training and Inference",
-							gray: true
-						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(NameOnlyItem, {
-							name: "Data Lake",
-							gray: true
-						})]
-					})]
+					})
 				})
 			]
 		})
